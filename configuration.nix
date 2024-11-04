@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
@@ -8,7 +5,6 @@
   ...
 }: {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.xremap-flake.nixosModules.default
   ];
@@ -23,11 +19,6 @@
   programs.zsh.enable = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -85,7 +76,6 @@
     NIXOS_OZONE_WL = "1";
   };
   hardware = {
-    graphics.enable = true;
     nvidia = {
       modesetting.enable = true;
       open = false;
@@ -129,6 +119,7 @@
 
   # System level packages
   environment.systemPackages = with pkgs; [
+    git
     # deps for sddm
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
@@ -148,7 +139,6 @@
     # LSPs
     nixd
     lua-language-server
-    bash-language-server
 
     # Formatters
     alejandra
