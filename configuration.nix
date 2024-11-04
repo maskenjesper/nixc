@@ -76,7 +76,7 @@
     NIXOS_OZONE_WL = "1";
   };
   hardware = {
-    graphics.enable = true;
+    opengl.enable = true;
     nvidia = {
       modesetting.enable = true;
       open = false;
