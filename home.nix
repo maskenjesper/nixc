@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jakob";
@@ -40,14 +42,14 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file =  {
+  home.file = {
     ".zshrc".source = ./dotfiles/.zshrc;
     ".p10k.zsh".source = ./dotfiles/.p10k.zsh;
     ".scripts/tmux-sessionizer.sh".source = ./dotfiles/.scripts/tmux-sessionizer.sh;
-   ".config" = {
-	source = ./dotfiles/.config;
-	recursive = true;
-   };
+    ".config" = {
+      source = ./dotfiles/.config;
+      recursive = true;
+    };
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -81,27 +83,26 @@
   };
 
   programs = {
-  	git = {
-		enable = true;
-		userName = "jakob";
-		userEmail = "noreply@email.com";
-		extraConfig = {
-			init.defaultBranch = "main";
-		};
-	};
-  	gh.enable = true;
-        bash = {
-		enable = true;
-		shellAliases = {
-			ll = "ls -l";
-			".." = "cd ..";
-		};
-	};
-	zoxide.enable = true;
-	fzf.enable = true;
+    git = {
+      enable = true;
+      userName = "jakob";
+      userEmail = "noreply@email.com";
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
+    };
+    gh.enable = true;
+    bash = {
+      enable = true;
+      shellAliases = {
+        ll = "ls -l";
+        ".." = "cd ..";
+      };
+    };
+    zoxide.enable = true;
+    fzf.enable = true;
     tmux.enable = true;
     kitty.enable = true;
-
   };
 
   # Let Home Manager install and manage itself.
