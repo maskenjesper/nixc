@@ -42,6 +42,11 @@
   home.file = {
     ".zshrc".source = ./dotfiles/.zshrc;
     ".p10k.zsh".source = ./dotfiles/.p10k.zsh;
+    ".scripts/tmux-sessionizer.sh".source = ./dotfiles/.scripts/tmux-sessionizer.sh;
+    ".config/hypr" = {
+    	source = ./dotfiles/.config/hypr;
+	recursive = true;
+    };
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
