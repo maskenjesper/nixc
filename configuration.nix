@@ -4,11 +4,13 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.xremap-flake.nixosModules.default
   ];
 
   # Bootloader.
@@ -48,12 +50,50 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # Keybinds
+  services.xremap = {
+    userName = "jakob";
+    withWlroots = true;
+    yamlConfig = ''
+      modmap:
+        - name: main remaps
+          remap:
+            CapsLock:
+              held: leftctrl
+              alone: esc
+              alone_timeout_millis: 150
+            esc: CapsLock
+    '';
+  };
+  hardware.uinput.enable = true;
+  users.groups.uinput.members = ["jakob"];
+  users.groups.input.members = ["jakob"];
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # Setup sddm
+  services.displayManager.sddm = {
+    wayland.enable = true;
+    enable = true;
+    theme = "${import ./window-manager/sddm-theme.nix {inherit pkgs;}}";
+  };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+  hardware = {
+    graphics.enable = true;
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+  };
+  services.xserver.videoDrivers = ["nvidia"];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -72,16 +112,8 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+    jack.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jakob = {
@@ -89,40 +121,41 @@
     description = "Jakob Olsson";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-      #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # System level packages
   environment.systemPackages = with pkgs; [
+    # deps for sddm
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
 
+    # Misc
     playerctl
     zoxide
     networkmanagerapplet
     gnumake
 
+    # Desktop environment
     mako
     libnotify
     swww
     rofi-wayland
 
+    # LSPs
     nixd
     lua-language-server
     bash-language-server
 
+    # Formatters
     alejandra
     stylua
     shellcheck
 
+    # User applications
     brave
     _1password-gui
     obsidian
@@ -130,24 +163,16 @@
     discord
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  # Enable inter-application communication
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  # Automatically delete generations older than 30 days.
+  nix.gc = {
+    automatic = true;
+    dates = "weelky";
+    options = "--delete-older-than 30d";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

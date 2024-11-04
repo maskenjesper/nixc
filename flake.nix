@@ -5,6 +5,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    xremap-flake.url = "github:xremap/nix-flake";
   };
 
   outputs = {
@@ -12,7 +13,7 @@
     nixpkgs,
     home-manager,
     ...
-  }: let
+  } @ inputs: let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -20,6 +21,7 @@
     nixosConfigurations = {
       desktop-nixos = lib.nixosSystem {
         inherit system;
+        inherit inputs;
         modules = [
           ./configuration.nix
         ];
