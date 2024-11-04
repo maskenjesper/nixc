@@ -18,6 +18,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.neovim
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -80,6 +81,11 @@
   };
 
   programs = {
+  	git = {
+		enable = true;
+		userName = "jakob";
+		userEmail = "noreply@email.com";
+	};
   	gh.enable = true;
         bash = {
 		enable = true;
