@@ -135,7 +135,6 @@
     gnumake
     lf
     gh # github cli
-    nautilus
     neofetch
 
     # Terminal
