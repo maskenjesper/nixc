@@ -166,7 +166,6 @@
     # LSPs
     nixd # Nix
     lua-language-server # Lua
-    bash-language-server # bash
 
     # Code formatters
     alejandra # Nix
