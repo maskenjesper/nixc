@@ -75,6 +75,7 @@
   };
 
   programs = {
+  	gh.enable = true;
         bash = {
 		enable = true;
 		shellAliases = {
