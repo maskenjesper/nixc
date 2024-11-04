@@ -40,7 +40,7 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {
+  home.file =  {
     ".zshrc".source = ./dotfiles/.zshrc;
     ".p10k.zsh".source = ./dotfiles/.p10k.zsh;
     ".scripts/tmux-sessionizer.sh".source = ./dotfiles/.scripts/tmux-sessionizer.sh;
@@ -99,6 +99,9 @@
 	};
 	zoxide.enable = true;
 	fzf.enable = true;
+    tmux.enable = true;
+    kitty.enable = true;
+
   };
 
   # Let Home Manager install and manage itself.

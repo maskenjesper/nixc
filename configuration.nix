@@ -101,9 +101,32 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects
 
+    playerctl
+    zoxide
+    networkmanagerapplet
+    gnumake
+
+    mako
+    libnotify
+    swww
+    rofi-wayland
+
+    nixd
+    lua-language-server
+    bash-language-server
+
+    alejandra
+    stylua
+    shellcheck
+
+    brave
+    _1password-gui
+    obsidian
+    spotify
+    discord
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
