@@ -85,6 +85,9 @@
 		enable = true;
 		userName = "jakob";
 		userEmail = "noreply@email.com";
+		extraConfig = {
+			init.defaultBranch = "main";
+		};
 	};
   	gh.enable = true;
         bash = {
