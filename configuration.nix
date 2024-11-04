@@ -76,6 +76,7 @@
     NIXOS_OZONE_WL = "1";
   };
   hardware = {
+    graphics.enable = true;
     nvidia = {
       modesetting.enable = true;
       open = false;
@@ -119,31 +120,59 @@
 
   # System level packages
   environment.systemPackages = with pkgs; [
-    git
     # deps for sddm
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
+
+    # Manage dotfiles
+    home-manager
+    stow # manage dotfiles
 
     # Misc
     playerctl
     zoxide
     networkmanagerapplet
     gnumake
+    lf
+    gh # github cli
+    nautilus
+    neofetch
 
-    # Desktop environment
-    mako
-    libnotify
-    swww
-    rofi-wayland
+    # Terminal
+    neovim
+    tmux
+    fzf
+    kitty # hyprland default (needed with standard hyprland config
+    zsh
+    (
+      waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
+      })
+    )
+    # hypridle
+
+    mako # notifications
+    libnotify # mako dep
+    swww # wallpaper daemon
+    rofi-wayland # app launcher
+
+    # Clipboard management
+    wl-clipboard
+    cliphist
+
+    # Dev
+    elixir
+    erlang
 
     # LSPs
-    nixd
-    lua-language-server
+    nixd # Nix
+    lua-language-server # Lua
+    bash-language-server # bash
 
-    # Formatters
-    alejandra
-    stylua
-    shellcheck
+    # Code formatters
+    alejandra # Nix
+    stylua # Lua
+    shellcheck # bash
 
     # User applications
     brave
