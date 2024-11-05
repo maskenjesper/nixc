@@ -187,8 +187,8 @@
   ];
 
   # Enable inter-application communication
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  # xdg.portal.enable = true;
+  # xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # Automatically delete generations older than 30 days.
   nix.gc = {
