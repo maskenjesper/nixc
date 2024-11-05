@@ -51,6 +51,7 @@
     ".config/nvim".source = ./dotfiles/.config/nvim;
     ".config/rofi".source = ./dotfiles/.config/rofi;
     ".config/tmux".source = ./dotfiles/.config/tmux;
+    ".config/hypr".source = ./dotfiles/.config/hypr;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
