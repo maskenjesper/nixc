@@ -2,6 +2,7 @@
 
 # nix requires all files in the directory to be either commited or staged
 git add --all
+git commit -m "rebuild"
 
 sudo nixos-rebuild switch --flake .#desktop-nixos
 home-manager switch --flake . -b backup
