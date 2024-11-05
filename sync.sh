@@ -4,5 +4,6 @@
 git add --all
 git commit -m "rebuild"
 
+sudo nix flake update
 sudo nixos-rebuild switch --flake .#desktop-nixos
 home-manager switch --flake . -b backup
