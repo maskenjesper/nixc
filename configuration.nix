@@ -10,15 +10,14 @@
   ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   environment.shells = with pkgs; [zsh];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "desktop-nixos"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -60,6 +59,10 @@
   users.groups.uinput.members = ["jakob"];
   users.groups.input.members = ["jakob"];
 
+  # Virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   # # Setup sddm
   # services.displayManager.sddm = {
   #   wayland.enable = true;
@@ -67,30 +70,30 @@
   #   theme = "${import ./window-manager/sddm-theme.nix {inherit pkgs;}}";
   # };
 
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  # };
-  # environment.sessionVariables = {
-  #   WLR_NO_HARDWARE_CURSORS = "1";
-  #   NIXOS_OZONE_WL = "1";
-  # };
-  # hardware = {
-  #   opengl.enable = true;
-  #   nvidia = {
-  #     modesetting.enable = true;
-  #     open = false;
-  #     nvidiaSettings = true;
-  #     package = config.boot.kernelPackages.nvidiaPackages.stable;
-  #   };
-  # };
-  # services.xserver.videoDrivers = ["nvidia"];
-
-  services.xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+  hardware = {
+    graphics.enable = true;
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+  };
+  services.xserver.videoDrivers = ["nvidia"];
+
+  # services.xserver = {
+  #     enable = true;
+  #     displayManager.gdm.enable = true;
+  #     desktopManager.gnome.enable = true;
+  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {
