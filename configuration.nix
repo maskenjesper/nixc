@@ -149,13 +149,14 @@
     fzf
     kitty # hyprland default (needed with standard hyprland config
     zsh
+
+
     (
       waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
       })
     )
-    # hypridle
-
+    ags # custom widgets
     mako # notifications
     libnotify # mako dep
     swww # wallpaper daemon
