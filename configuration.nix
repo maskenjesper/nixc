@@ -44,6 +44,7 @@
   services.xremap = {
     userName = "jakob";
     withWlroots = true;
+    watch = true;
     yamlConfig = ''
       modmap:
         - name: main remaps
@@ -97,8 +98,9 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "us,se";
     variant = "";
+    options = "grp:win_space_toggle";
   };
 
   # Enable CUPS to print documents.
@@ -153,7 +155,6 @@
     kitty # hyprland default (needed with standard hyprland config
     zsh
 
-
     (
       waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
@@ -183,16 +184,16 @@
     shellcheck # bash
 
     # User applications
-    brave
     _1password-gui
     obsidian
     spotify
     discord
+    brave
   ];
 
   # Enable inter-application communication
-  # xdg.portal.enable = true;
-  # xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # Automatically delete generations older than 30 days.
   nix.gc = {
