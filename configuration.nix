@@ -129,6 +129,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+  ];
+
   # System level packages
   environment.systemPackages = with pkgs; [
     # deps for sddm
@@ -155,12 +159,6 @@
     kitty # hyprland default (needed with standard hyprland config
     zsh
 
-    (
-      waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-      })
-    )
-    ags # custom widgets
     mako # notifications
     libnotify # mako dep
     swww # wallpaper daemon
