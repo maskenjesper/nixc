@@ -7,6 +7,8 @@
   imports = [
     ./hardware-configuration.nix
     inputs.xremap-flake.nixosModules.default
+    ../modules/features/gaming
+    ../modules/features/stylix
   ];
 
   # Bootloader.
@@ -17,7 +19,7 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-  networking.hostName = "desktop-nixos"; # Define your hostname.
+  networking.hostName = "desktop"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -89,12 +91,6 @@
     };
   };
   services.xserver.videoDrivers = ["nvidia"];
-
-  # services.xserver = {
-  #     enable = true;
-  #     displayManager.gdm.enable = true;
-  #     desktopManager.gnome.enable = true;
-  # };
 
   # Configure keymap in X11
   services.xserver.xkb = {

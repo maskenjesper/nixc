@@ -3,11 +3,14 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     xremap-flake.url = "github:xremap/nix-flake";
     ags.url = "github:Aylur/ags";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -19,22 +22,25 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    host = "desktop";
+    user = "jakob";
   in {
     nixosConfigurations = {
-      desktop-nixos = lib.nixosSystem {
+      ${host} = lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit system;
           inherit inputs;
         };
         modules = [
-          ./hosts/desktop/configuration.nix
+          ./hosts/${host}
           {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+          inputs.stylix.nixosModules.stylix
         ];
       };
     };
     homeConfigurations = {
-      jakob = home-manager.lib.homeManagerConfiguration {
+      ${user} = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
@@ -45,7 +51,7 @@
           inherit inputs;
         };
         modules = [
-          ./users/jakob/home.nix
+          ./users/${user}
         ];
       };
     };
