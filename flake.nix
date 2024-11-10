@@ -31,9 +31,11 @@
         specialArgs = {
           inherit system;
           inherit inputs;
+          inherit host;
+          inherit user;
         };
         modules = [
-          ./hosts/${host}
+          ./src/hosts/${host}
           {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           inputs.stylix.nixosModules.stylix
         ];
@@ -49,9 +51,11 @@
         };
         extraSpecialArgs = {
           inherit inputs;
+          inherit host;
+          inherit user;
         };
         modules = [
-          ./users/${user}
+          ./src/users/${user}
         ];
       };
     };

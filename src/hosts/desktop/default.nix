@@ -6,9 +6,12 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    inputs.xremap-flake.nixosModules.default
+    ../modules/features/system_packages
     ../modules/features/gaming
     ../modules/features/stylix
+    ../modules/features/desktop_environment/wallpaper/swww
+    ../modules/features/xremap
+    ../modules/features/virtualization
   ];
 
   # Bootloader.
@@ -43,28 +46,6 @@
   };
 
   # Keybinds
-  services.xremap = {
-    userName = "jakob";
-    withWlroots = true;
-    watch = true;
-    yamlConfig = ''
-      modmap:
-        - name: main remaps
-          remap:
-            CapsLock:
-              held: leftctrl
-              alone: esc
-              alone_timeout_millis: 150
-            esc: CapsLock
-    '';
-  };
-  hardware.uinput.enable = true;
-  users.groups.uinput.members = ["jakob"];
-  users.groups.input.members = ["jakob"];
-
-  # Virt-manager
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
 
   # # Setup sddm
   # services.displayManager.sddm = {
@@ -125,66 +106,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
-  ];
-
   # System level packages
-  environment.systemPackages = with pkgs; [
-    hyprpanel
-    hyprpicker
-    gucharmap
-    # deps for sddm
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtgraphicaleffects
-
-    # Manage dotfiles
-    home-manager
-    stow # manage dotfiles
-
-    # Misc
-    playerctl
-    zoxide
-    networkmanagerapplet
-    gnumake
-    lf
-    gh # github cli
-    neofetch
-
-    # Terminal
-    neovim
-    tmux
-    fzf
-    kitty # hyprland default (needed with standard hyprland config
-    zsh
-
-    libnotify # mako dep
-    rofi-wayland # app launcher
-
-    # Clipboard management
-    wl-clipboard
-    cliphist
-
-    # Dev
-    elixir
-    erlang
-
-    # LSPs
-    nixd # Nix
-    lua-language-server # Lua
-
-    # Code formatters
-    alejandra # Nix
-    stylua # Lua
-    shellcheck # bash
-
-    # User applications
-    _1password-gui
-    obsidian
-    spotify
-    discord
-    brave
-  ];
 
   # Enable inter-application communication
   xdg.portal.enable = true;

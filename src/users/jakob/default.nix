@@ -7,6 +7,7 @@
   imports = [
     ../modules/features/tmux
     ../modules/features/git
+    ../modules/features/desktop_apps
   ];
 
   home.username = "jakob";
@@ -22,7 +23,7 @@
 
   home.file = {
     ".zshrc".source = ./dotfiles/.zshrc;
-    ".p10k.zs".source = ./dotfiles/.p10k.zsh;
+    ".p10k.zsh".source = ./dotfiles/.p10k.zsh;
     ".config/kitty".source = ./dotfiles/.config/kitty;
     ".config/nvim".source = ./dotfiles/.config/nvim;
     ".config/rofi".source = ./dotfiles/.config/rofi;
