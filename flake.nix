@@ -28,7 +28,8 @@
           inherit inputs;
         };
         modules = [
-          ./configuration.nix
+          ./hosts/desktop/configuration.nix
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
         ];
       };
     };
@@ -44,7 +45,7 @@
           inherit inputs;
         };
         modules = [
-          ./home.nix
+          ./users/jakob/home.nix
         ];
       };
     };

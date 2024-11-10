@@ -135,6 +135,9 @@
 
   # System level packages
   environment.systemPackages = with pkgs; [
+    hyprpanel
+    hyprpicker
+    gucharmap
     # deps for sddm
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
@@ -159,9 +162,7 @@
     kitty # hyprland default (needed with standard hyprland config
     zsh
 
-    mako # notifications
     libnotify # mako dep
-    swww # wallpaper daemon
     rofi-wayland # app launcher
 
     # Clipboard management
