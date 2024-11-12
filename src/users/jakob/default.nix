@@ -2,33 +2,28 @@
   config,
   pkgs,
   inputs,
+  user,
   ...
 }: {
   imports = [
     ../modules/features/tmux
     ../modules/features/git
     ../modules/features/desktop_apps
+    ../modules/features/terminal/shell/zsh
+    ../modules/features/terminal/kitty
+    ../modules/features/hyprland
+    ../modules/features/rofi
+    ../modules/features/neovim
   ];
 
-  home.username = "jakob";
-  home.homeDirectory = "/home/jakob";
+  home.username = "${user}";
+  home.homeDirectory = "/home/${user}";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
-    neovim
-    kitty
     protonup
   ];
-
-  home.file = {
-    ".zshrc".source = ./dotfiles/.zshrc;
-    ".p10k.zsh".source = ./dotfiles/.p10k.zsh;
-    ".config/kitty".source = ./dotfiles/.config/kitty;
-    ".config/nvim".source = ./dotfiles/.config/nvim;
-    ".config/rofi".source = ./dotfiles/.config/rofi;
-    ".config/hypr".source = ./dotfiles/.config/hypr;
-  };
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatabilitytools.d";

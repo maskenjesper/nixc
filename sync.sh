@@ -3,7 +3,7 @@
 sudo echo starting
 
 # nix requires all files in the directory to be either commited or staged
-sudo git add --all
+git add --all
 
 home-manager switch --flake . -b backup
 
