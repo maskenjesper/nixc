@@ -6,12 +6,14 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../modules/features/bluetooth
     ../modules/features/system_packages
     ../modules/features/gaming
     ../modules/features/stylix
     ../modules/features/desktop_environment/wallpaper/swww
     ../modules/features/xremap
     ../modules/features/virtualization
+    ../modules/features/desktop_environment/window_manager/hyprland
   ];
 
   # Bootloader.
@@ -45,33 +47,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Keybinds
-
-  # # Setup sddm
-  # services.displayManager.sddm = {
-  #   wayland.enable = true;
-  #   enable = true;
-  #   theme = "${import ./window-manager/sddm-theme.nix {inherit pkgs;}}";
-  # };
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-  environment.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NIXOS_OZONE_WL = "1";
-  };
-  hardware = {
-    graphics.enable = true;
-    nvidia = {
-      modesetting.enable = true;
-      open = false;
-      nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-  };
-  services.xserver.videoDrivers = ["nvidia"];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -108,9 +83,6 @@
 
   # System level packages
 
-  # Enable inter-application communication
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   # Automatically delete generations older than 30 days.
   nix.gc = {
