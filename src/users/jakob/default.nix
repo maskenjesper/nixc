@@ -14,6 +14,7 @@
     ../modules/features/hyprland
     ../modules/features/rofi
     ../modules/features/neovim
+    ../modules/features/ags
   ];
 
   home.username = "${user}";
@@ -22,8 +23,8 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   nixpkgs.config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+    allowUnfree = true;
+    allowUnfreePredicate = _: true;
   };
 
   home.packages = with pkgs; [

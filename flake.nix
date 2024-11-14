@@ -45,9 +45,6 @@
       ${user} = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [
-            inputs.hyprpanel.overlay
-          ];
         };
         extraSpecialArgs = {
           inherit inputs;

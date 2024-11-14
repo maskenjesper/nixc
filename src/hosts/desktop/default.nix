@@ -6,11 +6,12 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../modules/features/flatpak
     ../modules/features/bluetooth
     ../modules/features/system_packages
     ../modules/features/gaming
     ../modules/features/stylix
-    ../modules/features/desktop_environment/wallpaper/swww
+    ../modules/features/desktop_environment/wallpaper
     ../modules/features/xremap
     ../modules/features/virtualization
     ../modules/features/desktop_environment/window_manager/hyprland
@@ -47,7 +48,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us,se";
@@ -82,7 +82,6 @@
   nixpkgs.config.allowUnfree = true;
 
   # System level packages
-
 
   # Automatically delete generations older than 30 days.
   nix.gc = {
