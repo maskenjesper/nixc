@@ -11,11 +11,12 @@ wl-paste --type image --watch cliphist store & # image data
 # wallpaper
 waypaper --restore &
 
-# bar
-waybar &
-
 # Notification daemon
 swaync &
 
 # idling
 hypridle &
+
+# bar
+sleep 1
+waybar &

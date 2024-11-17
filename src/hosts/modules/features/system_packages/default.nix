@@ -1,5 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    krusader
+    nnn
+    thunderbird
+    ranger
     nautilus
 
     ripgrep

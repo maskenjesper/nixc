@@ -23,7 +23,12 @@ in {
         extraConfig = "set -g @super-fingers-key f";
       }
       tmuxPlugins.better-mouse-mode
-      tmuxPlugins.gruvbox
+      {
+        plugin = tmuxPlugins.gruvbox;
+        extraConfig = ''
+          set -g @tmux-gruvbox 'dark'
+        '';
+      }
       tmuxPlugins.vim-tmux-navigator
       # {
       #   plugin = tmuxPlugins.resurrect;
