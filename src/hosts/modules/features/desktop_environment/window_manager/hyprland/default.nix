@@ -38,17 +38,28 @@
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
 
-    mako
-    libnotify # mako dep
+    xwaylandvideobridge
+
+    hyprshot
+
+    # Notifications
+    swaynotificationcenter
+    libnotify # notification dep
+
+    # Locking
+    hyprlock
+
     hyprsunset
     hyprpolkitagent
     hyprpicker
     hypridle
-    hyprlock
+
+    # Panel and widgets
     hyprpanel
     waybar
 
-    rofi-wayland # app launcher
+    # App launcher
+    rofi-wayland
 
     # Clipboard management
     wl-clipboard

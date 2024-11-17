@@ -6,7 +6,7 @@ sudo echo starting
 git add --all
 
 echo ====================== Running home-manager ======================
-home-manager switch --flake . -b backup
+home-manager switch --impure --flake . -b backup
 
 if [[ $? -eq 0 ]]; then
     echo ====================== Running nixos-rebuild ======================

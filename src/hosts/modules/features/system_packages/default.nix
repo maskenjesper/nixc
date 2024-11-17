@@ -1,5 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    nautilus
+
+    ripgrep
+
+    #fonts
+    font-awesome
     # Misc
     playerctl
     zoxide

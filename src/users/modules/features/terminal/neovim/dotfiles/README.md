@@ -18,3 +18,4 @@ in this directory which becomes our entry point into our configuration.
 This file in turn, require the jakob.core and jakob.lazy modules. The module names start from the "lua" folder in the same directrory as init.lua. The jakob.core module contains vanilla configs keymaps and options which. 
 
 The lazy.lua file installs the package manager lazy.nvim and loads it.
+

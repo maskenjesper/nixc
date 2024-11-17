@@ -1,3 +1,10 @@
-{pkgs, ...}: {
-  home.file.".config/rofi/config.rasi".source = ./config.rasi;
+{
+  pkgs,
+  config,
+  ...
+}: {
+  home.file.".config/rofi" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/features/rofi/dotfiles";
+    recursive = true;
+  };
 }

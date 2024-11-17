@@ -6,15 +6,16 @@
   ...
 }: {
   imports = [
-    ../modules/features/tmux
     ../modules/features/git
     ../modules/features/desktop_apps
-    ../modules/features/terminal/shell/zsh
     ../modules/features/terminal/kitty
+    ../modules/features/terminal/zsh
+    ../modules/features/terminal/tmux
+    ../modules/features/terminal/neovim
     ../modules/features/hyprland
     ../modules/features/rofi
-    ../modules/features/neovim
     ../modules/features/ags
+    ../modules/features/waybar
   ];
 
   home.username = "${user}";

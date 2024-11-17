@@ -15,6 +15,7 @@ waypaper --restore &
 waybar &
 
 # Notification daemon
-#mako
-# panel
+swaync &
 
+# idling
+hypridle &
