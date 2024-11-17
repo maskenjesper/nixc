@@ -24,24 +24,61 @@ in {
       }
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.gruvbox
-      {
-        plugin = tmuxPlugins.resurrect;
-        extraConfig = ''
-          set -g @resurrect-strategy-vim 'session'
-          set -g @resurrect-strategy-nvim 'session'
-          set -g @resurrect-capture-pane-contents 'on'
-        '';
-      }
-      {
-        plugin = tmuxPlugins.continuum;
-        extraConfig = ''
-          set -g @continuum-restore 'on'
-          set -g @continuum-boot 'on'
-          set -g @continuum-save-interval '10'
-        '';
-      }
+      tmuxPlugins.vim-tmux-navigator
+      # {
+      #   plugin = tmuxPlugins.resurrect;
+      #   extraConfig = ''
+      #     set -g @resurrect-strategy-vim 'session'
+      #     set -g @resurrect-strategy-nvim 'session'
+      #     set -g @resurrect-capture-pane-contents 'on'
+      #   '';
+      # }
+      # {
+      #   plugin = tmuxPlugins.continuum;
+      #   extraConfig = ''
+      #     set -g @continuum-restore 'on'
+      #     set -g @continuum-boot 'on'
+      #     set -g @continuum-save-interval '10'
+      #   '';
+      # }
     ];
     extraConfig = ''
+      set-option -sa terminal-overrides ",xterm*:Tc"
+      set -g status-position top
+
+      set -g mouse on
+
+      # Shortcut source the config
+      unbind r
+      bind r source-file ~/.config/tmux/tmux.conf \; display-message "config re-sourced"
+
+      # tmux prefix
+      unbind C-b
+      set -g prefix C-Space
+      bind C-Space send-prefix
+
+      # Start windows and panes at 1 , not 0
+      set -g base-index 1
+      set -g pane-base-index 1
+      set-window-option -g pane-base-index 1
+      set-option -g renumber-windows on
+
+      # Shift Alt vim keys to switch windows
+      bind -r h previous-window
+      bind -r l next-window
+
+      # Better window and pane management
+      bind -r c new-window -c "#{pane_current_path}"
+      bind -r "'" split-window -v -c "#{pane_current_path}"
+      bind -r ';' split-window -h -c "#{pane_current_path}"
+      bind -r k kill-window
+
+      # Yanking rebinds
+      set-window-option -g mode-keys vi
+      bind-key -T copy-mode-vi v send-keys -X begin-selection
+      bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+      bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+      bind-key -T copy-mode-vi Escape send-keys -X cancel
     '';
   };
 }

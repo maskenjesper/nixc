@@ -3,15 +3,13 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Todo ~/source ~/Machfiles ~/Machfiles/home ~/Machfiles/home/.config -mindepth 0 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/nixc ~/Todo ~/source ~/Machfiles ~/Machfiles/home ~/Machfiles/home/.config -mindepth 0 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
-    echo exited early
     exit 0
 fi
 
-echo hello
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 

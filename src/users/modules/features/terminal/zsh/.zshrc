@@ -1,12 +1,14 @@
+if [[ "$(tty)" =~ ^/dev/tty.* ]]; then
+    if uwsm check may-start && uwsm select; then
+        exec systemd-cat -t uwsm_start uwsm start default
+    fi
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if uwsm check may-start && uwsm select; then
-	exec systemd-cat -t uwsm_start uwsm start default
 fi
 
 # Set the directory we want to store zinit and plugins
@@ -75,6 +77,8 @@ alias tm='tmux attach'
 alias tk='tmux kill-server'
 alias ti='tmux new -s home'
 alias cls=clear
+alias uwu='systemd-cat -t uwsm_start uwsm start default'
+
 
 # Shell integrations
 eval "$(fzf --zsh)"
