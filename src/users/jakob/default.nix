@@ -30,6 +30,7 @@
 
   home.packages = with pkgs; [
     protonup
+    anki-bin
   ];
 
   home.sessionVariables = {

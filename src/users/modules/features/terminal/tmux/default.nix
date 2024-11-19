@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   tmux-super-fingers =
     pkgs.tmuxPlugins.mkTmuxPlugin
     {
@@ -12,7 +16,10 @@
       };
     };
 in {
-  home.file.".scripts/tmux-sessionizer.sh".source = ./tmux-sessionizer.sh;
+  home.file.".scripts/tmux-sessionizer.sh" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/features/terminal/tmux/tmux-sessionizer.sh";
+  };
+
   programs.tmux = {
     enable = true;
     terminal = "tmux-256color";
@@ -48,8 +55,11 @@ in {
       # }
     ];
     extraConfig = ''
+      set -sg escape-time 0
+
       set-option -sa terminal-overrides ",xterm*:Tc"
       set -g status-position top
+
 
       set -g mouse on
 
@@ -76,7 +86,7 @@ in {
       bind -r c new-window -c "#{pane_current_path}"
       bind -r "'" split-window -v -c "#{pane_current_path}"
       bind -r ';' split-window -h -c "#{pane_current_path}"
-      bind -r k kill-window
+      bind k kill-window
 
       # Yanking rebinds
       set-window-option -g mode-keys vi

@@ -15,6 +15,8 @@
     ../modules/features/xremap
     ../modules/features/virtualization
     ../modules/features/desktop_environment/window_manager/hyprland
+    ../modules/features/programming
+    ../modules/features/fonts
   ];
 
   # Bootloader.

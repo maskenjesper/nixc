@@ -1,43 +1,30 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    lazygit
+
     krusader
     nnn
     thunderbird
     ranger
     nautilus
 
-    ripgrep
-
-    #fonts
-    font-awesome
-    # Misc
-    playerctl
-    zoxide
-    networkmanagerapplet
-    gnumake
-    lf
-    gh # github cli
-    neofetch
-
     # Terminal
     neovim
     tmux
-    fzf
     kitty # hyprland default (needed with standard hyprland config
     zsh
 
-    # Dev
-    elixir
-    erlang
+    # CLI tools
+    ripgrep
+    zoxide
+    fzf
 
-    # LSPs
-    nixd # Nix
-    lua-language-server # Lua
-
-    # Code formatters
-    alejandra # Nix
-    stylua # Lua
-    shellcheck # bash
+    # Misc
+    playerctl
+    networkmanagerapplet
+    lf
+    gh # github cli
+    neofetch
 
     # User applications
   ];

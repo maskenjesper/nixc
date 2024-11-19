@@ -28,7 +28,7 @@ vim.keymap.set("v", "<C-y>", '"+y')
 vim.keymap.set("n", "<C-p>", '"+p')
 vim.keymap.set("v", "<C-p>", '"+p')
 
-keymap.set("i", "jj", "<ESC>:w<cr>", { desc = "Exit insert mode with jk" })
+-- keymap.set("i", "jj", "<ESC>:w<cr>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
