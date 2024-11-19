@@ -9,6 +9,7 @@
     ../modules/features/git
     ../modules/features/desktop_apps
     ../modules/features/terminal/kitty
+    ../modules/features/terminal/lf
     ../modules/features/terminal/zsh
     ../modules/features/terminal/tmux
     ../modules/features/terminal/neovim

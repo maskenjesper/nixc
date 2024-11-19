@@ -43,12 +43,24 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Functions
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
 # Keybindings to emacs mode
 bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey -s '^e' '~/.scripts/tmux-sessionizer.sh\n'
 bindkey -s '^n' 'nvim .\n'
+bindkey -s '^o' 'lfcd\n'
 
 # History
 HISTSIZE=5000

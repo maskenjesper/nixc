@@ -22,7 +22,6 @@
     # Misc
     playerctl
     networkmanagerapplet
-    lf
     gh # github cli
     neofetch
 
