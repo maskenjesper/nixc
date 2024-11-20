@@ -9,7 +9,6 @@
     nautilus
 
     # Terminal
-    neovim
     tmux
     kitty # hyprland default (needed with standard hyprland config
     zsh
