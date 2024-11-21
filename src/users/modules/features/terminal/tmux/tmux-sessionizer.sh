@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/nixc ~/todo ~/source ~/.config -mindepth 0 -type d | fzf)
+    selected=$(find ~/nixc ~/notes ~/todo ~/source ~/.config -mindepth 0 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
