@@ -5,8 +5,8 @@
       "on-click": "sh $HOME/.config/rofi/bin/powermenu"
     },
     "hyprland/workspaces": {
-      "format": "{name}",
-      "format": "{icon}",
+      "format": "<span color='white'>{name}</span>",
+      "format": "<span color='white'>{icon}</span>",
       "tooltip": false,
       "all-outputs": false,
       "format-icons": {
