@@ -8,10 +8,9 @@
       "format": "{name}",
       "format": "{icon}",
       "tooltip": false,
-      "all-outputs": true,
+      "all-outputs": false,
       "format-icons": {
-        "active": "",
-        "default": ""
+        "active": ""
       }
     },
     "tray": {

@@ -7,6 +7,16 @@
         "output": "DP-3",
         "modules-left": ["custom/arch", "hyprland/workspaces"],
         "modules-center": ["hyprland/window"],
-        "modules-right": ["tray", "backlight", "pulseaudio", "bluetooth", "network", "battery", "clock"]
+        "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"]
+    },
+    {
+        "layer": "top",
+        "include": [
+            "~/.config/waybar/default-modules.jsonc"
+        ],
+        "output": "!DP-3",
+        "modules-left": ["hyprland/workspaces"],
+        "modules-center": ["hyprland/window"],
+        "modules-right": []
     }
 ]

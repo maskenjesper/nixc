@@ -1,5 +1,12 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    baobab # gnome only?
+
+    lyx
+
+    libsForQt5.qt5ct
+
+    filezilla
     lazygit
 
     krusader

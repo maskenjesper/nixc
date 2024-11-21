@@ -15,7 +15,7 @@
     gtk.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 16;
+    size = 26;
   };
 
   # Explicitly avoids conficts with uswm
@@ -24,18 +24,31 @@
   gtk = {
     enable = true;
 
+    # To find the name of a theme in a package use nix build on the package and look inside
+    # cd $(nix build nixpkgs#packageName --print-out-paths --no-link)
     theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
+      package = pkgs.arc-kde-theme;
+      name = "ArcDark";
     };
 
     iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
     };
     font = {
       name = "Sans";
       size = 11;
+    };
+  };
+
+  qt = {
+    enable = true;
+
+    platformTheme.name = "gtk";
+
+    style = {
+      package = pkgs.adwaita-qt;
+      name = "adwaita-dark";
     };
   };
 }
