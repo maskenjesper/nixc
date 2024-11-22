@@ -12,8 +12,8 @@
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     nixvim = {
-        url = "github:nix-community/nixvim";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -42,6 +42,13 @@
           ./src/hosts/${host}
           {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           inputs.stylix.nixosModules.stylix
+        ];
+      };
+
+      exampleIso = lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./src/hosts/isoimage
         ];
       };
     };
