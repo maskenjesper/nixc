@@ -59,7 +59,7 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey -s '^e' '~/.scripts/tmux-sessionizer.sh\n'
-bindkey -s '^n' 'nvim .\n'
+bindkey -s '^n' 'vim .\n'
 bindkey -s '^o' 'lfcd\n'
 
 # History

@@ -6,11 +6,11 @@ sudo echo starting
 git add --all
 
 echo ====================== Running home-manager ======================
-home-manager switch --impure --flake . -b backup
+home-manager switch --impure --flake . -b backup --show-trace -L -v
 
 if [[ $? -eq 0 ]]; then
     echo ====================== Running nixos-rebuild ======================
-    sudo nixos-rebuild switch --flake .#desktop
+    sudo nixos-rebuild switch --flake .#desktop --show-trace -L -v 
     
     if [[ $? -eq 0 ]]; then
         echo Sync successful 
