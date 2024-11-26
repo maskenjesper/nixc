@@ -6,5 +6,6 @@
     spotify
     discord
     brave
+    vivaldi
   ];
 }

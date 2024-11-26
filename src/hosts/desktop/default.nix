@@ -17,6 +17,7 @@
     ../modules/features/desktop_environment/window_manager/hyprland
     ../modules/features/programming
     ../modules/features/fonts
+    ../modules/features/fhs_env
   ];
 
   # Bootloader.

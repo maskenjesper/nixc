@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    just
+
     baobab # gnome only?
 
     lyx

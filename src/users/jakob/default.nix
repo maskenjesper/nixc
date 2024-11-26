@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ../modules/features/terminal/nixCats
     ../modules/features/git
     ../modules/features/desktop_apps
     ../modules/features/terminal/kitty
