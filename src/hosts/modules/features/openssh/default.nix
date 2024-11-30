@@ -1,13 +1,24 @@
-{pkgs, ...}: {
+{pkgs, user,...}: {
+
+############################## Server ##############################
   services.openssh = {
     enable = true;
     ports = [30293];
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
       AllowUsers = ["jakob"];
       UseDns = true;
       X11Forwarding = false;
       PermitRootLogin = "no";
     };
   };
+
+  services.fail2ban.enable = true;
+
+  users.users.${user}.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE1iJRI2a6lYCXYTSppETys2O2OlSBcMhugVYr3i76BE"
+  ];
+
+############################## Client ##############################
 }
