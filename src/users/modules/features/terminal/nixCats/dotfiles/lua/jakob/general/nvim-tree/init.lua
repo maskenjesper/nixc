@@ -1,45 +1,16 @@
 return {
-	"nvim-tree/nvim-tree.lua",
+	"nvim-tree.lua",
 	-- Dependencies prop --
 	-- Tells lazy to install any missing dependencies and load them when this plugin loads.
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
-	config = function()
+	-- dependencies = {
+	-- 	"nvim-tree/nvim-web-devicons",
+	-- },
+	after = function()
 		local nvimtree = require("nvim-tree")
 
 		-- recommended settings from nvim-tree documentation
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
-
-		--   nvimtree.setup({
-		--       update_focused_file = {
-		--           enable = true
-		--       },
-		--       modified = {
-		--           enable = true,
-		--           show_on_open_dirs = false
-		--       },
-		--       view = {
-		--           width = 1000,
-		--           signcolumn = "no",
-		--           float = {
-		--               enable = true,
-		--               open_win_config = {
-		--                   width = 500,
-		--                   height = 40
-		--               },
-		--           }
-		--       },
-		--       actions = {
-		--           open_file = {
-		--               quit_on_open = true,
-		--               window_picker = {
-		--                   enable = false
-		--               }
-		--           }
-		--       }
-		--   })
 
 		nvimtree.setup({
 			view = {

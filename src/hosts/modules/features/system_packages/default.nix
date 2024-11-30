@@ -1,5 +1,13 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    wireshark
+    traceroute
+
+    rnote
+    krita
+
+    android-studio
+
     just
 
     baobab # gnome only?

@@ -29,7 +29,7 @@ in {
         [
           (utils.standardPluginOverlay inputs)
         ];
-      packageNames = ["myHomeModuleNvim"];
+      packageNames = ["nixCats"];
 
       luaPath = "${./dotfiles}";
       # you could also import lua from the flake though, by not including this.
@@ -50,93 +50,136 @@ in {
             ripgrep
             fd
           ];
+
+          langs = with pkgs; {
+            go = [
+              gopls
+              gotools
+              go-tools
+              gccgo
+            ];
+
+            bash = [
+              bash-language-server
+              shfmt
+            ];
+
+            nix = [
+              nix-doc
+              nixd
+              alejandra
+            ];
+
+            lua = [
+              lua-language-server
+              stylua
+            ];
+
+            elixir = [
+              elixir-ls
+            ];
+          };
         };
         startupPlugins = {
           general = with pkgs.vimPlugins; [
             lze
             vim-repeat
             plenary-nvim
+            nvim-web-devicons
           ];
-          # themer = with pkgs; [
-          #   # you can even make subcategories based on categories and settings sets!
-          #   (builtins.getAttr packageDef.categories.colorscheme {
-          #       "onedark" = onedark-vim;
-          #       "catppuccin" = catppuccin-nvim;
-          #       "catppuccin-mocha" = catppuccin-nvim;
-          #       "tokyonight" = tokyonight-nvim;
-          #       "tokyonight-day" = tokyonight-nvim;
-          #     }
-          #   )
-          # ];
+
+          themer = with pkgs.vimPlugins; [
+            # you can even make subcategories based on categories and settings sets!
+            (
+              builtins.getAttr packageDef.categories.colorscheme {
+                "onedark" = onedark-nvim;
+                "catppuccin" = catppuccin-nvim;
+                "catppuccin-mocha" = catppuccin-nvim;
+                "tokyonight" = tokyonight-nvim;
+                "tokyonight-day" = tokyonight-nvim;
+                "rose-pine" = rose-pine;
+                "gruvbox" = gruvbox-nvim;
+              }
+            )
+          ];
         };
+
         optionalPlugins = {
           general = with pkgs.vimPlugins; [
             telescope-fzf-native-nvim
             telescope-ui-select-nvim
             telescope-nvim
-          ];
-        };
-        # shared libraries to be added to LD_LIBRARY_PATH
-        # variable available to nvim runtime
-        sharedLibraries = {
-          general = with pkgs; [
-            # libgit2
-          ];
-        };
-        environmentVariables = {
-          test = {
-            CATTESTVAR = "It worked!";
-          };
-        };
-        extraWrapperArgs = {
-          test = [
-            ''--set CATTESTVAR2 "It worked again!"''
-          ];
-        };
-        # lists of the functions you would have passed to
-        # python.withPackages or lua.withPackages
 
-        # get the path to this python environment
-        # in your lua config via
-        # vim.g.python3_host_prog
-        # or run from nvim terminal via :!<packagename>-python3
-        extraPython3Packages = {
-          test = _: [];
-        };
-        # populates $LUA_PATH and $LUA_CPATH
-        extraLuaPackages = {
-          test = [(_: [])];
+            nvim-cmp
+            luasnip
+            friendly-snippets
+            cmp_luasnip
+            cmp-buffer
+            cmp-path
+            cmp-nvim-lua
+            cmp-nvim-lsp
+            cmp-cmdline
+            cmp-nvim-lsp-signature-help
+            cmp-cmdline-history
+            lspkind-nvim
+
+            nvim-treesitter-textobjects
+            nvim-treesitter.withAllGrammars
+
+            dressing-nvim
+
+            comment-nvim
+
+            harpoon
+
+            vim-tmux-navigator
+
+            lualine-nvim
+
+            nvim-tree-lua
+          ];
+
+          lint = with pkgs.vimPlugins; [
+            nvim-lint
+          ];
+
+          debug = with pkgs.vimPlugins; [
+            nvim-dap
+            nvim-dap-ui
+            nvim-dap-virtual-text
+          ];
+
+          format = with pkgs.vimPlugins; [
+            conform-nvim
+          ];
+
+          lsp = with pkgs.vimPlugins; [
+            nvim-lspconfig
+          ];
         };
       };
 
-      # see :help nixCats.flake.outputs.packageDefinitions
       packageDefinitions.replace = {
-        # These are the names of your packages
-        # you can include as many as you wish.
-        myHomeModuleNvim = {pkgs, ...}: {
-          # they contain a settings set defined above
-          # see :help nixCats.flake.outputs.settings
+        nixCats = {pkgs, ...}: {
           settings = {
-            wrapRc = true;
-            # IMPORTANT:
-            # your alias may not conflict with your other packages.
+            unwrappedCfgPath = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/features/terminal/nixCats/dotfiles";
             aliases = ["vim" "homeVim"];
-            # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
           };
-          # and a set of categories that you want
-          # (and other information to pass to lua)
+
           categories = {
             general = true;
-            test = true;
-            example = {
-              youCan = "add more than just booleans";
-              toThisSet = [
-                "and the contents of this categories set"
-                "will be accessible to your lua with"
-                "nixCats('path.to.value')"
-                "see :help nixCats"
-              ];
-            };
+            themer = true;
+            colorscheme = "onedark";
+
+            lint = true;
+            debug = true;
+            format = true;
+            lsp = true;
+
+            go = true;
+            nix = true;
+            elixir = true;
+            lua = true;
           };
         };
       };

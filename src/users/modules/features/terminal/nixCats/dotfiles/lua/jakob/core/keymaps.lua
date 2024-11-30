@@ -9,7 +9,7 @@ keymap.set("n", "<leader>ll", ":Lazy<CR>")
 keymap.set("n", "<leader>mm", ":Mason<cr>")
 
 -- Save and quit
--- keymap.set("n", "<leader>w", vim.cmd.wa)
+keymap.set("n", "<leader>w", vim.cmd.wa)
 keymap.set("n", "<leader>q", vim.cmd.q)
 ------------------
 --

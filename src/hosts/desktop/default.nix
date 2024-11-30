@@ -6,6 +6,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../modules/features/openssh
+    ../modules/features/docker
+    ../modules/features/wireguard
     ../modules/features/flatpak
     ../modules/features/bluetooth
     ../modules/features/system_packages
