@@ -1,12 +1,17 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # Gnome stuff
+    pomodoro-gtk
+    blanket
+
+    nix-index
+    vncdo
+
     wireshark
     traceroute
 
     rnote
     krita
-
-    android-studio
 
     just
 

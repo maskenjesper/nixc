@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ../modules/features/obs
     ../modules/features/openssh
     ../modules/features/docker
     ../modules/features/wireguard
