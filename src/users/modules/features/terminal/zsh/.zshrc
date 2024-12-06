@@ -83,6 +83,17 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# just global
+function ju() {
+    just -g $1
+}
+function jul() {
+    just -gl
+}
+function jus() {
+    just -g sync
+}
+
 # Aliases
 alias ls='ls --color'
 alias nv=nvim

@@ -61,6 +61,7 @@
         };
         modules = [
           ./src/users/${user}
+          ./tasks
         ];
       };
     };

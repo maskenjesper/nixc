@@ -1,7 +1,7 @@
 {
   description = "Flutter 3.13.x";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/23.11";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = {
@@ -17,13 +17,14 @@
           allowUnfree = true;
         };
       };
-      buildToolsVersion = "34.0.0";
-      androidComposition = pkgs.androidenv.composeAndroidPackages {
-        buildToolsVersions = [buildToolsVersion "28.0.3"];
-        platformVersions = ["34" "28"];
-        abiVersions = ["armeabi-v7a" "arm64-v8a"];
-      };
-      androidSdk = androidComposition.androidsdk;
+      # buildToolsVersion = "34.0.0";
+      # androidComposition = pkgs.androidenv.composeAndroidPackages {
+      #   buildToolsVersions = [buildToolsVersion "28.0.3"];
+      #   platformVersions = ["34" "28"];
+      #   abiVersions = ["armeabi-v7a" "arm64-v8a"];
+      # };
+      # androidSdk = androidComposition.androidsdk;
+      androidSdk = pkgs.androidenv.androidPkgs.androidsdk;
     in {
       devShell = with pkgs;
         mkShell rec {

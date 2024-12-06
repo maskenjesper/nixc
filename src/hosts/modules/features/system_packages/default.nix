@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+
   environment.systemPackages = with pkgs; [
     # Gnome stuff
     pomodoro-gtk
@@ -9,6 +10,8 @@
 
     wireshark
     traceroute
+
+    pwvucontrol
 
     rnote
     krita

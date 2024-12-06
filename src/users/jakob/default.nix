@@ -13,7 +13,6 @@
     ../modules/features/terminal/lf
     ../modules/features/terminal/zsh
     ../modules/features/terminal/tmux
-    ../modules/features/terminal/neovim
     ../modules/features/hyprland
     ../modules/features/rofi
     ../modules/features/ags

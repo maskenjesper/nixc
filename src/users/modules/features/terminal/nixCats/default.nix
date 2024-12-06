@@ -126,6 +126,10 @@ in {
             nvim-treesitter-textobjects
             nvim-treesitter.withAllGrammars
 
+            autoclose-nvim
+
+            neoscroll-nvim
+
             dressing-nvim
 
             comment-nvim

@@ -5,11 +5,16 @@ require("lze").load({
 
 	{ import = "jakob.general.lualine" },
 	{ import = "jakob.general.nvim-tree" },
+	{ import = "jakob.general.autoclose" },
 	----------------------------------------------------------------------------------------------------
 	{
 		"dressing.nvim",
 	},
 	----------------------------------------------------------------------------------------------------
+	{
+		"neoscroll.nvim",
+		config = true,
+	},
 
 	{
 		-- Only binding this plugin provides that I need to know is `gc` when in visual mode which comments out the selected text.
