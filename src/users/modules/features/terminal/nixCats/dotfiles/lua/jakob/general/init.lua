@@ -1,11 +1,12 @@
+require("jakob.general.oil")
 require("lze").load({
 	{ import = "jakob.general.telescope" },
 	{ import = "jakob.general.completion" },
 	{ import = "jakob.general.harpoon" },
-
 	{ import = "jakob.general.lualine" },
 	{ import = "jakob.general.nvim-tree" },
 	{ import = "jakob.general.autoclose" },
+	{ import = "jakob.general.which-key" },
 	----------------------------------------------------------------------------------------------------
 	{
 		"dressing.nvim",

@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../modules/features/obs
+    ../modules/features/android_dev
     ../modules/features/openssh
     ../modules/features/docker
     ../modules/features/wireguard

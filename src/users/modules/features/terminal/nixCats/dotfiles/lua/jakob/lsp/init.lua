@@ -6,7 +6,7 @@ servers.lua_ls = {
 		},
 		signatureHelp = { enabled = true },
 		diagnostics = {
-			globals = { "nixCats" },
+			globals = { "nixCats", "vim" },
 			disable = { "missing-fields" },
 		},
 	},
@@ -31,6 +31,8 @@ servers.nixd = {
 	},
 }
 servers.gopls = {}
+
+servers.lspdart = {}
 -- If you integrated with your system flake,
 -- you should pass inputs.self as nixdExtras.flake-path
 -- that way it will ALWAYS work, regardless

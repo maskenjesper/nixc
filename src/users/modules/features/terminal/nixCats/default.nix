@@ -78,11 +78,16 @@ in {
             elixir = [
               elixir-ls
             ];
+
+            dart = [
+              lsp-dart
+            ];
           };
         };
         startupPlugins = {
           general = with pkgs.vimPlugins; [
             lze
+            oil-nvim
             vim-repeat
             plenary-nvim
             nvim-web-devicons
@@ -125,6 +130,8 @@ in {
 
             nvim-treesitter-textobjects
             nvim-treesitter.withAllGrammars
+
+            which-key-nvim
 
             autoclose-nvim
 

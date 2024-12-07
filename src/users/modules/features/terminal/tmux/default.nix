@@ -31,10 +31,14 @@ in {
       }
       tmuxPlugins.better-mouse-mode
       {
-        plugin = tmuxPlugins.gruvbox;
+        plugin = tmuxPlugins.onedark-theme;
         extraConfig = ''
-          set -g @tmux-gruvbox 'dark'
+          set -g @onedark-theme
         '';
+        # plugin = tmuxPlugins.gruvbox;
+        # extraConfig = ''
+        #   set -g @tmux-gruvbox 'dark'
+        # '';
       }
       tmuxPlugins.vim-tmux-navigator
       # {
