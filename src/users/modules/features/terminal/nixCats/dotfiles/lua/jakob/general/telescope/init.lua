@@ -33,7 +33,7 @@ return {
 		local keymap = vim.keymap
 
 		keymap.set("n", "<leader>ff", function()
-			telescope_builtin.find_files({ hidden = true })
+			telescope_builtin.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git'}}) -- use ripgrep (rg), show hidden except .git
 		end, { desc = "Fuzzy find files in cwd" })
 		-- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })

@@ -7,6 +7,7 @@ require("lze").load({
 	{ import = "jakob.general.nvim-tree" },
 	{ import = "jakob.general.autoclose" },
 	{ import = "jakob.general.which-key" },
+	{ import = "jakob.general.treesitter" },
 	----------------------------------------------------------------------------------------------------
 	{
 		"dressing.nvim",

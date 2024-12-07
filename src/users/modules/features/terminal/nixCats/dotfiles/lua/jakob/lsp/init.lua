@@ -30,9 +30,28 @@ servers.nixd = {
 		},
 	},
 }
-servers.gopls = {}
+servers.elixirls = {
+    elixirls = { -- settings
 
-servers.lspdart = {}
+        cmd = {}
+    }
+}
+servers.gopls = {
+    gopls = { -- settings
+
+    }
+}
+
+servers.dartls = {
+    dartls = { -- settings
+
+    }
+}
+
+servers.bashls = {
+    bashls = { -- settings
+    }
+}
 -- If you integrated with your system flake,
 -- you should pass inputs.self as nixdExtras.flake-path
 -- that way it will ALWAYS work, regardless

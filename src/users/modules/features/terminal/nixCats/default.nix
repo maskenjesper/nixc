@@ -168,6 +168,12 @@ in {
             nvim-lspconfig
           ];
         };
+
+        environmentVariables = {
+          elixir = {
+            elixirls = "${pkgs.elixir_ls}/language-server.sh";
+          };
+        };
       };
 
       packageDefinitions.replace = {
@@ -187,10 +193,12 @@ in {
             format = true;
             lsp = true;
 
+            bash = true;
             go = true;
             nix = true;
             elixir = true;
             lua = true;
+            dart = true;
           };
         };
       };
