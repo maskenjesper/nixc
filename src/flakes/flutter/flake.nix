@@ -26,15 +26,14 @@
       # androidSdk = androidComposition.androidsdk;
       androidSdk = pkgs.androidenv.androidPkgs.androidsdk;
     in {
-      devShell = with pkgs;
-        mkShell rec {
-          # this is an env var
-          ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
-          buildInputs = [
-            flutter
-            androidSdk # The customized SDK that we've made above
-            jdk17
-          ];
-        };
+      devShell = pkgs.mkShell {
+        # this is an env var
+        ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
+        buildInputs = with pkgs; [
+          flutter
+          androidSdk # The customized SDK that we've made above
+          jdk17
+        ];
+      };
     });
 }

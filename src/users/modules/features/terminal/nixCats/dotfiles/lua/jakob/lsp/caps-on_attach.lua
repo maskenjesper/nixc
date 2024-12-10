@@ -29,9 +29,9 @@ function M.on_attach(_, bufnr)
 		nmap("<leader>ds", function()
 			require("telescope.builtin").lsp_document_symbols()
 		end, "[D]ocument [S]ymbols")
-		nmap("<leader>ws", function()
-			require("telescope.builtin").lsp_dynamic_workspace_symbols()
-		end, "[W]orkspace [S]ymbols")
+		-- nmap("<leader>ws", function()
+		-- 	require("telescope.builtin").lsp_dynamic_workspace_symbols()
+		-- end, "[W]orkspace [S]ymbols")
 	end -- TODO: someone who knows the builtin versions of these to do instead help me out please.
 
 	nmap("<leader>D", vim.lsp.buf.type_definition, "Type [D]efinition")
@@ -42,11 +42,11 @@ function M.on_attach(_, bufnr)
 
 	-- Lesser used LSP functionality
 	nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-	nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
-	nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
-	nmap("<leader>wl", function()
-		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-	end, "[W]orkspace [L]ist Folders")
+	-- nmap("<leader>wa", vim.lsp.buf.add_workspace_folder, "[W]orkspace [A]dd Folder")
+	-- nmap("<leader>wr", vim.lsp.buf.remove_workspace_folder, "[W]orkspace [R]emove Folder")
+	-- nmap("<leader>wl", function()
+	-- 	print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+	-- end, "[W]orkspace [L]ist Folders")
 
 	-- Create a command `:Format` local to the LSP buffer
 	vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)

@@ -65,12 +65,13 @@ return {
           },
           swap = {
             enable = true,
-            swap_next = {
-              ['<leader>a'] = '@parameter.inner',
-            },
-            swap_previous = {
-              ['<leader>A'] = '@parameter.inner',
-            },
+            -- conflicts with harpoon
+            -- swap_next = {
+            --   ['<leader>a'] = '@parameter.inner',
+            -- },
+            -- swap_previous = {
+            --   ['<leader>A'] = '@parameter.inner',
+            -- },
           },
         },
       }

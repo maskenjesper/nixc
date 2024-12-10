@@ -6,8 +6,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    # Global level development environments
+    ../modules/features/dev_environments
     ../modules/features/obs
-    ../modules/features/android_dev
     ../modules/features/openssh
     ../modules/features/docker
     ../modules/features/wireguard
