@@ -3,8 +3,6 @@
 sudo echo starting
 
 pushd ~/nixc/ || exit
-alejandra . &>/dev/null
-git diff -U0 *.nix
 
 # nix requires all files in the directory to be either commited or staged
 git add --all
