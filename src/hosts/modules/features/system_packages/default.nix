@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     mediawriter
+    usbimager
 
     bash-language-server # temp
 
