@@ -3,8 +3,7 @@
   config,
   ...
 }: {
-
-xdg.configFile."lf/icons".source = ./icons;
+  xdg.configFile."lf/icons".source = ./icons;
 
   programs.lf = {
     enable = true;
@@ -22,30 +21,30 @@ xdg.configFile."lf/icons".source = ./icons;
     };
 
     keybindings = {
-        "\\\"" = "";
-        o = "";
-        c = "mkdir";
-        "." = "set hidden!";
-        "`" = "mark-load";
-        "\\'" = "mark-load";
-        "<enter>" = "open";
+      "\\\"" = "";
+      o = "";
+      c = "mkdir";
+      "." = "set hidden!";
+      "`" = "mark-load";
+      "\\'" = "mark-load";
+      "<enter>" = "open";
 
-        do = "dragon-out";
+      do = "dragon-out";
 
-        "g~" = "cd";
-        gh = "cd";
-        "g/" = "/";
+      "g~" = "cd";
+      gh = "cd";
+      "g/" = "/";
 
-        ee = "editor-open";
-        V = ''''$${pkgs.bat}/bin/bat --paging=always --theme=gruvbox "$f"'';
+      ee = "editor-open";
+      V = ''''$${pkgs.bat}/bin/bat --paging=always --theme=gruvbox "$f"'';
     };
 
     settings = {
-        preview = true;
-        hidden = true;
-        drawbox = true;
-        icons = true;
-        ignorecase = true;
+      preview = true;
+      hidden = true;
+      drawbox = true;
+      icons = true;
+      ignorecase = true;
     };
   };
 }

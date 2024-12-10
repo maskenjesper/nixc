@@ -115,6 +115,8 @@ in {
             telescope-ui-select-nvim
             telescope-nvim
 
+            snacks-nvim
+
             nvim-cmp
             luasnip
             friendly-snippets

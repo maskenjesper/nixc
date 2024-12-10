@@ -2,6 +2,10 @@
 
 sudo echo starting
 
+pushd ~/nixc/ || exit
+alejandra . &>/dev/null
+git diff -U0 *.nix
+
 # nix requires all files in the directory to be either commited or staged
 git add --all
 
@@ -14,9 +18,13 @@ if [[ $? -eq 0 ]]; then
     
     if [[ $? -eq 0 ]]; then
         echo Sync successful 
+        gen=$(nixos-rebuild list-generations | grep current)
+        git commit -m "$gen"
     else
         echo Rebuild failed. Aborting...    
     fi
 else
     echo Home manager failed. Aborting...
 fi
+
+popd || exit

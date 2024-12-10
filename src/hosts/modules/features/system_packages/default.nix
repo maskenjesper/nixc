@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    mediawriter
+
+    bash-language-server # temp
 
     # Gnome stuff
     pomodoro-gtk
