@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    mediawriter
     usbimager
+
+    zed-editor
 
     bash-language-server # temp
 
