@@ -19,11 +19,33 @@
       };
     in
       pkgs.mkShell {
-        packages = with pkgs; [
+        nativeBuildInputs = with pkgs; [
+          zsh
+
+          gtk2
+          gtk3
+          gtk4
+
+          clang
+          cmake
+          ninja
+          pkg-config
+          pcre
+          libepoxy
+
+
+          # jdk11
+          # android-studio
+          # android-tools
+
           flutter
-          androidsdk
+          # androidsdk
           jdk
         ];
+
+        shellHook = ''
+          exec zsh
+        '';
       };
   };
 }
