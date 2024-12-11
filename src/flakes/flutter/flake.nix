@@ -16,35 +16,48 @@
       };
     };
   in {
-    devShells."${system}".default = pkgs.mkShell {
+    devShells."${system}".default = with pkgs;
+      mkShell {
+        packages = [
+          zsh
 
-      packages = with pkgs; [
-        zsh
+          gtk2
+          gtk3
+          gtk4
 
-        gtk2
-        gtk3
-        gtk4
+          clang
+          cmake
+          ninja
+          pkg-config
 
-        clang
-        cmake
-        ninja
-        pkg-config
-        pcre
-        libepoxy
+          pcre
+          libepoxy
 
-        # jdk11
-        # android-studio
-        # android-tools
+          libuuid # for mount.pc
+          xorg.libXdmcp.dev
+          python310Packages.libselinux.dev # for libselinux.pc
+          libsepol.dev
+          libthai.dev
+          libdatrie.dev
+          libxkbcommon.dev
+          dbus.dev
+          at-spi2-core.dev
+          xorg.libXtst.out
+          pcre2.dev
 
-        flutter
-        jdk
+          jdk11
+          andorid-studio
+          android-tools
+        ];
 
-        androidenv.androidPkgs.androidsdk
-      ];
+        LD_LIBRARY_PATH = lib.makeLibraryPath [
+          fontconfig.lib
+          sqlite.out
+        ];
 
-      shellHook = ''
-        exec zsh
-      '';
-    };
+        shellHook = ''
+          exec zsh
+        '';
+      };
   };
 }

@@ -1,5 +1,6 @@
 {
   inputs,
+  user,
   system,
   ...
 }: let
@@ -13,5 +14,11 @@
 in {
   environment.systemPackages = with pkgs; [
     android-studio
+  ];
+
+  programs.adb.enable = true;
+
+  users.users.${user}.extraGroups = [
+    "adbusers"
   ];
 }
