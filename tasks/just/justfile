@@ -8,6 +8,9 @@
 
 devnew:
   cd ~/dev/
+  time=$(timedatectl | grep Local)
+  mkdir $time
+  ~/nixc/src/users/modules/features/terminal/tmux/tmux-sessionizer.sh $time
 
 sync:
   ~/.config/just/sync.sh
