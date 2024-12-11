@@ -7,10 +7,7 @@
 ############################################################################
 
 devnew:
-  cd ~/dev/
-  time=$(timedatectl | grep Local)
-  mkdir $time
-  ~/nixc/src/users/modules/features/terminal/tmux/tmux-sessionizer.sh $time
+  ~/.config/just/devnew.sh
 
 sync:
   ~/.config/just/sync.sh

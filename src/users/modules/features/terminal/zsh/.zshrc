@@ -95,6 +95,7 @@ function jjs() {
 }
 
 # Aliases
+alias dn='just -g devnew'
 alias ls='ls --color'
 alias nv=nvim
 alias tm='tmux attach'

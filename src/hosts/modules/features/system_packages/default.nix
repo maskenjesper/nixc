@@ -35,19 +35,10 @@
     filezilla
     lazygit
 
-    krusader
-    nnn
-    thunderbird
-    ranger
     nautilus
 
     gnome-disk-utility
     udisks
-
-    # Terminal
-    tmux
-    kitty # hyprland default (needed with standard hyprland config
-    zsh
 
     # CLI tools
     ripgrep
