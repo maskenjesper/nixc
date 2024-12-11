@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     # Global level development environments
-    ../modules/features/dev_environments
+    ../modules/features/dev_environment
     ../modules/features/obs
     ../modules/features/openssh
     ../modules/features/docker
