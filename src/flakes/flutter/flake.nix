@@ -1,7 +1,7 @@
 {
   description = "Flutter 3.13.x";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
   };
   outputs = {
     self,
@@ -37,8 +37,9 @@
         # android-tools
 
         flutter
-        # androidsdk
         jdk
+
+        androidenv.androidPkgs.androidsdk
       ];
 
       shellHook = ''
