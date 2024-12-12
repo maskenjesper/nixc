@@ -13,7 +13,7 @@ sync:
   ~/.config/just/sync.sh
 
 deploy:
-  nixos-rebuild switch --flake . --use-remote-sudo
+  nix-shell -p git home-manager --command ~/.config/just/deploy.sh
 
 debug:
   nixos-rebuild switch --flake . --use-remote-sudo --show-trace --verbose
