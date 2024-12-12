@@ -3,7 +3,7 @@
   font-family: "NotoSans", "FontAwesome6Free", "SymbolsNerdFont";
   font-size: 16px;
   /* font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"'; */
-  min-height: 40px;
+  min-height: 15px;
 }
 
 window#waybar {
@@ -16,13 +16,13 @@ window#waybar {
   color: white;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-right: 15px;
+  margin-right: 5px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 #custom-arch {
-  font-size: 26px;
+  font-size: 18px;
   color: white;
 }
 
@@ -33,7 +33,7 @@ window#waybar {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 

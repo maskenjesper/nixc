@@ -2,7 +2,6 @@
   config,
   pkgs,
   inputs,
-  user,
   ...
 }: {
   imports = [
@@ -19,8 +18,8 @@
     ../modules/waybar
   ];
 
-  home.username = "${user}";
-  home.homeDirectory = "/home/${user}";
+  home.username = "jakob";
+  home.homeDirectory = "/home/jakob";
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 

@@ -20,63 +20,30 @@
     home-manager,
     ...
   } @ inputs: let
+    inherit (self) outputs;
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     user = "jakob";
   in {
     nixosConfigurations = {
-      desktop = lib.nixosSystem {
-        system = system;
-        specialArgs = {
-          inherit system;
-          inherit inputs;
-          host = "desktop";
-          inherit user;
-        };
-        modules = [
-          ./src/hosts/desktop
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
-          inputs.stylix.nixosModules.stylix
-        ];
+      # Personal Laptop
+      voyager = lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./src/hosts/voyager];
       };
 
-      exampleIso = lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./src/hosts/isoimage
-        ];
-      };
-
-      laptop = lib.nixosSystem {
-        system = system;
-        specialArgs = {
-          inherit system;
-          inherit inputs;
-          host = "laptop";
-          inherit user;
-        };
-        modules = [
-          ./src/hosts/laptop
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
-          inputs.stylix.nixosModules.stylix
-        ];
+      # Home desktop
+      bettan = lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./src/hosts/bettan];
       };
     };
     homeConfigurations = {
-      ${user} = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-        extraSpecialArgs = {
-          inherit inputs;
-          host = "laptop";
-          inherit user;
-        };
-        modules = [
-          ./src/users/${user}
-          ./tasks
-        ];
+      jakob = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs user;};
+        modules = [./src/users/jakob ./tasks];
       };
     };
   };
