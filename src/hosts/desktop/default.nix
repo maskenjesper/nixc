@@ -7,23 +7,23 @@
   imports = [
     ./hardware-configuration.nix
     # Global level development environments
-    ../modules/features/dev_environment
-    ../modules/features/obs
-    ../modules/features/openssh
-    ../modules/features/docker
-    ../modules/features/wireguard
-    ../modules/features/flatpak
-    ../modules/features/bluetooth
-    ../modules/features/system_packages
-    ../modules/features/gaming
-    ../modules/features/stylix
-    ../modules/features/desktop_environment/wallpaper
-    ../modules/features/xremap
-    ../modules/features/virtualization
-    ../modules/features/desktop_environment/window_manager/hyprland
-    ../modules/features/programming
-    ../modules/features/fonts
-    ../modules/features/fhs_env
+    ./modules/features/dev_environment
+    ./modules/features/obs
+    ./modules/features/openssh
+    ./modules/features/docker
+    ./modules/features/wireguard
+    ./modules/features/flatpak
+    ./modules/features/bluetooth
+    ./modules/features/system_packages
+    ./modules/features/gaming
+    ./modules/features/stylix
+    ./modules/features/desktop_environment/wallpaper
+    ./modules/features/xremap
+    ./modules/features/virtualization
+    ./modules/features/desktop_environment/window_manager/hyprland
+    ./modules/features/programming
+    ./modules/features/fonts
+    ./modules/features/fhs_env
   ];
 
   # Bootloader.
