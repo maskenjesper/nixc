@@ -4,7 +4,7 @@
         "include": [
             "~/.config/waybar/default-modules.jsonc"
         ],
-        "output": "DP-3",
+        "output": "eDP-1",
         "modules-left": ["custom/arch", "hyprland/workspaces"],
         "modules-center": ["hyprland/window"],
         "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock"]
@@ -14,7 +14,7 @@
         "include": [
             "~/.config/waybar/default-modules.jsonc"
         ],
-        "output": "!DP-3",
+        "output": "!eDP-1",
         "modules-left": ["hyprland/workspaces"],
         "modules-center": ["hyprland/window"],
         "modules-right": []

@@ -47,21 +47,21 @@
           ./src/hosts/isoimage
         ];
       };
-      
+
       laptop = lib.nixosSystem {
-	      system = system;
-		specialArgs = {
-		  inherit system;
-		  inherit inputs;
-		  host = "laptop";
-		  inherit user;
-		};
-		modules = [
-		  ./src/hosts/laptop
-		  {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
-		  inputs.stylix.nixosModules.stylix
-		];
-	};
+        system = system;
+        specialArgs = {
+          inherit system;
+          inherit inputs;
+          host = "laptop";
+          inherit user;
+        };
+        modules = [
+          ./src/hosts/laptop
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+          inputs.stylix.nixosModules.stylix
+        ];
+      };
     };
     homeConfigurations = {
       ${user} = home-manager.lib.homeManagerConfiguration {
