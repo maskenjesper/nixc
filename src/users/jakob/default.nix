@@ -6,17 +6,17 @@
   ...
 }: {
   imports = [
-    ../modules/features/terminal/nixCats
-    ../modules/features/git
-    ../modules/features/desktop_apps
-    ../modules/features/terminal/kitty
-    ../modules/features/terminal/lf
-    ../modules/features/terminal/zsh
-    ../modules/features/terminal/tmux
-    ../modules/features/hyprland
-    ../modules/features/rofi
-    ../modules/features/ags
-    ../modules/features/waybar
+    ../modules/terminal/nixCats
+    ../modules/git
+    ../modules/desktop_apps
+    ../modules/terminal/kitty
+    ../modules/terminal/lf
+    ../modules/terminal/zsh
+    ../modules/terminal/tmux
+    ../modules/hyprland
+    ../modules/rofi
+    ../modules/ags
+    ../modules/waybar
   ];
 
   home.username = "${user}";

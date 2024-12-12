@@ -17,7 +17,7 @@
     };
 in {
   home.file.".scripts/tmux-sessionizer.sh" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/features/terminal/tmux/tmux-sessionizer.sh";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/terminal/tmux/tmux-sessionizer.sh";
   };
 
   programs.tmux = {
