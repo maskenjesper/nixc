@@ -18,7 +18,7 @@
   in {
     devShells."${system}".default = with pkgs;
       mkShell {
-        packages = [
+        nativeBuildInputs = [
           zsh
 
           gtk2
@@ -35,7 +35,6 @@
 
           libuuid # for mount.pc
           xorg.libXdmcp.dev
-          python310Packages.libselinux.dev # for libselinux.pc
           libsepol.dev
           libthai.dev
           libdatrie.dev
@@ -46,7 +45,7 @@
           pcre2.dev
 
           jdk11
-          andorid-studio
+          android-studio
           android-tools
         ];
 
