@@ -49,6 +49,24 @@ in {
             universal-ctags
             ripgrep
             fd
+
+            gopls
+            gotools
+            go-tools
+            gccgo
+
+            bash-language-server
+            shfmt
+
+            nix-doc
+            nixd
+            alejandra
+
+            lua-language-server
+            stylua
+
+            elixir-ls
+
           ];
 
           langs = with pkgs; {
