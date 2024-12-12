@@ -23,20 +23,19 @@
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    host = "desktop";
     user = "jakob";
   in {
     nixosConfigurations = {
-      ${host} = lib.nixosSystem {
+      desktop = lib.nixosSystem {
         system = system;
         specialArgs = {
           inherit system;
           inherit inputs;
-          inherit host;
+          host = "desktop";
           inherit user;
         };
         modules = [
-          ./src/hosts/${host}
+          ./src/hosts/desktop
           {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           inputs.stylix.nixosModules.stylix
         ];
@@ -48,6 +47,21 @@
           ./src/hosts/isoimage
         ];
       };
+      
+      laptop = lib.nixosSystem {
+	      system = system;
+		specialArgs = {
+		  inherit system;
+		  inherit inputs;
+		  host = "laptop";
+		  inherit user;
+		};
+		modules = [
+		  ./src/hosts/laptop
+		  {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+		  inputs.stylix.nixosModules.stylix
+		];
+	};
     };
     homeConfigurations = {
       ${user} = home-manager.lib.homeManagerConfiguration {
@@ -56,7 +70,7 @@
         };
         extraSpecialArgs = {
           inherit inputs;
-          inherit host;
+          host = "laptop";
           inherit user;
         };
         modules = [

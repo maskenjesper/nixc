@@ -1,13 +1,13 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    kicad
+    #kicad
 
     killall
     usbimager
 
-    zed-editor
+    #zed-editor
 
-    bash-language-server # temp
+    #bash-language-server # temp
 
     # Gnome stuff
     pomodoro-gtk
@@ -28,11 +28,11 @@
 
     baobab # gnome only?
 
-    lyx
+    #lyx
 
     libsForQt5.qt5ct
 
-    filezilla
+    #filezilla
     lazygit
 
     nautilus
