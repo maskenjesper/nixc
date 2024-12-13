@@ -5,18 +5,18 @@
   ...
 }: {
   imports = [
-    ../modules/terminal/nixCats
-    ../modules/git
-    ../modules/desktop_apps
-    ../modules/terminal/kitty
-    ../modules/terminal/lf
-    ../modules/terminal/zsh
-    ../modules/terminal/fish
-    ../modules/terminal/tmux
-    ../modules/hyprland
-    ../modules/rofi
-    ../modules/ags
-    ../modules/waybar
+    ../home_manager_modules/terminal/nixCats
+    ../home_manager_modules/git
+    ../home_manager_modules/desktop_apps
+    ../home_manager_modules/terminal/kitty
+    ../home_manager_modules/terminal/lf
+    ../home_manager_modules/terminal/zsh
+    ../home_manager_modules/terminal/fish
+    ../home_manager_modules/terminal/tmux
+    ../home_manager_modules/hyprland
+    ../home_manager_modules/rofi
+    ../home_manager_modules/ags
+    ../home_manager_modules/waybar
   ];
 
   home.username = "jakob";
