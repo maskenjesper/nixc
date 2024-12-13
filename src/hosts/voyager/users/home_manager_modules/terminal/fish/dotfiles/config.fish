@@ -1,8 +1,8 @@
-if "$(tty)" =~ ^/dev/tty.* 
-    if uwsm check may-start && uwsm select 
-        exec systemd-cat -t uwsm_start uwsm start default
-    end 
-end
+#if "$(tty)" =~ ^/dev/tty.* 
+#    if uwsm check may-start && uwsm select 
+#        exec systemd-cat -t uwsm_start uwsm start default
+#    end 
+#end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
