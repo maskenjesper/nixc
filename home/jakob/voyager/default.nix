@@ -15,7 +15,6 @@
     ../common/features/terminal/tmux
     ../common/features/hyprland
     ../common/features/rofi
-    ../common/features/ags
     ../common/features/waybar
   ];
 

@@ -8,8 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xremap-flake.url = "github:xremap/nix-flake";
-    ags.url = "github:Aylur/ags";
-    stylix.url = "github:danth/stylix";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
   };
 
