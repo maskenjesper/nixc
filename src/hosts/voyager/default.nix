@@ -18,9 +18,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  environment.shells = with pkgs; [zsh];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  environment.shells = with pkgs; [fish];
+  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
 
   networking.hostName = "voyager"; # Define your hostname.
 
