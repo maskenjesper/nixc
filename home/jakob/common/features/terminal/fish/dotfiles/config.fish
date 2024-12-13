@@ -42,3 +42,4 @@ alias tk='tmux kill-server'
 alias ti='tmux new -s home'
 alias cls=clear
 alias uwu='systemd-cat -t uwsm_start uwsm start default'
+alias lg='lazygit'
