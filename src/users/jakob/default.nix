@@ -10,7 +10,7 @@
     ../modules/desktop_apps
     ../modules/terminal/kitty
     ../modules/terminal/lf
-    #../modules/terminal/zsh
+    ../modules/terminal/zsh
     ../modules/terminal/fish
     ../modules/terminal/tmux
     ../modules/hyprland
