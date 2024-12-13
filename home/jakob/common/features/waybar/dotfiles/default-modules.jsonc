@@ -1,0 +1,69 @@
+{
+    "custom/arch": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "hyprland/workspaces": {
+      "format": "<span color='white'>{name}</span>",
+      "format": "<span color='white'>{icon}</span>",
+      "tooltip": false,
+      "all-outputs": false,
+      "format-icons": {
+        "active": ""
+      }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+      "format": "<span color='white'> </span> {:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='white'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+      "format": "<span color='white'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+    },
+    "bluetooth": {
+      "format": "<span color='white'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='white'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "format": "{ifname}",
+      "format-wifi": "<span color='white'> </span>{essid}",
+      "format-ethernet": "Wired Connection",
+      "format-disconnected": "<span color='white'>󰖪 </span>No Network",
+      "tooltip": false,
+    },
+    "battery": {
+      "format": "<span color='white'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='white'></span> {capacity}%",
+      "tooltip": false,
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+    }
+}
+}

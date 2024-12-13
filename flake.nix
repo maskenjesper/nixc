@@ -16,37 +16,55 @@
 
   outputs = {
     self,
+    nixpkgs,
+    home-manager,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    lib = inputs.nixpkgs.lib;
-    system = "x86_64-linux";
-    pkgs = inputs.nixpkgs.legacyPackages.${system};
-    user = "jakob";
+    lib = nixpkgs.lib // home-manager.lib;
+    systems = ["x86_64-linux"];
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs systems (
+      system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+    );
   in {
+    inherit lib;
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./moduels/home-manager;
+
+    overlays = import ./overlays {inherit inputs outputs;};
+
+    packages = forEachSystem (pkgs: import ./pkgs {inherit pkgs;});
+    devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
+
     nixosConfigurations = {
       # Personal Laptop
       voyager = lib.nixosSystem {
+        modules = [./hosts/voyager];
         specialArgs = {inherit inputs outputs;};
-        modules = [./src/hosts/voyager];
       };
 
       # Home desktop
       bettan = lib.nixosSystem {
+        modules = [./hosts/bettan];
         specialArgs = {inherit inputs outputs;};
-        modules = [./src/hosts/bettan];
       };
     };
     homeConfigurations = {
       "jakob@voyager" = inputs.home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {inherit inputs user;};
-        modules = [./src/hosts/voyager/users/jakob ./tasks];
+        modules = [./home/jakob/voyager ./tasks];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
       };
       "jakob@bettan" = inputs.home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = {inherit inputs user;};
-        modules = [./src/hosts/bettan/users/jakob ./tasks];
+        modules = [./home/jakob/bettan ./tasks];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
       };
     };
   };
