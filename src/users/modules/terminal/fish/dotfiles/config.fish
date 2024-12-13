@@ -14,15 +14,25 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
 end
 
 bind \ce '~/.scripts/tmux-sessionizer.sh'
-bind \cn 'nvim .'
-alias 'f=~/.scripts/tmux-sessionizer.sh'
-alias 'naut=nautilus $(pwd)'
-alias 'thun=thunar'
+bind \cn 'vim .'
+
+# just global
+function jj
+    just -g $1
+end
+function jjl
+    just -gl
+end
+function jjs
+    just -g sync
+end
+
+# Aliases
+alias dn='just -g devnew'
+alias ls='ls --color'
 alias nv=nvim
-alias neo="neovidecloseterminal"
-alias gis='git status'
-alias gia='git add --all'
 alias tm='tmux attach'
 alias tk='tmux kill-server'
 alias ti='tmux new -s home'
 alias cls=clear
+alias uwu='systemd-cat -t uwsm_start uwsm start default'
