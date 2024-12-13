@@ -7,23 +7,23 @@
   imports = [
     ./hardware-configuration.nix
     # Global level development environments
-    ./modules/features/dev_environment
-    ./modules/features/obs
-    ./modules/features/openssh
-    ./modules/features/docker
-    ./modules/features/wireguard
-    ./modules/features/flatpak
-    ./modules/features/bluetooth
-    ./modules/features/system_packages
-    ./modules/features/gaming
-    ./modules/features/stylix
-    ./modules/features/desktop_environment/wallpaper
-    ./modules/features/xremap
-    ./modules/features/virtualization
-    ./modules/features/desktop_environment/window_manager/hyprland
-    ./modules/features/programming
-    ./modules/features/fonts
-    ./modules/features/fhs_env
+    ../nixos_modules/features/dev_environment
+    ../nixos_modules/features/obs
+    ../nixos_modules/features/openssh
+    ../nixos_modules/features/docker
+    ../nixos_modules/features/wireguard
+    ../nixos_modules/features/flatpak
+    ../nixos_modules/features/bluetooth
+    ../nixos_modules/features/system_packages
+    ../nixos_modules/features/gaming
+    ../nixos_modules/features/stylix
+    ../nixos_modules/features/desktop_environment/wallpaper
+    ../nixos_modules/features/xremap
+    ../nixos_modules/features/virtualization
+    ../nixos_modules/features/desktop_environment/window_manager/hyprland
+    ../nixos_modules/features/programming
+    ../nixos_modules/features/fonts
+    ../nixos_modules/features/fhs_env
   ];
 
   # Bootloader.

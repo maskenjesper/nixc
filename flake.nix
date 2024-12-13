@@ -40,10 +40,15 @@
       };
     };
     homeConfigurations = {
-      jakob = home-manager.lib.homeManagerConfiguration {
+      "jakob@voyager" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs user;};
-        modules = [./src/users/jakob ./tasks];
+        modules = [./src/hosts/voyager/users/jakob ./tasks];
+      };
+      "jakob@bettan" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = {inherit inputs user;};
+        modules = [./src/hosts/bettan/users/jakob ./tasks];
       };
     };
   };

@@ -6,12 +6,12 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/bluetooth
-    ./modules/system_packages
-    ./modules/desktop_environment/wallpaper
-    ./modules/xremap
-    ./modules/desktop_environment/window_manager/hyprland
-    ./modules/fonts
+    ../nixos_modules/bluetooth
+    ../nixos_modules/system_packages
+    ../nixos_modules/desktop_environment/wallpaper
+    ../nixos_modules/xremap
+    ../nixos_modules/desktop_environment/window_manager/hyprland
+    ../nixos_modules/fonts
   ];
 
   # Bootloader.
