@@ -5,7 +5,7 @@
   ...
 }: {
   home.file.".config/fish" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/fish/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/users/modules/terminal/fish/dotfiles";
     recursive = true;
   };
 }
