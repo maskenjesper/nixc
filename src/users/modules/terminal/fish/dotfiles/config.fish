@@ -4,11 +4,6 @@ end
 
 set -U fish_greeting ""
 
-function neovidecloseterminal
-    neovide $argv
-    exit
-end
-
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
     if test "$argv" = !!
         echo sudo $history[1]
