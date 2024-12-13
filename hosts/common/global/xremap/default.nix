@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.xremap-flake.nixosModules.default
+    inputs.xremap.nixosModules.default
   ];
 
   services.xremap = {
