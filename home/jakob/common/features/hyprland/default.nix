@@ -7,7 +7,7 @@
     # TODO: Get working. Still makes symlink to store
     # Dafuq? It seems to be working anyhow
     # Sadly, the line below forces this repository to be placed directly under the users home and have the name nixc. I can live with this however.
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/hosts/voyager/users/home_manager_modules/hyprland/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/home/jakob/common/features/hyprland/dotfiles";
     recursive = true;
   };
 

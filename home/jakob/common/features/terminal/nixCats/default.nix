@@ -201,7 +201,7 @@ in {
       packageDefinitions.replace = {
         nixCats = {pkgs, ...}: {
           settings = {
-            unwrappedCfgPath = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/hosts/voyager/users/home_manager_modules/terminal/nixCats/dotfiles";
+            unwrappedCfgPath = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
             aliases = ["vim" "homeVim"];
           };
 

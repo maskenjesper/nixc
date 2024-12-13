@@ -4,7 +4,7 @@
   ...
 }: {
   home.file.".config/rofi" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/src/hosts/voyager/users/home_manager_modules/rofi/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/home/jakob/common/features/rofi/dotfiles";
     recursive = true;
   };
 }
