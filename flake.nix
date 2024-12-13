@@ -9,7 +9,6 @@
     };
     xremap-flake.url = "github:xremap/nix-flake";
     ags.url = "github:Aylur/ags";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     stylix.url = "github:danth/stylix";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
   };
