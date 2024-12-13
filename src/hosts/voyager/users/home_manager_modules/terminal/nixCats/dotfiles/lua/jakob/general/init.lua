@@ -1,4 +1,5 @@
 require("jakob.general.oil")
+
 require("lze").load({
 	{ import = "jakob.general.telescope" },
 	{ import = "jakob.general.completion" },
@@ -10,9 +11,9 @@ require("lze").load({
 	{ import = "jakob.general.treesitter" },
 	{ import = "jakob.general.snacks" },
 	----------------------------------------------------------------------------------------------------
-	{
-		"dressing.nvim",
-	},
+	{ "markview.nvim" },
+	{ "dressing.nvim", },
+	{ "vim-tmux-navigator", },
 	----------------------------------------------------------------------------------------------------
 	{
 		"neoscroll.nvim",
@@ -24,8 +25,5 @@ require("lze").load({
 		"Comment.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		config = true, -- runs require('Comment').setup()
-	},
-	{
-		"vim-tmux-navigator",
 	},
 })

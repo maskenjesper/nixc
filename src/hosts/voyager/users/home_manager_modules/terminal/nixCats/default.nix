@@ -109,6 +109,7 @@ in {
             vim-repeat
             plenary-nvim
             nvim-web-devicons
+            markview-nvim
           ];
 
           themer = with pkgs.vimPlugins; [
@@ -129,6 +130,7 @@ in {
 
         optionalPlugins = {
           general = with pkgs.vimPlugins; [
+
             telescope-fzf-native-nvim
             telescope-ui-select-nvim
             telescope-nvim

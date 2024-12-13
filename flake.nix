@@ -16,14 +16,12 @@
 
   outputs = {
     self,
-    nixpkgs,
-    home-manager,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    lib = nixpkgs.lib;
+    lib = inputs.nixpkgs.lib;
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = inputs.nixpkgs.legacyPackages.${system};
     user = "jakob";
   in {
     nixosConfigurations = {
@@ -40,12 +38,12 @@
       };
     };
     homeConfigurations = {
-      "jakob@voyager" = home-manager.lib.homeManagerConfiguration {
+      "jakob@voyager" = inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs user;};
         modules = [./src/hosts/voyager/users/jakob ./tasks];
       };
-      "jakob@bettan" = home-manager.lib.homeManagerConfiguration {
+      "jakob@bettan" = inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = {inherit inputs user;};
         modules = [./src/hosts/bettan/users/jakob ./tasks];
