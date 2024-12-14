@@ -12,6 +12,12 @@ devnew:
 sync:
   ~/.config/just/sync.sh
 
+nixos:
+  sudo nixos-rebuild switch --flake . --show-trace -L -v 
+
+home:
+  home-manager switch --impure --flake . -b backup --show-trace -L -v
+
 deploy:
   nix-shell -p git home-manager --command ~/.config/just/deploy.sh
 
