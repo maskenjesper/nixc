@@ -8,4 +8,5 @@
       pkgs.home-manager
     ];
   };
+  programs.fish.enable = true;
 }
