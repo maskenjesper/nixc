@@ -16,6 +16,7 @@
     ../common/features/hyprland
     ../common/features/rofi
     ../common/features/waybar
+    ../common/features/desktop/common/wayland/wofi
   ];
 
   home.username = "jakob";

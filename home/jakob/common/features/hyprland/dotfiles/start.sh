@@ -17,6 +17,3 @@ swaync &
 # idling
 hypridle &
 
-# bar
-sleep 5
-waybar &
