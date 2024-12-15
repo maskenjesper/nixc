@@ -8,6 +8,7 @@
     ../common/global
     ../common/features/terminal/nixCats
     ../common/features/git
+    ../common/features/git/gh
     ../common/features/desktop_apps
     ../common/features/terminal/kitty
     ../common/features/terminal/lf
@@ -32,7 +33,6 @@
     htop
     killall
     playerctl
-    gh
     neofetch
 
     # GUI utilities
