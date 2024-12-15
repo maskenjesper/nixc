@@ -19,31 +19,18 @@
   environment.systemPackages = with pkgs; [
     #kicad
 
-
-
     nix-index
     vncdo
-
-
-
-
 
     libsForQt5.qt5ct
 
     lazygit
-
-
 
     # CLI tools
     ripgrep
     zoxide
     fzf
 
-    # Misc
-    playerctl
-    networkmanagerapplet
-    gh # github cli
-    neofetch
 
     # User applications
   ];

@@ -31,6 +31,9 @@
     # CLI utilities
     htop
     killall
+    playerctl
+    gh
+    neofetch
 
     # GUI utilities
     nautilus
@@ -49,6 +52,7 @@
     # Networking
     wireshark
     traceroute 
+    networkmanagerapplet
 
     # Productivity
     pomodoro-gtk

@@ -62,7 +62,6 @@
     # Misc
     playerctl
     networkmanagerapplet
-    gh # github cli
     neofetch
 
     # User applications
