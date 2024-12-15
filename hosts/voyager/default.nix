@@ -19,36 +19,20 @@
   environment.systemPackages = with pkgs; [
     #kicad
 
-    killall
-    usbimager
 
-    # Gnome stuff
-    pomodoro-gtk
-    blanket
 
     nix-index
     vncdo
 
-    wireshark
-    traceroute
 
-    pwvucontrol
 
-    rnote
-    krita
 
-    just
-
-    baobab # gnome only?
 
     libsForQt5.qt5ct
 
     lazygit
 
-    nautilus
 
-    gnome-disk-utility
-    udisks
 
     # CLI tools
     ripgrep
