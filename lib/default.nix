@@ -1,4 +1,4 @@
 # own library of utilities
 {
-  test = "hello";
+  currentDir = builtins.toString ./.;
 }
