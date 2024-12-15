@@ -1,11 +1,10 @@
 {
   pkgs,
   config,
-  outputs,
   ...
 }: {
   home.file.".config/just" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${outputs.customLib.currentDir}/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/tasks/dotfiles";
     recursive = true;
   };
 
