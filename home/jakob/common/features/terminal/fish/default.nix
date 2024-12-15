@@ -1,11 +1,10 @@
 {
   pkgs,
   config,
-  outputs,
   ...
 }: {
   home.file.".config/fish" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${outputs.customLib.currentDir}/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${builtins.toString ./.}/dotfiles";
     recursive = true;
   };
 
