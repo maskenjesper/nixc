@@ -13,6 +13,7 @@
   networking.hostName = "voyager"; # Define your hostname.
 
   ####### define options values here ########
+  global.xremap.users = ["jakob"];
 
   ###########################################
 
