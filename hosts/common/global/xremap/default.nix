@@ -11,6 +11,7 @@ in {
     inputs.xremap.nixosModules.default
   ];
 
+  # TODO: Refine this concept. Declare default true option for every global module.
   options.global.xremap = {
     enable = lib.mkOption {
       type = lib.types.bool;
@@ -18,11 +19,16 @@ in {
       example = true;
       description = "Whether to enable this cool module.";
     };
+    users = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [];
+      example = ["username1" "username2"];
+      description = "Users of this host.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
     services.xremap = {
-      userName = "jakob";
       withWlroots = true;
       watch = true;
       yamlConfig = ''
@@ -37,7 +43,7 @@ in {
       '';
     };
     hardware.uinput.enable = true;
-    users.groups.uinput.members = ["jakob"];
-    users.groups.input.members = ["jakob"];
+    users.groups.uinput.members = cfg.users;
+    users.groups.input.members = cfg.users;
   };
 }
