@@ -47,8 +47,8 @@
       };
 
       # Home desktop
-      bettan = lib.nixosSystem {
-        modules = [./hosts/bettan];
+      tellus = lib.nixosSystem {
+        modules = [./hosts/tellus];
         specialArgs = {inherit inputs outputs;};
       };
     };
@@ -58,8 +58,8 @@
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };
-      "jakob@bettan" = inputs.home-manager.lib.homeManagerConfiguration {
-        modules = [./home/jakob/bettan ./tasks];
+      "jakob@tellus" = inputs.home-manager.lib.homeManagerConfiguration {
+        modules = [./home/jakob/tellus ./tasks];
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };

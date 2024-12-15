@@ -7,7 +7,7 @@
     # import optional modules
   ];
 
-  networking.hostName = "bettan"; # Define your hostname.
+  networking.hostName = "tellus"; # Define your hostname.
 
   ####### define options values here ########
 
