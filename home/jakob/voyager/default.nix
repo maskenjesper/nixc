@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ../common/global
     ../common/features/terminal/nixCats
     ../common/features/git
     ../common/features/desktop_apps
@@ -22,16 +23,11 @@
   home.username = "jakob";
   home.homeDirectory = "/home/jakob";
 
-  home.stateVersion = "24.05"; # Please read the comment before changing.
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnfreePredicate = _: true;
-  };
-
   home.packages = with pkgs; [
     anki-bin
   ];
+
+  home.stateVersion = "24.05"; # Please read the comment before changing.
 
   programs.home-manager.enable = true;
 }
