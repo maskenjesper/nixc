@@ -25,6 +25,7 @@
 
   home.packages = with pkgs; [
     anki-bin
+    galculator
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
