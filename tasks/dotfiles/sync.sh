@@ -12,7 +12,7 @@ home-manager switch --impure --flake . -b backup --show-trace -L -v
 
 if [[ $? -eq 0 ]]; then
     echo ====================== Running nixos-rebuild ======================
-    sudo nixos-rebuild switch --flake . --show-trace -L -v 
+    sudo nixos-rebuild switch --impure --flake . --show-trace -L -v 
     
     if [[ $? -eq 0 ]]; then
         echo Sync successful 
