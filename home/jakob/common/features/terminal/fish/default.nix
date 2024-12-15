@@ -5,7 +5,7 @@
   ...
 }: {
   home.file.".config/fish" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${outputs.customLib.currentDir}/nixc/home/jakob/common/features/terminal/fish/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${outputs.customLib.currentDir}/dotfiles";
     recursive = true;
   };
 
