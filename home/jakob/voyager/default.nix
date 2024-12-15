@@ -34,7 +34,7 @@
 
     # GUI utilities
     nautilus
-     usbimager
+    usbimager
     galculator
     gnome-disk-utility
     udisks
@@ -44,7 +44,7 @@
     # Drawing
     rnote
     krita
-    #sweethome3d
+    sweethome3d.application
 
     # Networking
     wireshark
