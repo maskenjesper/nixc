@@ -9,7 +9,6 @@
     ../common/features/terminal/nixCats
     ../common/features/git
     ../common/features/git/gh
-    ../common/features/desktop_apps
     ../common/features/terminal/kitty
     ../common/features/terminal/lf
     ../common/features/terminal/zsh
@@ -43,6 +42,22 @@
     udisks
     baobab
     pwvucontrol
+    _1password-gui
+    gucharmap
+
+    # Messaging
+    discord
+    telegram-desktop
+
+    # Browsers
+    brave
+    vivaldi
+
+    # Music
+    spotify
+
+    # Notes
+    obsidian
 
     # Drawing
     rnote
@@ -51,7 +66,7 @@
 
     # Networking
     wireshark
-    traceroute 
+    traceroute
     networkmanagerapplet
 
     # Productivity
