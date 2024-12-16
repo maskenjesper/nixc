@@ -68,6 +68,7 @@
     rnote
     krita
     sweethome3d.application
+    kicad
 
     # Networking
     wireshark
