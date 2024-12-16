@@ -25,17 +25,15 @@
 
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
-
-# Trying out
-libreoffice
-vlc
-gimp
-shotcut
-audacity
-filezilla
-thunderbird
-keepass
-
+    # Trying out
+    libreoffice
+    vlc
+    gimp
+    shotcut
+    audacity
+    filezilla
+    thunderbird
+    keepass
 
     # Studies
     anki-bin
