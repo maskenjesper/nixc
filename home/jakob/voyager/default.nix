@@ -42,7 +42,6 @@
     udisks
     baobab
     pwvucontrol
-    _1password-gui
     gucharmap
 
     # Messaging
@@ -53,6 +52,7 @@
     # Browsers
     brave
     vivaldi
+    qutebrowser
 
     # Music
     spotify

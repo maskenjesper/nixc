@@ -9,4 +9,9 @@
     ];
   };
   programs.fish.enable = true;
+
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = ["jakob"];
+  };
 }
