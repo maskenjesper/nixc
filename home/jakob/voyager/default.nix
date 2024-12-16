@@ -33,6 +33,7 @@
     killall
     playerctl
     neofetch
+    lm_sensors
 
     # GUI utilities
     nautilus
