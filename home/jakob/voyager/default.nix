@@ -48,6 +48,7 @@
     # Messaging
     discord
     telegram-desktop
+    element-desktop
 
     # Browsers
     brave
