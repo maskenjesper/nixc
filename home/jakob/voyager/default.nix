@@ -34,8 +34,11 @@
     playerctl
     neofetch
     lm_sensors
+    hddtemp
 
     # GUI utilities
+    resources
+    monitorets
     nautilus
     usbimager
     galculator
