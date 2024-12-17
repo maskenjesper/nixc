@@ -52,6 +52,8 @@ in {
           zoxide
           fzf
 
+          fish-lsp
+
           gopls
           gotools
           go-tools
