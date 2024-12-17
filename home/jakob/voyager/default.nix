@@ -34,11 +34,12 @@
     filezilla
     thunderbird
     keepassxc
-    logisim-evolution
-    mars-mips
+    arduino-ide
 
     # Studies
     anki-bin
+    mars-mips
+    logisim-evolution
 
     # CLI utilities
     htop
