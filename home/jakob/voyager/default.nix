@@ -28,7 +28,6 @@
     # Trying out
     libreoffice
     vlc
-    gimp
     shotcut
     audacity
     filezilla
@@ -65,9 +64,7 @@
     telegram-desktop
 
     # Browsers
-    brave
     vivaldi
-    qutebrowser
 
     # Music
     spotify
@@ -80,6 +77,7 @@
     krita
     sweethome3d.application
     kicad
+    gimp
 
     # Networking
     wireshark
