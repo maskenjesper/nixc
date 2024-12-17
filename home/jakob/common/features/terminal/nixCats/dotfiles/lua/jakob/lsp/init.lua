@@ -31,26 +31,28 @@ servers.nixd = {
 	},
 }
 servers.elixirls = {
-    elixirls = { -- settings
+	elixirls = { -- settings
 
-        cmd = {}
-    }
+		cmd = {},
+	},
 }
 servers.gopls = {
-    gopls = { -- settings
-
-    }
+	gopls = { -- settings
+	},
 }
 
 servers.dartls = {
-    dartls = { -- settings
-
-    }
+	dartls = { -- settings
+	},
 }
 
 servers.bashls = {
-    bashls = { -- settings
-    }
+	bashls = { -- settings
+	},
+}
+
+servers.fish_lsp = {
+	fish_lsp = {},
 }
 -- If you integrated with your system flake,
 -- you should pass inputs.self as nixdExtras.flake-path
