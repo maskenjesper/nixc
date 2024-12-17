@@ -1,14 +1,13 @@
-#if "$(tty)" =~ ^/dev/tty.* 
-#    if uwsm check may-start && uwsm select 
+#if status is-login
+#    if uwsm check may-start && uwsm select
 #        exec systemd-cat -t uwsm_start uwsm start default
-#    end 
+#    end
 #end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    #set -U fish_greeting "Hello"
 end
-
-set -U fish_greeting ""
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
     if test "$argv" = !!
