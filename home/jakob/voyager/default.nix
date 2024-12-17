@@ -33,7 +33,7 @@
     audacity
     filezilla
     thunderbird
-    keepass
+    keepassxc
 
     # Studies
     anki-bin
@@ -48,7 +48,6 @@
 
     # GUI utilities
     resources
-    monitorets
     nautilus
     usbimager
     galculator
@@ -61,7 +60,6 @@
     # Messaging
     discord
     telegram-desktop
-    element-desktop
 
     # Browsers
     brave
