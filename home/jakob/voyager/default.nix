@@ -34,7 +34,8 @@
     filezilla
     thunderbird
     keepassxc
-    sublime
+    logisim-evolution
+    mars-mips
 
     # Studies
     anki-bin
