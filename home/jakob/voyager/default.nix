@@ -34,6 +34,7 @@
     filezilla
     thunderbird
     keepassxc
+    sublime
 
     # Studies
     anki-bin
