@@ -9,9 +9,9 @@
   stylix = {
     enable = true;
 
-    polarity = "light";
+    polarity = "dark";
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord-light.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
     cursor = {
       package = pkgs.bibata-cursors;
