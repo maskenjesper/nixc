@@ -36,6 +36,9 @@
     keepassxc
     arduino-ide
 
+# Dev
+dbeaver-bin
+
     # Studies
     anki-bin
     mars-mips
