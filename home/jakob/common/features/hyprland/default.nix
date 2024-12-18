@@ -11,44 +11,44 @@
     recursive = true;
   };
 
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 26;
-  };
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   package = pkgs.bibata-cursors;
+  #   name = "Bibata-Modern-Classic";
+  #   size = 26;
+  # };
 
   # Explicitly avoids conficts with uswm
   wayland.windowManager.hyprland.systemd.enable = false;
 
-  gtk = {
-    enable = true;
-
-    # To find the name of a theme in a package use nix build on the package and look inside
-    # cd $(nix build nixpkgs#packageName --print-out-paths --no-link)
-    theme = {
-      package = pkgs.arc-kde-theme;
-      name = "ArcDark";
-    };
-
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
-    };
-    font = {
-      name = "Sans";
-      size = 11;
-    };
-  };
-
-  qt = {
-    enable = true;
-
-    platformTheme.name = "qtct";
-
-    style = {
-      package = pkgs.adwaita-qt;
-      name = "adwaita-dark";
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #
+  #   # To find the name of a theme in a package use nix build on the package and look inside
+  #   # cd $(nix build nixpkgs#packageName --print-out-paths --no-link)
+  #   theme = {
+  #     package = pkgs.arc-kde-theme;
+  #     name = "ArcDark";
+  #   };
+  #
+  #   iconTheme = {
+  #     package = pkgs.papirus-icon-theme;
+  #     name = "Papirus-Dark";
+  #   };
+  #   font = {
+  #     name = "Sans";
+  #     size = 11;
+  #   };
+  # };
+  #
+  # qt = {
+  #   enable = true;
+  #
+  #   platformTheme.name = "qtct";
+  #
+  #   style = {
+  #     package = pkgs.adwaita-qt;
+  #     name = "adwaita-dark";
+  #   };
+  # };
 }
