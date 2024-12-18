@@ -210,7 +210,7 @@ in {
         categories = {
           general = true;
           themer = true;
-          colorscheme = "onedark";
+          colorscheme = "gruvbox";
 
           lint = true;
           debug = true;
