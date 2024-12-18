@@ -31,9 +31,9 @@ in {
       }
       tmuxPlugins.better-mouse-mode
       {
-        plugin = tmuxPlugins.onedark-theme;
+        plugin = tmuxPlugins.gruvbox;
         extraConfig = ''
-          set -g @onedark-theme
+          set -g @gruvbox
         '';
         # plugin = tmuxPlugins.gruvbox;
         # extraConfig = ''
