@@ -24,6 +24,13 @@
       name = "Bibata-Modern-Ice";
     };
 
+    iconTheme = {
+      enable = true;
+      package = pkgs.papirus-icon-theme;
+      dark = "Papirus-dark";
+      light = "Papirus-light";
+    };
+
     fonts = {
       monospace = {
         package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};

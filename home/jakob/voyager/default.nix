@@ -36,8 +36,8 @@
     keepassxc
     arduino-ide
 
-# Dev
-dbeaver-bin
+    # Dev
+    dbeaver-bin
 
     # Studies
     anki-bin
