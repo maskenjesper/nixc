@@ -27,8 +27,8 @@
     iconTheme = {
       enable = true;
       package = pkgs.papirus-icon-theme;
-      dark = "Papirus-dark";
-      light = "Papirus-light";
+      dark = "Papirus-Dark";
+      light = "Papirus-Light";
     };
 
     fonts = {
