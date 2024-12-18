@@ -7,7 +7,6 @@
     # import optional modules
     ../common/optional/desktop_environment/wallpaper
     ../common/optional/desktop_environment/window_manager/hyprland
-    ../common/optional/stylix
   ];
 
   networking.hostName = "voyager"; # Define your hostname.
