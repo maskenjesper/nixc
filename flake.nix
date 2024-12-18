@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
     xremap.url = "github:xremap/nix-flake";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
   };
@@ -31,7 +32,7 @@
   in {
     inherit lib;
     nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./moduels/home-manager;
+    homeManagerModules = import ./modules/home-manager;
     customLib = import ./lib;
 
     overlays = import ./overlays {inherit inputs outputs;};
