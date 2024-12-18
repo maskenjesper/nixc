@@ -18,6 +18,7 @@
     ../common/features/rofi
     ../common/features/waybar
     ../common/features/desktop/common/wayland/wofi
+    ../common/features/stylix
   ];
 
   home.username = "jakob";
