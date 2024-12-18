@@ -8,7 +8,12 @@
     recursive = true;
   };
 
+  home.packages = with pkgs; [
+    sqlite
+  ];
+
   programs = {
+    # to solve implicit which error
     zoxide.enable = true;
     fzf.enable = true;
   };
