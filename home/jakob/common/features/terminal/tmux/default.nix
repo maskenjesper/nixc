@@ -30,16 +30,16 @@ in {
         extraConfig = "set -g @super-fingers-key f";
       }
       tmuxPlugins.better-mouse-mode
-      {
-        plugin = tmuxPlugins.gruvbox;
-        extraConfig = ''
-          set -g @gruvbox-hard
-        '';
-        # plugin = tmuxPlugins.gruvbox;
-        # extraConfig = ''
-        #   set -g @tmux-gruvbox 'dark'
-        # '';
-      }
+      # {
+      #   plugin = tmuxPlugins.gruvbox;
+      #   extraConfig = ''
+      #     set -g @gruvbox
+      #   '';
+      #   # plugin = tmuxPlugins.gruvbox;
+      #   # extraConfig = ''
+      #   #   set -g @tmux-gruvbox 'dark'
+      #   # '';
+      # }
       tmuxPlugins.vim-tmux-navigator
       # {
       #   plugin = tmuxPlugins.resurrect;
@@ -58,11 +58,12 @@ in {
       #   '';
       # }
     ];
+    # if i want to put it on top again
+    # -g status-position top
     extraConfig = ''
       set -sg escape-time 0
 
       set-option -sa terminal-overrides ",xterm*:Tc"
-      set -g status-position top
 
 
       set -g mouse on
