@@ -4,3 +4,9 @@ if not require("nixCatsUtils").isNixCats then
 end
 
 vim.cmd.colorscheme(colorschemeName)
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
