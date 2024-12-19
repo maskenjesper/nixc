@@ -53,6 +53,7 @@
     hddtemp
 
     # GUI utilities
+    alarm-clock-applet
     resources
     nautilus
     usbimager
