@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
-SETUVAR base16_theme:gruvbox\x2ddark\x2dmedium
+SETUVAR base16_theme:gruvbox\x2ddark\x2dhard
 SETUVAR fish_color_autosuggestion:504945
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:green

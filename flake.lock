@@ -525,6 +525,21 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-24_11": {
+      "locked": {
+        "lastModified": 1734323986,
+        "narHash": "sha256-m/lh6hYMIWDYHCAsn81CDAiXoT3gmxXI9J987W5tZrE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "394571358ce82dff7411395829aa6a3aad45b907",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-24.11",
+        "type": "indirect"
+      }
+    },
     "nixpkgs-lib": {
       "locked": {
         "lastModified": 1727825735,
@@ -679,6 +694,7 @@
         "home-manager": "home-manager",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-24_11": "nixpkgs-24_11",
         "stylix": "stylix",
         "xremap": "xremap"
       }

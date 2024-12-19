@@ -33,7 +33,7 @@ in {
       {
         plugin = tmuxPlugins.gruvbox;
         extraConfig = ''
-          set -g @gruvbox
+          set -g @gruvbox-hard
         '';
         # plugin = tmuxPlugins.gruvbox;
         # extraConfig = ''
