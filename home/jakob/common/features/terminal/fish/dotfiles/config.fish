@@ -19,6 +19,7 @@ function sudo --description "Replacement for Bash 'sudo !!' command to run last 
     end
 end
 
+bind \co lfcd
 function lfcd --description "lf but it changes directory"
     set tmp (mktemp)
     lf --last-dir-path="$tmp" $argv
@@ -51,9 +52,7 @@ end
 function dn
     just -g devnew
 end
-function ls
-    ls --color
-end
+alias ls 'ls --color'
 function tm 
     tmux attach
 end
