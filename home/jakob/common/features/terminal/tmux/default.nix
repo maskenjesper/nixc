@@ -64,7 +64,7 @@ in {
       set -sg escape-time 0
 
       set-option -sa terminal-overrides ",xterm*:Tc"
-
+      set-option -g status-style bg=default
 
       set -g mouse on
 
