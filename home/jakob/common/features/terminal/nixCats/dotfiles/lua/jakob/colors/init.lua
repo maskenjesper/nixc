@@ -4,6 +4,8 @@ if not require("nixCatsUtils").isNixCats then
 end
 
 vim.cmd.colorscheme(colorschemeName)
+
+-- make background transparent
 vim.cmd [[
   highlight Normal guibg=none
   highlight NonText guibg=none

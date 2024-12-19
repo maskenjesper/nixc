@@ -58,13 +58,12 @@ in {
       #   '';
       # }
     ];
-    # if i want to put it on top again
-    # -g status-position top
     extraConfig = ''
       set -sg escape-time 0
 
       set-option -sa terminal-overrides ",xterm*:Tc"
       set-option -g status-style bg=default
+      -g status-position top
 
       set -g mouse on
 
