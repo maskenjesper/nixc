@@ -16,9 +16,6 @@
       };
     };
 in {
-  home.file.".scripts/tmux-sessionizer.sh" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/tmux/tmux-sessionizer.sh";
-  };
 
   programs.tmux = {
     enable = true;

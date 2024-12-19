@@ -8,6 +8,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+
 set -U fish_greeting ""
 
 function sudo --description "Replacement for Bash 'sudo !!' command to run last command using sudo."
@@ -32,7 +33,8 @@ function lfcd --description "lf but it changes directory"
     end
 end
 
-bind \ce '~/.scripts/tmux-sessionizer.sh'
+bind \ce 'tmux-sessionizer'
+
 bind \cn 'vim .'
 function vv
     vim . 
@@ -52,7 +54,6 @@ end
 function dn
     just -g devnew
 end
-alias ls 'ls --color'
 function tm 
     tmux attach
 end
