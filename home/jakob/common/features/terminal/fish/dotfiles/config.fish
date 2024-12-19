@@ -32,7 +32,13 @@ function lfcd --description "lf but it changes directory"
 end
 
 bind \ce '~/.scripts/tmux-sessionizer.sh'
+function tm
+    ~/.scripts/tmux-sessionizer.sh
+end
 bind \cn 'vim .'
+function vi 
+    vim . 
+end
 
 # just global
 function jj
