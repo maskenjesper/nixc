@@ -32,11 +32,8 @@ function lfcd --description "lf but it changes directory"
 end
 
 bind \ce '~/.scripts/tmux-sessionizer.sh'
-function tm
-    ~/.scripts/tmux-sessionizer.sh
-end
 bind \cn 'vim .'
-function vi 
+function vv
     vim . 
 end
 
@@ -51,13 +48,21 @@ function jjs
     just -g sync
 end
 
-# Aliases
-alias dn='just -g devnew'
-alias ls='ls --color'
-alias nv=nvim
-alias tm='tmux attach'
-alias tk='tmux kill-server'
-alias ti='tmux new -s home'
-alias cls=clear
-alias uwu='systemd-cat -t uwsm_start uwsm start default'
-alias lg='lazygit'
+function dn
+    just -g devnew
+end
+function ls
+    ls --color
+end
+function tm 
+    tmux attach
+end
+function cls
+    clear
+end
+function uwu
+    systemd-cat -t uwsm_start uwsm start default
+end
+function lg
+    lazygit
+end
