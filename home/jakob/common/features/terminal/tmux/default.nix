@@ -63,7 +63,7 @@ in {
 
       set-option -sa terminal-overrides ",xterm*:Tc"
       set-option -g status-style bg=default
-      -g status-position top
+      set -g status-position top
 
       set -g mouse on
 
