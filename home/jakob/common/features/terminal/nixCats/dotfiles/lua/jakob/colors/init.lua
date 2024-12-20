@@ -12,4 +12,5 @@ vim.cmd [[
   highlight Normal ctermbg=none
   highlight NonText ctermbg=none
   highlight SignColumn guibg=none
+  highlight SignColumn ctermbg=none
 ]]

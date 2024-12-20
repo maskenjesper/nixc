@@ -133,6 +133,8 @@ in {
 
       optionalPlugins = {
         general = with pkgs.vimPlugins; [
+          obsidian-nvim
+
           telescope-fzf-native-nvim
           telescope-ui-select-nvim
           telescope-nvim

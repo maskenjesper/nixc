@@ -33,7 +33,7 @@ function jjs
 end
 
 function dn
-    just -g devnew
+    devnew 
 end
 function tm 
     tmux attach
