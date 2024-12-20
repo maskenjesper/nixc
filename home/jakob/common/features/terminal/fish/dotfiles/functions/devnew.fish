@@ -1,10 +1,9 @@
-#!/usr/bin/env bash
 
 pushd ~/dev || exit
-time=$(date "+%H-%M-%S_%d-%m-%y")
+set time (date "+%H-%M-%S_%d-%m-%y")
 mkdir $time
 cd $time
-dir=$(pwd)
+set dir (pwd)
 
 echo $dir
 
