@@ -21,7 +21,7 @@ require("lze").load({
 		config = true,
 	},
     {
-        "ibl.nvim",
+        "ibl",
         config = true,
     },
 	{
