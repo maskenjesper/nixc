@@ -3,7 +3,7 @@ function tmux-sessionizer
     if test (count $argv) -eq 1
         set selected $argv[1]
     else
-        set selected (find ~/nixc ~/notes ~/todo ~/dev ~/.config -mindepth 0 -type d | fzf)
+        set selected (find ~/nixc ~/nixm ~/nixt ~/notes ~/todo ~/dev ~/.config -mindepth 0 -type d | fzf)
     end
 
     if test -z "$selected"
