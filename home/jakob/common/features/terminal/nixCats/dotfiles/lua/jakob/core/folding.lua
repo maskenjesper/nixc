@@ -1,4 +1,4 @@
-vim.opt.foldmethod = "expr"
+vim.opt.foldmethod = "indent"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldcolumn = "1"
 vim.opt.foldtext = ""
