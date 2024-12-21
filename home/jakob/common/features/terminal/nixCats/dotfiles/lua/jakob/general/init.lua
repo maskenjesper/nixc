@@ -20,7 +20,10 @@ require("lze").load({
 		"neoscroll.nvim",
 		config = true,
 	},
-
+    {
+        "ibl.nvim",
+        config = true,
+    },
 	{
 		-- Only binding this plugin provides that I need to know is `gc` when in visual mode which comments out the selected text.
 		"Comment.nvim",

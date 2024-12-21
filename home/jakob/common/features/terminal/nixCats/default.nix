@@ -133,6 +133,7 @@ in {
 
       optionalPlugins = {
         general = with pkgs.vimPlugins; [
+          indent-blankline-nvim
           obsidian-nvim
 
           telescope-fzf-native-nvim

@@ -9,7 +9,7 @@ function tmux-sessionizer
     if test -z "$selected"
         exit 0
     end
-
+    
     set selected_name (basename "$selected" | tr . _)
     set tmux_running (pgrep tmux)
 

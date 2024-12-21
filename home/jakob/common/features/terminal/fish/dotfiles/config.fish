@@ -15,6 +15,7 @@ set -U fish_greeting ""
 bind \co lfcd
 
 bind \ce 'tmux-sessionizer'
+bind \cw 'tmux-sessionizer $(pwd)'
 
 bind \cn 'vim .'
 function vv
@@ -47,3 +48,6 @@ end
 function lg
     lazygit
 end
+
+direnv hook fish | source
+set -g direnv_fish_mode eval_on_arrow
