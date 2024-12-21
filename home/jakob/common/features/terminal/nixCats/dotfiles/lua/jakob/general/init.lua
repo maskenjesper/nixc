@@ -11,6 +11,7 @@ require("lze").load({
 	{ import = "jakob.general.treesitter" },
 	{ import = "jakob.general.snacks" },
     { import = "jakob.general.obsidian" },
+    { import = "jakob.general.indent-blankline" },
 	----------------------------------------------------------------------------------------------------
 	{ "markview.nvim" },
 	{ "dressing.nvim", },
@@ -20,10 +21,6 @@ require("lze").load({
 		"neoscroll.nvim",
 		config = true,
 	},
-    {
-        "indent-blankline.nvim",
-        config = true,
-    },
 	{
 		-- Only binding this plugin provides that I need to know is `gc` when in visual mode which comments out the selected text.
 		"Comment.nvim",
