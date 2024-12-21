@@ -45,6 +45,8 @@
     logisim-evolution
 
     # CLI utilities
+    zip
+    unzip
     htop
     killall
     playerctl
