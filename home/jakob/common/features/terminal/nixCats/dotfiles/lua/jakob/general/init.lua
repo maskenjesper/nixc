@@ -21,7 +21,7 @@ require("lze").load({
 		config = true,
 	},
     {
-        "ibl",
+        "indent-blankline.nvim",
         config = true,
     },
 	{
