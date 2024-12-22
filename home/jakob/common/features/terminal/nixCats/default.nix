@@ -70,6 +70,9 @@ in {
           stylua
 
           elixir-ls
+
+          yamlfmt
+          yaml-language-server
         ];
 
         langs = with pkgs; {
