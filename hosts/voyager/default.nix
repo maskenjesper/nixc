@@ -8,6 +8,7 @@
     ../common/optional/desktop_environment/wallpaper
     ../common/optional/desktop_environment/window_manager/hyprland
     ../common/optional/stylix
+    ../common/optional/docker
   ];
 
   networking.hostName = "voyager"; # Define your hostname.
