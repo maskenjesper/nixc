@@ -55,6 +55,10 @@ servers.fish_lsp = {
 	fish_lsp = {},
 }
 
+servers.yamlls = {
+    yamlls = {}
+}
+
 -- If you integrated with your system flake,
 -- you should pass inputs.self as nixdExtras.flake-path
 -- that way it will ALWAYS work, regardless
