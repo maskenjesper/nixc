@@ -103,6 +103,12 @@ in {
           dart = [
             lsp-dart
           ];
+
+          yaml = [
+            yamlfmt
+            yaml-language-server
+            yaml-filter
+          ];
         };
       };
       startupPlugins = {
@@ -226,6 +232,7 @@ in {
           elixir = true;
           lua = true;
           dart = true;
+          yaml = true;
         };
       };
     };
