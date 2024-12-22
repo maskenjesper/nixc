@@ -107,7 +107,6 @@ in {
           yaml = [
             yamlfmt
             yaml-language-server
-            yaml-filter
           ];
         };
       };
