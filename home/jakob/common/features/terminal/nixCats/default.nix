@@ -71,47 +71,49 @@ in {
 
           elixir-ls
 
+          dart
+
           yamlfmt
           yaml-language-server
         ];
 
-        langs = with pkgs; {
-          go = [
-            gopls
-            gotools
-            go-tools
-            gccgo
-          ];
-
-          bash = [
-            bash-language-server
-            shfmt
-          ];
-
-          nix = [
-            nix-doc
-            nixd
-            alejandra
-          ];
-
-          lua = [
-            lua-language-server
-            stylua
-          ];
-
-          elixir = [
-            elixir-ls
-          ];
-
-          dart = [
-            lsp-dart
-          ];
-
-          yaml = [
-            yamlfmt
-            yaml-language-server
-          ];
-        };
+        # langs = with pkgs; {
+        #   go = [
+        #     gopls
+        #     gotools
+        #     go-tools
+        #     gccgo
+        #   ];
+        #
+        #   bash = [
+        #     bash-language-server
+        #     shfmt
+        #   ];
+        #
+        #   nix = [
+        #     nix-doc
+        #     nixd
+        #     alejandra
+        #   ];
+        #
+        #   lua = [
+        #     lua-language-server
+        #     stylua
+        #   ];
+        #
+        #   elixir = [
+        #     elixir-ls
+        #   ];
+        #
+        #   dart = [
+        #     lsp-dart
+        #   ];
+        #
+        #   yaml = [
+        #     yamlfmt
+        #     yaml-language-server
+        #   ];
+        # };
       };
       startupPlugins = {
         general = with pkgs.vimPlugins; [
@@ -227,14 +229,6 @@ in {
           debug = true;
           format = true;
           lsp = true;
-
-          bash = true;
-          go = true;
-          nix = true;
-          elixir = true;
-          lua = true;
-          dart = true;
-          yaml = true;
         };
       };
     };

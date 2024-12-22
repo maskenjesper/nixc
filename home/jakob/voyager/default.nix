@@ -53,6 +53,8 @@
     neofetch
     lm_sensors
     hddtemp
+    wget
+    curl
 
     # GUI utilities
     alarm-clock-applet
