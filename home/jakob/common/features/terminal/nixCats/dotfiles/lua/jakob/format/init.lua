@@ -33,11 +33,13 @@ require("lze").load({
 			-- Create an autocommand for "BufRead" events
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				-- The autocommand will trigger the following lua function
-				conform.format({
-					lsp_fallback = true,
-					async = false,
-					timeout_ms = 1000,
-				}),
+				callback = function()
+					conform.format({
+						lsp_fallback = true,
+						async = false,
+						timeout_ms = 1000,
+					})
+				end,
 			})
 
 			vim.keymap.set({ "n", "v" }, "<leader>FF", function()
