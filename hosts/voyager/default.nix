@@ -26,7 +26,6 @@
 
     libsForQt5.qt5ct
 
-    lazygit
 
     # CLI tools
     ripgrep

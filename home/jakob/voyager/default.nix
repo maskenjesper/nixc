@@ -45,6 +45,7 @@
     logisim-evolution
 
     # CLI utilities
+    lazygit
     zip
     unzip
     htop

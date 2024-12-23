@@ -26,6 +26,10 @@ vim.keymap.set("v", "<C-y>", '"+y')
 vim.keymap.set("n", "<C-p>", '"+p')
 vim.keymap.set("v", "<C-p>", '"+p')
 
+-- buffers
+vim.keymap.set("n", "<leader>b", ":bprev<CR>", { desc = "Goto prev buffer" })
+vim.keymap.set("n", "<leader>p", ":bnext<CR>", { desc = "Goto next buffer" })
+
 -- keymap.set("i", "jj", "<ESC>:w<cr>", { desc = "Exit insert mode with jk" })
 
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
