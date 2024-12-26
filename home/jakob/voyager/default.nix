@@ -38,6 +38,7 @@
 
     # Dev
     dbeaver-bin
+    vscodium-fhs 
 
     # Studies
     anki-bin
