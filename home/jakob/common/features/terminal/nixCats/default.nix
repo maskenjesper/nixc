@@ -143,6 +143,7 @@ in {
 
       optionalPlugins = {
         general = with pkgs.vimPlugins; [
+          hologram-nvim
           indent-blankline-nvim
           obsidian-nvim
 
