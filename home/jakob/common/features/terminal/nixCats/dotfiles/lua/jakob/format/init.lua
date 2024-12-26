@@ -30,9 +30,7 @@ require("lze").load({
 				},
 			})
 
-			-- Create an autocommand for "BufRead" events
 			vim.api.nvim_create_autocmd("BufWritePre", {
-				-- The autocommand will trigger the following lua function
 				callback = function()
 					conform.format({
 						lsp_fallback = true,
