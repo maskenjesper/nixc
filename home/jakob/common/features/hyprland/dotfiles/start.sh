@@ -14,6 +14,9 @@ waypaper --restore &
 # Notification daemon
 swaync &
 
+# Alarm 
+alarm-clock-applet --hidden
+
 # idling
 hypridle &
 
