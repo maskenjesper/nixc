@@ -38,7 +38,7 @@
 
     # Dev
     dbeaver-bin
-    vscodium-fhs 
+    vscodium-fhs
 
     # Studies
     anki-bin
@@ -46,6 +46,7 @@
     logisim-evolution
 
     # CLI utilities
+    power-profiles-daemon
     lazygit
     zip
     unzip

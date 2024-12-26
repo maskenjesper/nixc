@@ -6,8 +6,8 @@
         ],
         "output": "eDP-1",
         "modules-left": ["custom/arch", "hyprland/workspaces"],
-        "modules-center": ["clock", "hyprland/submap", "temperature"],
-        "modules-right": ["tray", "hyprland/language", "pulseaudio", "battery"]
+        "modules-center": ["clock", "hyprland/submap", "gamemode"],
+        "modules-right": ["tray", "hyprland/language", "pulseaudio", "temperature", "battery"]
     },
     {
         "layer": "top",
