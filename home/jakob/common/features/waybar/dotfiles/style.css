@@ -1,6 +1,6 @@
 * {
   border: none;
-  font-family: JetBrainsMono Nerd Font;
+  font-family: Fira Code;
   font-size: 16px;
   /* font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"'; */
   min-height: 15px;
@@ -26,7 +26,7 @@ window#waybar {
   color: white;
 }
 
-#hyprland-window, #keyboard-state, #language, #tray, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock {
+#hyprland-window, #temperature, #keyboard-state, #language, #tray, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock {
   border-radius: 10px;
   background-color: #0D0D0D;
   color: white;

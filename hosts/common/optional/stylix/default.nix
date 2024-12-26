@@ -21,8 +21,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-        name = "JetBrainsMono Nerd Font Mono";
+        package = pkgs.nerd-fonts.fira-code;
+        name = "Fira Code";
       };
       sansSerif = {
         package = pkgs.dejavu_fonts;
