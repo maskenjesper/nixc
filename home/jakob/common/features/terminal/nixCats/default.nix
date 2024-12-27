@@ -15,7 +15,7 @@ in {
     addOverlays = [
       (utils.standardPluginOverlay inputs)
     ];
-    packageNames = ["nixCats"];
+    packageNames = ["nixCats" "testCats"];
 
     luaPath = "${./dotfiles}";
 
@@ -138,7 +138,7 @@ in {
       };
       testCats = {...}: {
         settings = {
-            wrapRc = false;
+          wrapRc = false;
           unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
           aliases = ["tvim"];
         };
