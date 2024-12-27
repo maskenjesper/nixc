@@ -2,9 +2,7 @@
 vim.g.mapleader = " "
 
 -- Reload config
-vim.keymap.set("n", "<leader>ss", ":% source<CR>:Lazy load all<CR>")
-vim.keymap.set("n", "<leader>ll", ":Lazy<CR>")
-vim.keymap.set("n", "<leader>mm", ":Mason<cr>")
+vim.keymap.set("n", "<leader>ss", ":% source<CR>")
 
 -- Save and quit
 vim.keymap.set("n", "<leader>w", vim.cmd.wa)
@@ -12,7 +10,7 @@ vim.keymap.set("n", "<leader>q", vim.cmd.q)
 ------------------
 --
 -- Launch tmux-sessionizer
-vim.keymap.set("n", "<C-e>", "<cmd>silent !tmux neww ~/.scripts/tmux-sessionizer.sh<CR>")
+vim.keymap.set("n", "<C-e>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Copy pasting --
 -- Use the plus register so that the system clipboard is accessed
