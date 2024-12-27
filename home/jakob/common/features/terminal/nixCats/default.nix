@@ -131,7 +131,18 @@ in {
         settings = {
             wrapRc = false;
           unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
-          aliases = ["vim" "homeVim"];
+          aliases = ["vim"];
+        };
+
+        categories = {
+          general = true;
+        };
+      };
+      testCats = {...}: {
+        settings = {
+            wrapRc = false;
+          unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
+          aliases = ["tvim"];
         };
 
         categories = {
