@@ -14,12 +14,12 @@ set -U fish_greeting ""
 
 bind \co lfcd
 
-bind \ce 'tmux-sessionizer'
+bind \ce tmux-sessionizer
 bind \cw 'tmux-sessionizer $(pwd)'
 
 bind \cn 'vim .'
 function vv
-    vim . 
+    vim .
 end
 
 # just global
@@ -34,9 +34,9 @@ function jjs
 end
 
 function dn
-    devnew 
+    devnew
 end
-function tm 
+function tm
     tmux attach
 end
 function cls

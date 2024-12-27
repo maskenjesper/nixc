@@ -50,6 +50,8 @@ in {
 
         yamlfmt
         yaml-language-server
+
+        hyprls 
       ];
 
       startupPlugins.general = with pkgs.vimPlugins; [
