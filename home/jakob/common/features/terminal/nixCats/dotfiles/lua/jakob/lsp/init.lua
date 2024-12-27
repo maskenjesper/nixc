@@ -59,10 +59,13 @@ servers.yamlls = {
     yamlls = {}
 }
 
+servers.hyprls = {
+  hyprls = {},
+}
+
 require("lze").load({
 	{
 		"nvim-lspconfig",
-		for_cat = "general.always",
 		event = "FileType",
 		load = (require("nixCatsUtils").isNixCats and vim.cmd.packadd) or function(name)
 			vim.cmd.packadd(name)

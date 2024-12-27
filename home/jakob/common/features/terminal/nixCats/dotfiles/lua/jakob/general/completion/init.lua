@@ -8,67 +8,56 @@ local load_w_after_plugin = require("nixCatsUtils.lzUtils").make_load_with_after
 return {
 	{
 		"cmp-buffer",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-cmdline",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-cmdline-history",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-nvim-lsp",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		dep_of = { "nvim-lspconfig" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-nvim-lsp-signature-help",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-nvim-lua",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp-path",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"cmp_luasnip",
-		for_cat = "general.cmp",
 		on_plugin = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"friendly-snippets",
-		for_cat = "general.cmp",
 		dep_of = { "nvim-cmp" },
 	},
 	{
 		"lspkind.nvim",
-		for_cat = "general.cmp",
 		dep_of = { "nvim-cmp" },
 		load = load_w_after_plugin,
 	},
 	{
 		"luasnip",
-		for_cat = "general.cmp",
 		dep_of = { "nvim-cmp" },
 		after = function(plugin)
 			local luasnip = require("luasnip")
@@ -86,7 +75,6 @@ return {
 	},
 	{
 		"nvim-cmp",
-		for_cat = "general.cmp",
 		-- cmd = { "" },
 		event = { "DeferredUIEnter" },
 		on_require = { "cmp" },

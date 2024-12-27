@@ -36,6 +36,9 @@
     keepassxc
     arduino-ide
 
+    # Office
+    masterpdfeditor
+
     # Dev
     dbeaver-bin
     vscodium-fhs

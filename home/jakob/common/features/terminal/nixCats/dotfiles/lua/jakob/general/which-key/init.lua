@@ -1,7 +1,6 @@
 
   return {
     "which-key.nvim",
-    for_cat = 'general.extra',
     -- cmd = { "" },
     event = "DeferredUIEnter",
     -- ft = "",
