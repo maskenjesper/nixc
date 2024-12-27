@@ -7,22 +7,12 @@ require("jakob.core")
 require("jakob.colors")
 
 -- Load modules based on categories
-if nixCats("general") then
-	require("jakob.general")
-end
+require("jakob.general")
 
-if nixCats("debug") then
-	require("jakob.debug")
-end
+require("jakob.debug")
 
-if nixCats("lint") then
-	require("jakob.lint")
-end
+require("jakob.lint")
 
-if nixCats("format") then
-	require("jakob.format")
-end
+require("jakob.format")
 
-if nixCats("lsp") then
-	require("jakob.lsp")
-end
+require("jakob.lsp")
