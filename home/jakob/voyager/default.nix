@@ -43,6 +43,9 @@
     dbeaver-bin
     vscodium-fhs
 
+    # Languages
+    lua
+
     # Studies
     anki-bin
     mars-mips
