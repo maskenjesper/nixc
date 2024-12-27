@@ -129,8 +129,6 @@ in {
     packageDefinitions.replace = {
       nixCats = {...}: {
         settings = {
-            wrapRc = false;
-          unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
           aliases = ["vim"];
         };
 
