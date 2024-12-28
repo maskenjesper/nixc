@@ -10,6 +10,8 @@
   stylix = {
     enable = true;
 
+    targets.wezterm.enable = false;
+
     polarity = "dark";
 
     image = pkgs.fetchurl {
