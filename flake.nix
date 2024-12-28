@@ -2,6 +2,7 @@
   description = "My first flake!";
 
   inputs = {
+    # nix eco-system
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-24_11.url = "nixpkgs/nixos-24.11";
     home-manager = {
@@ -9,6 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # other
     stylix.url = "github:danth/stylix/release-24.11";
     xremap.url = "github:xremap/nix-flake";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
