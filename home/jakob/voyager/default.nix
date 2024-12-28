@@ -10,6 +10,7 @@
     ../common/features/git
     ../common/features/git/gh
     ../common/features/terminal/kitty
+    ../common/features/terminal/wezterm
     ../common/features/terminal/lf
     ../common/features/terminal/zsh
     ../common/features/terminal/fish
