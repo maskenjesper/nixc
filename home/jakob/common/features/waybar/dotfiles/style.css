@@ -13,7 +13,7 @@ window#waybar {
 #custom-arch, #hyprland-workspaces {
   border-radius: 10px;
   background-color: #000000;
-  color: #C6B696;
+  color: #D5C4A1;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -23,13 +23,13 @@ window#waybar {
 
 #custom-arch {
   font-size: 18px;
-  color: #C6B696;
+  color: #D5C4A1;
 }
 
-#hyprland-window, #temperature, #keyboard-state, #language, #tray, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock {
+#hyprland-window, #temperature, #keyboard-state, #language, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock {
   border-radius: 10px;
   background-color: #000000;
-  color: #C6B696;
+  color: #D5C4A1;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 15px;
@@ -37,3 +37,13 @@ window#waybar {
   padding-right: 5px;
 }
 
+#tray {
+  border-radius: 10px;
+  background-color: #111111;
+  color: #D5C4A1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}

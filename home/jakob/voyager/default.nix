@@ -34,6 +34,8 @@
     audacity
     filezilla
     keepassxc
+    minesweep-rs
+    snake4
 
     # Office
     masterpdfeditor
