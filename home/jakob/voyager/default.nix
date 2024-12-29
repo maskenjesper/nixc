@@ -36,6 +36,7 @@
     thunderbird
     keepassxc
     arduino-ide
+    element-desktop
 
     # Office
     masterpdfeditor
