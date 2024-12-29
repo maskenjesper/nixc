@@ -51,6 +51,7 @@
     logisim-evolution
 
     # CLI utilities
+    chatgpt-cli
     power-profiles-daemon
     lazygit
     zip
