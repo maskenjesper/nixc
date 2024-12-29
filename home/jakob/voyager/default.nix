@@ -28,21 +28,19 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
-    libreoffice
     vlc
     shotcut
     audacity
     filezilla
-    thunderbird
     keepassxc
-    arduino-ide
-    element-desktop
 
     # Office
     masterpdfeditor
+    libreoffice
 
     # Dev
     dbeaver-bin
+    arduino-ide
     vscodium-fhs
 
     # Studies
@@ -78,6 +76,8 @@
     gucharmap
 
     # Messaging
+    thunderbird
+    element-desktop
     discord
     telegram-desktop
 

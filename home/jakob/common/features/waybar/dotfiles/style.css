@@ -7,13 +7,13 @@
 }
 
 window#waybar {
-  background: #0D0D0D;
+  background: #000000;
 }
 
 #custom-arch, #hyprland-workspaces {
   border-radius: 10px;
-  background-color: #0D0D0D;
-  color: white;
+  background-color: #000000;
+  color: #C6B696;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -23,13 +23,13 @@ window#waybar {
 
 #custom-arch {
   font-size: 18px;
-  color: white;
+  color: #C6B696;
 }
 
 #hyprland-window, #temperature, #keyboard-state, #language, #tray, #backlight, #pulseaudio, #bluetooth, #network, #battery, #clock {
   border-radius: 10px;
-  background-color: #0D0D0D;
-  color: white;
+  background-color: #000000;
+  color: #C6B696;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 15px;

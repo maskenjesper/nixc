@@ -1,6 +1,9 @@
 -- New config. Only Vanilla keymaps here
 vim.g.mapleader = " "
 
+-- stuff
+vim.keymap.set("n", "<leader>e", ":edit ")
+
 -- Reload config
 vim.keymap.set("n", "<leader>ss", ":% source<CR>")
 
