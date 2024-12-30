@@ -40,22 +40,21 @@ in {
                 alone: esc
                 alone_timeout_millis: 250
               esc: CapsLock
-        keymap:
-          - name: main keymaps
-            remap:
-              ALT-KEY_SEMICOLON:
-                [semicolon]
-              ALT-KEY_APOSTROPHE:
-                [apostrophe]
-              ALT-KEY_LEFTBRACE:
-                [leftbrace]
-              ALT-C-KEY_SEMICOLON:
-                [semicolon]
-              ALT-C-KEY_APOSTROPHE:
-                [apostrophe]
-              ALT-C-KEY_LEFTBRACE:
-                [leftbrace]
       '';
+      # semicolon:
+      #   remap:
+      #     semicolon: o
+      #   timeout_millis: 200
+      # apostrophe:
+      #   remap:
+      #     apostrophe: a
+      #   timeout_millis: 200
+      # leftbrace:
+      #   remap:
+      #     leftbrace: a
+      #   timeout_millis: 200
+      # ALT-KEY_SEMICOLON: { set_mark: true }
+      # ALT-KEY_SEMICOLON: { with_mark: leftalt }
     };
     environment.systemPackages = with pkgs; [
       wtype
