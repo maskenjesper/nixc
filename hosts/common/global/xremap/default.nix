@@ -43,7 +43,7 @@ in {
       '';
     };
     environment.systemPackages = with pkgs; [
-      xdotool
+      wtype
     ];
     hardware.uinput.enable = true;
     users.groups.uinput.members = cfg.users;
