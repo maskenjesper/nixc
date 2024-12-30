@@ -1,6 +1,9 @@
 function tmux-sessionizer --description "sessionizer"
+    
+    # use argument as path
     if test (count $argv) -eq 1
         set session_path $argv[1]
+    # use fzf for path
     else
         set session_path (find ~/nixc ~/nixt ~/dev ~/.config -mindepth 0 -type d | fzf)
     end
@@ -11,15 +14,19 @@ function tmux-sessionizer --description "sessionizer"
     
     set session_name (basename "$session_path" | tr . _)
 
+    # make sure the server is started
     tmux start-server
 
+    # create session if it doesn't already exist
     if not tmux has-session -t=$session_name &> /dev/null
         tmux new-session -ds $session_name -c $session_path
     end
 
-    if test -z "$TMUX"
+    # outside tmux
+    if test -z "$TMUX" 
         tmux attach-session -t $session_name
-    else
+    # inside tmux
+    else 
         tmux switch-client -t $session_name
     end
 
