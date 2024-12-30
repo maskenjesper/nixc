@@ -40,15 +40,6 @@ in {
                 alone: esc
                 alone_timeout_millis: 250
               esc: CapsLock
-        keymap:
-          - name: main keymaps
-            remap:
-              C-KEY_SEMICOLON:
-                launch: ["sudo", "wtype", "ö"]
-              C-KEY_APOSTROPHE:
-                launch: ["sudo", "wtype", "ä"]
-              C-KEY_LEFTBRACE:
-                launch: ["sudo", "wtype", "å"]
       '';
     };
     environment.systemPackages = with pkgs; [
