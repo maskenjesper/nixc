@@ -20,6 +20,7 @@
     ../common/features/waybar
     ../common/features/desktop/common/wayland/wofi
     ../common/features/stylix
+    ../common/features/xremap
   ];
 
   home.username = "jakob";
