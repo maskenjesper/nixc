@@ -44,11 +44,11 @@ in {
           - name: main keymaps
             remap:
               C-KEY_SEMICOLON:
-                launch: ["wtype", "ö"]
+                launch: ["sudo", "wtype", "ö"]
               C-KEY_APOSTROPHE:
-                launch: ["wtype", "ä"]
+                launch: ["sudo", "wtype", "ä"]
               C-KEY_LEFTBRACE:
-                launch: ["wtype", "å"]
+                launch: ["sudo", "wtype", "å"]
       '';
     };
     environment.systemPackages = with pkgs; [
