@@ -44,17 +44,17 @@ in {
           - name: main keymaps
             remap:
               ALT-KEY_SEMICOLON:
-                [key_1, key_2]
+                [semicolon]
               ALT-KEY_APOSTROPHE:
-                launch: ["wtype", "ä"]
+                [apostrophe]
               ALT-KEY_LEFTBRACE:
-                launch: ["wtype", "å"]
+                [leftbrace]
               ALT-C-KEY_SEMICOLON:
-                launch: ["wtype", "Ö"]
+                [semicolon]
               ALT-C-KEY_APOSTROPHE:
-                launch: ["wtype", "Ä"]
+                [apostrophe]
               ALT-C-KEY_LEFTBRACE:
-                launch: ["wtype", "Å"]
+                [leftbrace]
       '';
     };
     environment.systemPackages = with pkgs; [
