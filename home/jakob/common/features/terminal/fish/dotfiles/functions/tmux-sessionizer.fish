@@ -1,26 +1,26 @@
-
-function tmux-sessionizer
+function tmux-sessionizer --description "sessionizer"
     if test (count $argv) -eq 1
-        set selected $argv[1]
+        set session_path $argv[1]
     else
-        set selected (find ~/nixc ~/nixt ~/dev ~/.config -mindepth 0 -type d | fzf)
+        set session_path (find ~/nixc ~/nixt ~/dev ~/.config -mindepth 0 -type d | fzf)
     end
 
-    if test -z "$selected"
+    if test -z "$session_path"
         exit 0
     end
     
-    set selected_name (basename "$selected" | tr . _)
-    set tmux_running (pgrep tmux)
+    set session_name (basename "$session_path" | tr . _)
 
-    if test -z "$TMUX" -a -z "$tmux_running"
-        tmux new-session -s $selected_name -c $selected
-        exit 0
+    tmux start-server
+
+    if not tmux has-session -t=$session_name &> /dev/null
+        tmux new-session -ds $session_name -c $session_path
     end
 
-    if not tmux has-session -t=$selected_name ^/dev/null
-        tmux new-session -ds $selected_name -c $selected
+    if test -z "$TMUX"
+        tmux attach-session -t $session_name
+    else
+        tmux switch-client -t $session_name
     end
 
-    tmux switch-client -t $selected_name
 end
