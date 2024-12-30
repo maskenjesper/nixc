@@ -14,7 +14,7 @@
   networking.hostName = "voyager"; # Define your hostname.
 
   ####### define options values here ########
-  global.xremap.users = ["jakob"];
+  # global.xremap.users = ["jakob"];
 
   ###########################################
 
@@ -26,12 +26,10 @@
 
     libsForQt5.qt5ct
 
-
     # CLI tools
     ripgrep
     zoxide
     fzf
-
 
     # User applications
   ];

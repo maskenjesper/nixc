@@ -10,7 +10,7 @@
     [
       ./bluetooth
       ./fonts
-      ./xremap
+      # ./xremap
     ]
     # Always import custom modules
     ++ (builtins.attrValues outputs.nixosModules);
