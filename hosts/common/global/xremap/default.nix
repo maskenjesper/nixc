@@ -31,8 +31,6 @@ in {
     services.xremap = {
       withWlroots = true;
       watch = true;
-      serviceMode = "user";
-      userName = "jakob";
       yamlConfig = ''
         modmap:
           - name: main remaps
