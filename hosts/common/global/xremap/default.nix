@@ -63,5 +63,6 @@ in {
     hardware.uinput.enable = true;
     users.groups.uinput.members = cfg.users;
     users.groups.input.members = cfg.users;
+    users.groups.wtype.members = cfg.users;
   };
 }
