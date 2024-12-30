@@ -36,6 +36,7 @@
     keepassxc
     minesweep-rs
     snake4
+    xdotool
 
     # Office
     masterpdfeditor
