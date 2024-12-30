@@ -42,6 +42,9 @@ in {
               esc: CapsLock
       '';
     };
+    environment.systemPackages = with pkgs; [
+      xdotool
+    ];
     hardware.uinput.enable = true;
     users.groups.uinput.members = cfg.users;
     users.groups.input.members = cfg.users;
