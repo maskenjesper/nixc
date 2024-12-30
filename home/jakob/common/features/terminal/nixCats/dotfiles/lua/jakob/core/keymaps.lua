@@ -32,6 +32,7 @@ vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights
 vim.keymap.set("n", "<leader>bb", ":ls<CR>", { desc = "Show buffer stack" })
 vim.keymap.set("n", "<leader>bj", ":bnext<CR>", { desc = "Goto next buffer" })
 vim.keymap.set("n", "<leader>bk", ":bprev<CR>", { desc = "Goto prev buffer" })
+vim.keymap.set("n", "<leader>bh", ":e #<CR>", { desc = "Toggle prev buffer" })
 
 -- split management
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically

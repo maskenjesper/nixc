@@ -44,7 +44,7 @@ in {
           - name: main keymaps
             remap:
               ALT-KEY_SEMICOLON:
-                launch: ["wtype", "ö"]
+                [key_1, key_2]
               ALT-KEY_APOSTROPHE:
                 launch: ["wtype", "ä"]
               ALT-KEY_LEFTBRACE:
