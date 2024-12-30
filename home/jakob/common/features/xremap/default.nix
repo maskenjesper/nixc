@@ -6,6 +6,7 @@
 }: {
   home.packages = [
     inputs.xremap.packages.x86_64-linux.default
+    pkgs.wtype
   ];
 
   home.file.".config/xremap" = {
