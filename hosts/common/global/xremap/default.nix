@@ -40,6 +40,15 @@ in {
                 alone: esc
                 alone_timeout_millis: 250
               esc: CapsLock
+        keymap:
+          - name: main keymaps
+            remap:
+              C-KEY_SEMICOLON:
+                launch: ["wtype", "ö"]
+              C-KEY_APOSTROPHE:
+                launch: ["wtype", "ä"]
+              C-KEY_LEFTBRACE:
+                launch: ["wtype", "å"]
       '';
     };
     environment.systemPackages = with pkgs; [
