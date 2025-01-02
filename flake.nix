@@ -14,6 +14,7 @@
     stylix.url = "github:danth/stylix/release-24.11";
     xremap.url = "github:xremap/nix-flake";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = {

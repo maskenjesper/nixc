@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../common/global
@@ -20,6 +24,8 @@
 
   environment.systemPackages = with pkgs; [
     #kicad
+
+    inputs.zen-browser.packages.x86_64-linux.default
 
     nix-index
     vncdo
