@@ -86,6 +86,7 @@
 
     # Browsers
     vivaldi
+    inputs.zen-browser.packages.x86_64-linux.default
 
     # Music
     spotify
