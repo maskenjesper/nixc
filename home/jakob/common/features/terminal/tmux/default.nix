@@ -71,7 +71,7 @@ in {
       bind -r c new-window -c "#{pane_current_path}"
       bind -r "'" split-window -v -c "#{pane_current_path}"
       bind -r ';' split-window -h -c "#{pane_current_path}"
-      bind q kill-window
+      bind -r q kill-window
 
       # Yanking rebinds
       set-window-option -g mode-keys vi

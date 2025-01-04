@@ -1,8 +1,18 @@
+local oil = require("oil")
 vim.g.loaded_netrwPlugin = 1
 vim.keymap.set("n", "-", "<cmd>Oil<CR>", { noremap = true, desc = "Open Parent Directory" })
 vim.keymap.set("n", "<leader>-", "<cmd>Oil .<CR>", { noremap = true, desc = "Open nvim root directory" })
+-- vim.keymap.set("n", "<leader>o", string.format("<cmd>!tmux new-window -c %s<CR>", oil.get_current_dir(nil)), { noremap = true, desc = "Open dir in new tmux window"})
+vim.keymap.set("n", "<leader>o", function()
+	local path = oil.get_current_dir()
+	if path == nil then
+		return
+	end
+	local cmd = string.format("!tmux new-window -c %s", path)
+	vim.cmd(cmd)
+end, { silent = true, noremap = true, desc = "Open dir in new tmux window" })
 
-require("oil").setup({
+oil.setup({
 	-- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
 	-- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
 	default_file_explorer = true,
