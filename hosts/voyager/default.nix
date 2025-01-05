@@ -31,6 +31,8 @@
       mode = "0755";
     };
   };
+  programs.adb.enable = true;
+  users.users.jakob.extraGroups = ["adbusers"];
 
   environment.systemPackages = with pkgs; [
     #kicad

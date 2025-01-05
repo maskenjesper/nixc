@@ -10,15 +10,20 @@ if status is-interactive
     set -gx EDITOR vim
 end
 
+bind \cj down-or-search
+bind \ck up-or-search
+
 
 bind \co lfcd
 
 bind \ce tmux-sessionizer
 bind \cw 'tmux-sessionizer $(pwd)'
 
-bind \cn 'vim .'
 function vv
     vim .
+end
+function vt
+    tvim .
 end
 
 # just global

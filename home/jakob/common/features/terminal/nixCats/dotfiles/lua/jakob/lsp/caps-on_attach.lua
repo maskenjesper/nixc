@@ -13,6 +13,8 @@ function M.on_attach(_, bufnr)
 
 	nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 	nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+    nmap("<leader>[g", vim.diagnostic.goto_prev, "Goto previous diagnostic")
+    nmap("<leader>]g", vim.diagnostic.goto_next, "Goto next diagnostic")
 
 	nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
 

@@ -9,7 +9,7 @@ function tmux-sessionizer --description "sessionizer"
     end
 
     if test -z "$session_path"
-        exit 0
+        return 0
     end
     
     set session_name (basename "$session_path" | tr . _)
