@@ -37,6 +37,8 @@
   environment.systemPackages = with pkgs; [
     #kicad
 
+    devenv
+
     nix-index
     vncdo
 
