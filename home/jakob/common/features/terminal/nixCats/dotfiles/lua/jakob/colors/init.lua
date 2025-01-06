@@ -1,4 +1,4 @@
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("gruvbox")
 
 -- make background transparent
 vim.cmd [[
