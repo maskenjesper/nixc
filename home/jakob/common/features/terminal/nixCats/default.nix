@@ -62,6 +62,7 @@ in {
         nvim-web-devicons
         markview-nvim
         gruvbox-nvim
+        kanagawa-nvim
       ];
 
       optionalPlugins.general = with pkgs.vimPlugins; [
