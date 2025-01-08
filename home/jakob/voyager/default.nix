@@ -25,6 +25,13 @@
   home.username = "jakob";
   home.homeDirectory = "/home/jakob";
 
+  programs = {
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+  };
+
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
