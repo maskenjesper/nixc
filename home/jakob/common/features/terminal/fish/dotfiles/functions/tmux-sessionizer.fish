@@ -1,4 +1,15 @@
 function tmux-sessionizer --description "sessionizer"
+    # outside tmux
+    if test -z "$TMUX" 
+        local-tmux-sessionizer
+    # inside tmux
+    else 
+        local-tmux-sessionizer  
+    end
+end
+
+
+function local-tmux-sessionizer --description "sessionizer"
     
     # use argument as path
     if test (count $argv) -eq 1

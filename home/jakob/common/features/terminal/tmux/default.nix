@@ -57,6 +57,9 @@ in {
       set -g prefix C-Space
       bind C-Space send-prefix
 
+      # sessionizer
+      bind e new-window tmux-sessionizer
+
       # Start windows and panes at 1 , not 0
       set -g base-index 1
       set -g pane-base-index 1
