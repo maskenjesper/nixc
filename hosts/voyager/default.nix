@@ -37,6 +37,8 @@
   environment.systemPackages = with pkgs; [
     #kicad
 
+    zed
+
     devenv
 
     nix-index
