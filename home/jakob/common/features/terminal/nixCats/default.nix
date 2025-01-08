@@ -90,7 +90,7 @@ in {
         lspkind-nvim
 
         nvim-treesitter-textobjects
-        (import inputs.nixpkgs-treesitter {inherit "x86_64-linux";}).pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+        nvim-treesitter.withAllGrammars
 
         which-key-nvim
 
