@@ -37,7 +37,6 @@
   environment.systemPackages = with pkgs; [
     #kicad
 
-    zed-editor
 
     devenv
 

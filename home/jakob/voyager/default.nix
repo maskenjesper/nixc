@@ -35,6 +35,8 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
+    zed-editor
+    
     cowsay
     gedit
     guvcview
