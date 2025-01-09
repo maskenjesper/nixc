@@ -131,16 +131,17 @@ in {
     };
 
     packageDefinitions.replace = {
-      nixCats = {...}: {
+      nixCats = {pkgs, ...}: {
         settings = {
           aliases = ["vim"];
         };
 
         categories = {
           general = true;
+          elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
         };
       };
-      testCats = {...}: {
+      testCats = {pkgs, ...}: {
         settings = {
           wrapRc = false;
           unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
@@ -149,6 +150,7 @@ in {
 
         categories = {
           general = true;
+          elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
         };
       };
     };

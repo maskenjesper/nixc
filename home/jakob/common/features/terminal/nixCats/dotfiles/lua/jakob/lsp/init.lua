@@ -32,6 +32,7 @@ servers.nixd = {
 }
 servers.elixirls = {
 	elixirls = { -- settings
+		cmd = { nixCats("elixirlspath") },
 	},
 }
 servers.gopls = {
