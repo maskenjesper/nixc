@@ -32,8 +32,6 @@ servers.nixd = {
 }
 servers.elixirls = {
 	elixirls = { -- settings
-
-		cmd = {},
 	},
 }
 servers.gopls = {
@@ -56,11 +54,11 @@ servers.fish_lsp = {
 }
 
 servers.yamlls = {
-    yamlls = {}
+	yamlls = {},
 }
 
 servers.hyprls = {
-  hyprls = {},
+	hyprls = {},
 }
 
 require("lze").load({

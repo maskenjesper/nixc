@@ -126,6 +126,7 @@ in {
       ];
 
       environmentVariables.general = {
+        ELIXIRLS = "${pkgs.elixir-ls}/lib/language-server.sh";
       };
     };
 
