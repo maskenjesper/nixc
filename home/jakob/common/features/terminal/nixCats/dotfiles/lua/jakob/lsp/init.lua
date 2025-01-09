@@ -31,36 +31,19 @@ servers.nixd = {
 	},
 }
 servers.elixirls = {
-	elixirls = { -- settings
-		cmd = { nixCats("elixirlspath") },
-	},
+	cmd = { "elixir-ls" },
 }
-servers.gopls = {
-	gopls = { -- settings
-	},
-}
+servers.gopls = {}
 
-servers.dartls = {
-	dartls = { -- settings
-	},
-}
+servers.dartls = {}
 
-servers.bashls = {
-	bashls = { -- settings
-	},
-}
+servers.bashls = {}
 
-servers.fish_lsp = {
-	fish_lsp = {},
-}
+servers.fish_lsp = {}
 
-servers.yamlls = {
-	yamlls = {},
-}
+servers.yamlls = {}
 
-servers.hyprls = {
-	hyprls = {},
-}
+servers.hyprls = {}
 
 require("lze").load({
 	{
