@@ -19,7 +19,7 @@
 
   ####### define options values here ########
   global.xremap.users = ["jakob"];
-
+  programs.wireshark.enable = true;
   ###########################################
 
   environment.etc = {
@@ -36,7 +36,6 @@
 
   environment.systemPackages = with pkgs; [
     #kicad
-
 
     devenv
 

@@ -36,6 +36,7 @@
   home.packages = with pkgs; [
     # Trying out
     zed-editor
+
     
     cowsay
     gedit
@@ -111,7 +112,6 @@
     gimp
 
     # Networking
-    wireshark
     traceroute
     networkmanagerapplet
 
