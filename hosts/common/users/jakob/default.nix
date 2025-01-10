@@ -3,7 +3,7 @@
     isNormalUser = true;
     shell = pkgs.fish;
     description = "Jakob Olsson";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "wireshark"];
     packages = [
       pkgs.home-manager
     ];
