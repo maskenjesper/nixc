@@ -13,13 +13,13 @@
     ../common/optional/desktop_environment/window_manager/hyprland
     ../common/optional/stylix
     ../common/optional/docker
+    ../common/optional/wireshark
   ];
 
   networking.hostName = "voyager"; # Define your hostname.
 
   ####### define options values here ########
   global.xremap.users = ["jakob"];
-  programs.wireshark.enable = true;
   ###########################################
 
   environment.etc = {
@@ -32,7 +32,7 @@
     };
   };
   programs.adb.enable = true;
-  users.users.jakob.extraGroups = ["adbusers" "wireshark"];
+  users.users.jakob.extraGroups = ["adbusers"];
 
   environment.systemPackages = with pkgs; [
     #kicad
