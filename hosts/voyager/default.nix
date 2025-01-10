@@ -32,7 +32,7 @@
     };
   };
   programs.adb.enable = true;
-  users.users.jakob.extraGroups = ["adbusers"];
+  users.users.jakob.extraGroups = ["adbusers" "wireshark"];
 
   environment.systemPackages = with pkgs; [
     #kicad
