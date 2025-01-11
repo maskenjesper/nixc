@@ -14,6 +14,7 @@
     ../common/optional/stylix
     ../common/optional/docker
     ../common/optional/wireshark
+    ../common/optional/obs
   ];
 
   networking.hostName = "voyager"; # Define your hostname.

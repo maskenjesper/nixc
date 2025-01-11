@@ -26,6 +26,8 @@ function vt
     tvim .
 end
 
+
+
 # just global
 function jj
     just -g $1
