@@ -34,6 +34,7 @@
   };
   programs.adb.enable = true;
   users.users.jakob.extraGroups = ["adbusers"];
+  boot.kernelModules = ["v4l2loopback"];
 
   environment.systemPackages = with pkgs; [
     #kicad
