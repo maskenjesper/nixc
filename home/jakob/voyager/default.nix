@@ -37,7 +37,8 @@
     # Trying out
     zed-editor
 
-    
+    exercism
+
     cowsay
     gedit
     guvcview
