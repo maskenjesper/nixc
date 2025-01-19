@@ -1,4 +1,4 @@
-complete -c flakeinit -a 'flutter nodejs wireguard lua elixir'
+complete -c flakeinit -a 'flutter dart nodejs wireguard lua elixir'
 function flakeinit
 
     if test (count $argv) -eq 1
