@@ -39,6 +39,7 @@
 
     exercism
     tetex
+    evince
 
     cowsay
     gedit
