@@ -38,6 +38,7 @@
     zed-editor
 
     exercism
+    tetex
 
     cowsay
     gedit
