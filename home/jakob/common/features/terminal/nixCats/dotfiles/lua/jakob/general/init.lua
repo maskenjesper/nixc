@@ -6,7 +6,6 @@ require("lze").load({
 	{ import = "jakob.general.harpoon" },
 	{ import = "jakob.general.lualine" },
 	{ import = "jakob.general.nvim-tree" },
-	{ import = "jakob.general.autoclose" },
 	{ import = "jakob.general.which-key" },
 	{ import = "jakob.general.treesitter" },
 	{ import = "jakob.general.snacks" },

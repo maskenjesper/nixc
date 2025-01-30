@@ -94,8 +94,6 @@ in {
 
         which-key-nvim
 
-        autoclose-nvim
-
         neoscroll-nvim
 
         dressing-nvim
