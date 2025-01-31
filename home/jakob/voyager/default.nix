@@ -38,6 +38,7 @@
     # Trying out
     zed-editor
 
+    postman
     exercism
     tetex
     evince
