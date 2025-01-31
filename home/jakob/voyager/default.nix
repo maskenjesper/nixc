@@ -40,6 +40,7 @@
     exercism
     tetex
     evince
+    kanshi
 
     cowsay
     gedit
