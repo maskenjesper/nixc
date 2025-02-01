@@ -40,6 +40,7 @@
 
     postman
     halloy
+    morgen
     exercism
     tetex
     evince
