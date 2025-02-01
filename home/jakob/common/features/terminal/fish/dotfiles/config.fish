@@ -18,6 +18,7 @@ bind \co lfcd
 
 bind \ce tmux-sessionizer
 bind \cw 'tmux-sessionizer $(pwd)'
+bind \cr 'tmux-sessionizer $HOME'
 
 function vv
     vim .

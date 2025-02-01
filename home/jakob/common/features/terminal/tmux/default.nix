@@ -59,6 +59,7 @@ in {
 
       # sessionizer
       bind e new-window tmux-sessionizer
+      bind r new-window tmux-sessionizer $HOME
 
       # Start windows and panes at 1 , not 0
       set -g base-index 1
