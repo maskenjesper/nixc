@@ -49,8 +49,8 @@ in {
       set -g mouse on
 
       # Shortcut source the config
-      unbind r
-      bind r source-file ~/.config/tmux/tmux.conf \; display-message "config re-sourced"
+      # unbind r
+      # bind r source-file ~/.config/tmux/tmux.conf \; display-message "config re-sourced"
 
       # tmux prefix
       unbind C-b
