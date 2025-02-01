@@ -39,6 +39,7 @@
     zed-editor
 
     postman
+    halloy
     exercism
     tetex
     evince
