@@ -36,35 +36,33 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
-    zed-editor
 
-    postman
-    halloy
-    morgen
-    exercism
-    tetex
-    evince
-    kanshi
-
-    cowsay
-    gedit
-    guvcview
+    # Media
     vlc
     shotcut
     audacity
-    filezilla
-    keepassxc
+    rnote
+    krita
+    sweethome3d.application
+    kicad
+    gimp
 
     # Office
     masterpdfeditor
+    morgen
+    tetex
+    evince
     libreoffice
 
     # Dev
+    gigalixir
+    postman
     dbeaver-bin
     arduino-ide
     vscodium-fhs
 
     # Studies
+    exercism
     anki-bin
     mars-mips
     logisim-evolution
@@ -85,6 +83,9 @@
     curl
 
     # GUI utilities
+    cowsay
+    guvcview
+    kanshi
     alarm-clock-applet
     resources
     nautilus
@@ -95,11 +96,14 @@
     baobab
     pwvucontrol
     gucharmap
+    filezilla
+    keepassxc
 
     # Messaging
     thunderbird
     element-desktop
     discord
+    halloy
     telegram-desktop
 
     # Browsers
@@ -111,13 +115,6 @@
 
     # Notes
     obsidian
-
-    # Drawing
-    rnote
-    krita
-    sweethome3d.application
-    kicad
-    gimp
 
     # Networking
     traceroute
