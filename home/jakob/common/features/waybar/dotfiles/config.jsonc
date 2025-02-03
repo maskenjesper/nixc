@@ -4,19 +4,8 @@
         "include": [
             "~/.config/waybar/default-modules.jsonc"
         ],
-        "output": "eDP-1",
         "modules-left": ["custom/arch", "hyprland/workspaces"],
         "modules-center": ["clock", "hyprland/submap", "gamemode"],
         "modules-right": ["tray", "hyprland/language", "pulseaudio", "temperature", "battery"]
     },
-    {
-        "layer": "top",
-        "include": [
-            "~/.config/waybar/default-modules.jsonc"
-        ],
-        "output": "!eDP-1",
-        "modules-left": ["hyprland/workspaces"],
-        "modules-center": [], 
-        "modules-right": []
-    }
 ]
