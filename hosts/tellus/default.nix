@@ -9,12 +9,12 @@
     ../common/users/jakob
 
     # import optional modules
-    ../common/optional/desktop_environment/wallpaper
-    ../common/optional/desktop_environment/window_manager/hyprland
-    ../common/optional/stylix
-    ../common/optional/docker
-    ../common/optional/wireshark
-    ../common/optional/obs
+    ./features/desktop_environment/wallpaper
+    ./features/desktop_environment/window_manager/hyprland
+    ./features/stylix
+    ./features/docker
+    ./features/wireshark
+    ./features/obs
   ];
 
   networking.hostName = "tellus"; # Define your hostname.
