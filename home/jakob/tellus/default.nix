@@ -6,20 +6,20 @@
 }: {
   imports = [
     ../common/global
-    ../common/features/terminal/nixCats
-    ../common/features/git
-    ../common/features/git/gh
-    ../common/features/terminal/kitty
-    ../common/features/terminal/lf
-    ../common/features/terminal/zsh
-    ../common/features/terminal/fish
-    ../common/features/terminal/tmux
-    ../common/features/hyprland
-    ../common/features/rofi
-    ../common/features/waybar
-    ../common/features/desktop/common/wayland/wofi
-    ../common/features/stylix
-    ../common/features/kanshi
+    ./features/terminal/nixCats
+    ./features/git
+    ./features/git/gh
+    ./features/terminal/kitty
+    ./features/terminal/lf
+    ./features/terminal/zsh
+    ./features/terminal/fish
+    ./features/terminal/tmux
+    ./features/hyprland
+    ./features/rofi
+    ./features/waybar
+    ./features/desktop/common/wayland/wofi
+    ./features/stylix
+    ./features/kanshi
   ];
 
   home.username = "jakob";
