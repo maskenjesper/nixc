@@ -11,6 +11,7 @@
     # import optional modules
     ./features/desktop_environment/wallpaper
     ./features/desktop_environment/window_manager/hyprland
+    ./features/gaming.nix
     ./features/stylix
     ./features/docker
     ./features/wireshark
