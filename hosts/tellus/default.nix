@@ -1,6 +1,7 @@
 {
   pkgs, 
   inputs,
+  lib,
   ...
 }: { 
   imports = [
@@ -20,6 +21,8 @@
   ####### define options values here ########
   global.xremap.users = ["jakob"];
   ###########################################
+
+  swapDevices = lib.mkForce [ ];
 
   environment.etc = {
     "1password/custom_allowed_browsers" = {
