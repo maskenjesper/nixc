@@ -14,6 +14,7 @@
     lutris
     r2modman
     gamescope
+    protonup-qt
   ];
 
   programs = {
