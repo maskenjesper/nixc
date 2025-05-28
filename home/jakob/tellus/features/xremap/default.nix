@@ -10,7 +10,7 @@
   ];
 
   home.file.".config/xremap" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${builtins.toString ./.}/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/home/jakob/tellus/features/xremap/dotfiles";
     recursive = true;
   };
 }

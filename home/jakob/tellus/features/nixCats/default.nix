@@ -142,7 +142,7 @@ in {
       testCats = {pkgs, ...}: {
         settings = {
           wrapRc = false;
-          unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/common/features/terminal/nixCats/dotfiles";
+          unwrappedCfgPath = "${config.home.homeDirectory}/nixc/home/jakob/tellus/features/nixCats/dotfiles";
           aliases = ["tvim"];
         };
 
