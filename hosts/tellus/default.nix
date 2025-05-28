@@ -13,9 +13,6 @@
     ./features/desktop_environment/window_manager/hyprland
     ./features/gaming.nix
     ./features/stylix
-    ./features/docker
-    ./features/wireshark
-    ./features/obs
   ];
 
   networking.hostName = "tellus"; # Define your hostname.

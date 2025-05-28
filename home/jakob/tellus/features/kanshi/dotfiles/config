@@ -1,8 +1,0 @@
-profile {
-	output HDMI-A-2 enable
-	output eDP-1 disable
-}
-
-profile {
-	output eDP-1 enable
-}

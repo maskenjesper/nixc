@@ -6,20 +6,17 @@
 }: {
   imports = [
     ../common/global
-    ./features/terminal/nixCats
+    ./features/nixCats
     ./features/git
-    ./features/git/gh
-    ./features/terminal/kitty
-    ./features/terminal/lf
-    ./features/terminal/zsh
-    ./features/terminal/fish
-    ./features/terminal/tmux
+    ./features/gh
+    ./features/kitty
+    ./features/fish
+    ./features/tmux
     ./features/hyprland
-    ./features/rofi
     ./features/waybar
-    ./features/desktop/common/wayland/wofi
+    ./features/wofi
     ./features/stylix
-    ./features/kanshi
+    ./features/xremap
   ];
 
   home.username = "jakob";
