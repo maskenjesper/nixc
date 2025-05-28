@@ -4,7 +4,7 @@
         "include": [
             "~/.config/waybar/default-modules.jsonc"
         ],
-        "modules-left": ["custom/arch", "hyprland/workspaces"],
+        "modules-left": ["hyprland/workspaces"],
         "modules-center": ["clock", "hyprland/submap", "gamemode"],
         "modules-right": ["tray", "hyprland/language", "pulseaudio", "temperature", "battery"]
     },
