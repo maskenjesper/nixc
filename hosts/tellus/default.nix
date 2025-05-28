@@ -9,8 +9,8 @@
     ../common/users/jakob
 
     # import optional modules
-    ./features/desktop_environment/wallpaper
-    ./features/desktop_environment/window_manager/hyprland
+    ./features/wallpaper.nix
+    ./features/hyprland.nix
     ./features/gaming.nix
     ./features/stylix
   ];
