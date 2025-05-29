@@ -11,6 +11,7 @@
     enable = true;
 
     targets.wezterm.enable = false;
+    targets.mako.enable = false;
 
     polarity = "dark";
 

@@ -38,34 +38,19 @@
     shotcut
     audacity
     rnote
-    krita
     sweethome3d.application
-    kicad
-    gimp
 
     # Office
     masterpdfeditor
-    morgen
-    tetex
     evince
     libreoffice
 
     # Dev
-    gigalixir
-    postman
-    dbeaver-bin
-    arduino-ide
-    vscodium-fhs
 
     # Studies
-    exercism
     anki-bin
-    mars-mips
-    logisim-evolution
 
     # CLI utilities
-    chatgpt-cli
-    power-profiles-daemon
     lazygit
     zip
     unzip
@@ -79,9 +64,7 @@
     curl
 
     # GUI utilities
-    cowsay
     guvcview
-    kanshi
     alarm-clock-applet
     resources
     nautilus
@@ -93,18 +76,14 @@
     pwvucontrol
     gucharmap
     filezilla
-    keepassxc
 
     # Messaging
     thunderbird
-    element-desktop
     discord
-    halloy
     telegram-desktop
 
     # Browsers
     vivaldi
-    inputs.zen-browser.packages.x86_64-linux.default
 
     # Music
     spotify
