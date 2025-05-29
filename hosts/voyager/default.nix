@@ -9,12 +9,12 @@
     ../common/users/jakob
 
     # import optional modules
-    ../common/optional/desktop_environment/wallpaper
-    ../common/optional/desktop_environment/window_manager/hyprland
-    ../common/optional/stylix
-    ../common/optional/docker
-    ../common/optional/wireshark
-    ../common/optional/obs
+    ../common/desktop_environment/wallpaper
+    ../common/desktop_environment/window_manager/hyprland
+    ../common/stylix
+    ../common/docker
+    ../common/wireshark
+    ../common/obs
   ];
 
   networking.hostName = "voyager"; # Define your hostname.
