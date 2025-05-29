@@ -10,7 +10,7 @@
     ../common/users/jakob
 
     # import optional modules
-    ./features/wallpaper.nix
+    ../common/wallpaper.nix
     ./features/hyprland.nix
     ./features/gaming.nix
     ./features/stylix
