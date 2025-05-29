@@ -4,7 +4,7 @@
   ...
 }: {
   home.file.".config/just" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${builtins.toString ./.}/dotfiles";
+    source = config.lib.file.mkOutOfStoreSymlink "./dotfiles";
     recursive = true;
   };
 
