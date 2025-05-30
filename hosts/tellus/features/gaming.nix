@@ -51,6 +51,9 @@
     gamescope
     protonup-qt
     gamemode
+    vulkan-tools
+    mesa
+    wayland-protocols
   ];
 
   programs = {
