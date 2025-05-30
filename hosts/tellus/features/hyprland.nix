@@ -19,16 +19,6 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
-  hardware = {
-    graphics.enable = true;
-    nvidia = {
-      modesetting.enable = true;
-      open = false;
-      nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-  };
-  services.xserver.videoDrivers = ["nvidia"];
 
   # Enable inter-application communication
   xdg.portal.enable = true;
