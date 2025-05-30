@@ -3,9 +3,11 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    extraPackages = with pkgs; [ vulkan-loader ];
   };
 
   services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.enable = true;
   hardware.steam-hardware.enable = true;
 
   hardware.nvidia = {
@@ -49,6 +51,7 @@
     r2modman
     gamescope
     protonup-qt
+    gamemode
   ];
 
   programs = {
