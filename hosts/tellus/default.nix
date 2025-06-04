@@ -38,6 +38,11 @@
   users.users.jakob.extraGroups = ["adbusers"];
   boot.kernelModules = ["v4l2loopback"];
   services.hardware.bolt.enable = true;
+  services.flatpak.enable = true;
+
+  # Enable inter-application communication
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   environment.systemPackages = with pkgs; [
 
