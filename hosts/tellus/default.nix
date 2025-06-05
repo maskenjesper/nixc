@@ -13,6 +13,7 @@
     ../common/wallpaper.nix
     ../common/desktop_environment/display_manager/sddm
 #    ./features/hyprland.nix
+    ./features/plasma.nix
     ./features/gaming.nix
     ./features/stylix
   ];
