@@ -49,6 +49,7 @@
 
 
     #kicad
+    appimage-run
 
     devenv
 
