@@ -47,7 +47,6 @@
 
   environment.systemPackages = with pkgs; [
 
-
     #kicad
     appimage-run
 
