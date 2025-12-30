@@ -30,6 +30,7 @@
     ];
   };
   programs.fish.enable = true;
+  programs.bash.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Avoid adding packages here.
