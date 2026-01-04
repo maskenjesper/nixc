@@ -27,6 +27,8 @@
     alejandra
     gitnr
 
+    steamcmd
+
     # Media
 
     # Office
