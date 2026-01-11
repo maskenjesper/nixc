@@ -14,7 +14,15 @@
 
   networking.hostName = "tellus"; # Define your hostname.
 
-  networking.firewall.enable = false;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [25565];
+    allowedUDPPorts = [25565];
+    # allowedUDPPortRanges = [
+    #   { from = 4000; to = 4007; }
+    #   { from = 8000; to = 8010; }
+    # ];
+  };
 
   users.users."jakob".openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIME9fphOgNX9tRi5vFwzxtahA5ErQAqFPxjN6a1qLs6z jakob"
