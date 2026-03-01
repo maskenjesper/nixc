@@ -31,6 +31,7 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
+    unrar
     anydesk
     clang
     jetbrains.clion
@@ -43,6 +44,11 @@
     keepassxc
     obsidian
     cool-retro-term
+    atlauncher
+    modrinth-app
+    prismlauncher
+    jdk
+    mcaselector
 
     ventoy-full-gtk
 

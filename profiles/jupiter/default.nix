@@ -34,6 +34,8 @@
         Hostname 192.168.1.109
         Port 6845 
         User jakob
+        IdentitiesOnly yes
+        IdentityFile ~/.ssh/tellus
     ";
   };
 
@@ -45,6 +47,8 @@
   boot.kernel.sysctl = {
     "kernel.printk" = "3 3 3 3";
   };
+
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   syncthing = {
     devices = {
