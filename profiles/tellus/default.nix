@@ -8,6 +8,8 @@
     ../../modules/base/nixos
 
     ../../modules/services/ssh/nixos
+    ../../modules/services/dyndns/nixos
+
     ../../modules/features/nix_ld/nixos
     ../../modules/features/docker/nixos
   ];
