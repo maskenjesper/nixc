@@ -42,6 +42,8 @@
     import-tree.url = "github:vic/import-tree";
     gittype.url = "github:unhappychoice/gittype";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
+    agenix.url = "github:ryantm/agenix";
   };
 
   outputs = inputs @ {
