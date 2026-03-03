@@ -5,6 +5,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./secrets.nix
+
     ../../modules/base/nixos
 
     ../../modules/services/ssh/nixos

@@ -4,7 +4,8 @@
   ...
 }: let
   hostupUpdate = pkgs.writeShellScript "hostup-ddns-update" ''
-    ${pkgs.curl}/bin/curl -fsS "https://cloud.hostup.se/api/dyndns/update?hostname=maskenjesper.se&token=0d464d3a4f86126991105c2cc180a92131e3042bdebd2758fb862f2daa443ec9"
+    source ${config.age.secrets.secret1.path}
+    ${pkgs.curl}/bin/curl -fsS "https://cloud.hostup.se/api/dyndns/update?hostname=maskenjesper.se&token=$HOSTUP_TOKEN"
   '';
 in {
   systemd.services.hostup-ddns = {
