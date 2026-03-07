@@ -67,6 +67,10 @@ in {
         cmake-language-server
         cmake-format
         cmake-lint
+
+        nginx-language-server
+
+        htmx-lsp2
       ];
 
       startupPlugins.general = with pkgs.vimPlugins; [
