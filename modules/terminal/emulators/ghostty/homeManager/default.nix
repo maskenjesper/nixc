@@ -25,7 +25,7 @@
       font-size = 15;
       font-family = "Fira Code Nerd Font";
       background-opacity = "1.0";
-      gtk-single-instance = false;
+      gtk-single-instance = true;
     };
   };
 }
