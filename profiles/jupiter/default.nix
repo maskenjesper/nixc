@@ -36,6 +36,10 @@
         User jakob
         IdentitiesOnly yes
         IdentityFile ~/.ssh/tellus
+      Host tellusub
+        Hostname 192.168.1.176
+        Port 22 
+        User jakob
     ";
   };
 
