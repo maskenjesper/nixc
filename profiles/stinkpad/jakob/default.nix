@@ -12,6 +12,7 @@
     # Only dots
     ../../../modules/terminal/emulators/kitty/homeManager/dotfiles.nix
     ../../../modules/terminal/apps/git/homeManager/dotfiles.nix
+    ../../../modules/terminal/apps/gh/homeManager/dotfiles.nix
     ../../../modules/terminal/shells/fish/homeManager/dotfiles.nix
 
     ../../../modules/desktop-environments/niri/homeManager/dotfiles.nix
@@ -28,6 +29,7 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
+    keepassxc
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
