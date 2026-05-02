@@ -70,7 +70,7 @@ binds {
     Mod+4                               { focus-workspace "communication"; }
     Mod+5                               { focus-workspace "gaming"       ; }
     Mod+6                               { focus-workspace "notes"        ; }
-    Mod+7                               { focus-workspace "w7"           ; }
+    Mod+7                               { focus-workspace "tools"           ; }
     Mod+8                               { focus-workspace "w8"           ; }
     Mod+9                               { focus-workspace "music"        ; }
     Mod+0                               { focus-workspace "system"       ; }
@@ -92,7 +92,7 @@ binds {
     Mod+CTRL+4                         { move-window-to-workspace "communication"; }
     Mod+CTRL+5                         { move-window-to-workspace "gaming"       ; }
     Mod+CTRL+6                         { move-window-to-workspace "notes"        ; }
-    Mod+CTRL+7                         { move-window-to-workspace "w7"           ; }
+    Mod+CTRL+7                         { move-window-to-workspace "tools"           ; }
     Mod+CTRL+8                         { move-window-to-workspace "w8"           ; }
     Mod+CTRL+9                         { move-window-to-workspace "music"        ; }
     Mod+CTRL+0                         { move-window-to-workspace "system"       ; }
