@@ -1,6 +1,6 @@
 {inputs, config, lib, ...}: {
     options.zen-browser.system = lib.mkOption {
-        type = lib.types.string;
+        type = lib.types.str;
         default = "x86_64-linux";
     };
 

@@ -5,7 +5,6 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
-    lutris
     r2modman
     protonup-qt
     gamemode

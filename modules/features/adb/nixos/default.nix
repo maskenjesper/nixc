@@ -1,5 +1,4 @@
 {lib, localUsers, ...}: {
-  programs.adb.enable = true;
   users.users = lib.genAttrs localUsers (user: {
     extraGroups = ["adbusers"];
   });

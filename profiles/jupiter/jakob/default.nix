@@ -25,7 +25,7 @@
   home.homeDirectory = "/home/jakob";
 
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-gtk3-1.1.07"
+    "ventoy-gtk3-1.1.10"
   ];
 
   # For packages that need no configuration (yet...)
@@ -56,7 +56,7 @@
 
     qbittorrent
 
-    sequoia
+    sequoia-sq
 
     lua
     arduino
@@ -72,7 +72,6 @@
 
     cmatrix
     xaos
-    electricsheep
 
     github-desktop
 

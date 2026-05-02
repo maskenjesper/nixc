@@ -15,7 +15,7 @@
     htop
     killall
     playerctl
-    neofetch
+    fastfetch
     lm_sensors
     hddtemp
     wget

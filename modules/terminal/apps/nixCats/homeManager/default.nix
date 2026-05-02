@@ -33,7 +33,7 @@ in {
         gopls
         gotools
         go-tools
-        gccgo
+        #gccgo
 
         bash-language-server
         shfmt
