@@ -13,6 +13,6 @@ output "HDMI-A-1" {
 // Laptop display (eDP-1)
 output "eDP-1" {
     mode "1920x1080"     // 1920x1080 @ 59.999 Hz (preferred)
-    scale 1.25
+    scale 1
     position x=2560 y=0
 }
