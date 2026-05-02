@@ -165,7 +165,7 @@ in {
       testCats = {pkgs, ...}: {
         settings = {
           wrapRc = false;
-          unwrappedCfgPath = "${config.home.homeDirectory}/neonixc/modules/terminal/apps/nixCats/homeManager/dotfiles";
+          unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/terminal/apps/nixCats/homeManager/dotfiles";
           aliases = ["nvim"];
         };
 
