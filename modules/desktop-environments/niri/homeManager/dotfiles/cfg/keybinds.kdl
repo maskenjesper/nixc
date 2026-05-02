@@ -64,16 +64,16 @@ binds {
 
     // ─── Named Workspaces ───
 
-    Mod+1                               { focus-workspace "w1"; }
-    Mod+2                               { focus-workspace "w2"; }
-    Mod+3                               { focus-workspace "w3"; }
-    Mod+4                               { focus-workspace "w4"; }
-    Mod+5                               { focus-workspace "w5"; }
-    Mod+6                               { focus-workspace "w6"; }
-    Mod+7                               { focus-workspace "w7"; }
-    Mod+8                               { focus-workspace "w8"; }
-    Mod+9                               { focus-workspace "w9"; }
-    Mod+0                               { focus-workspace "w0"; }
+    Mod+1                               { focus-workspace "entertainment"; }
+    Mod+2                               { focus-workspace "research"     ; }
+    Mod+3                               { focus-workspace "development"  ; }
+    Mod+4                               { focus-workspace "communication"; }
+    Mod+5                               { focus-workspace "gaming"       ; }
+    Mod+6                               { focus-workspace "notes"        ; }
+    Mod+7                               { focus-workspace "w7"           ; }
+    Mod+8                               { focus-workspace "w8"           ; }
+    Mod+9                               { focus-workspace "music"        ; }
+    Mod+0                               { focus-workspace "system"       ; }
 
     Mod+Shift+1                               { focus-workspace 1; }
     Mod+Shift+2                               { focus-workspace 2; }
@@ -86,16 +86,16 @@ binds {
     Mod+Shift+9                               { focus-workspace 9; }
     Mod+Shift+0                               { focus-workspace 10; }
 
-    Mod+CTRL+1                         { move-column-to-workspace "w1"; }
-    Mod+CTRL+2                         { move-column-to-workspace "w2"; }
-    Mod+CTRL+3                         { move-column-to-workspace "w3"; }
-    Mod+CTRL+4                         { move-column-to-workspace "w4"; }
-    Mod+CTRL+5                         { move-column-to-workspace "w5"; }
-    Mod+CTRL+6                         { move-column-to-workspace "w6"; }
-    Mod+CTRL+7                         { move-column-to-workspace "w7"; }
-    Mod+CTRL+8                         { move-column-to-workspace "w8"; }
-    Mod+CTRL+9                         { move-column-to-workspace "w9"; }
-    Mod+CTRL+0                         { move-column-to-workspace "w0"; }
+    Mod+CTRL+1                         { move-window-to-workspace "entertainment"; }
+    Mod+CTRL+2                         { move-window-to-workspace "research"     ; }
+    Mod+CTRL+3                         { move-window-to-workspace "development"  ; }
+    Mod+CTRL+4                         { move-window-to-workspace "communication"; }
+    Mod+CTRL+5                         { move-window-to-workspace "gaming"       ; }
+    Mod+CTRL+6                         { move-window-to-workspace "notes"        ; }
+    Mod+CTRL+7                         { move-window-to-workspace "w7"           ; }
+    Mod+CTRL+8                         { move-window-to-workspace "w8"           ; }
+    Mod+CTRL+9                         { move-window-to-workspace "music"        ; }
+    Mod+CTRL+0                         { move-window-to-workspace "system"       ; }
 
     //--------- Extra ----------//
     Mod+Q                               { close-window; }

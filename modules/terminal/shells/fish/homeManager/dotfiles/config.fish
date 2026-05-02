@@ -48,7 +48,7 @@ function mr
 end
 
 function vv
-    tvim .
+    nvim .
 end
 
 function dn

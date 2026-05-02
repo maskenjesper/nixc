@@ -4,12 +4,18 @@
 
         background-color "transparent" // <- needed for noctalia-shell to set wallpaper
 
+        always-center-single-column
+        // default-column-display "tabbed"
+
         preset-column-widths {
             proportion 0.5
             proportion 1.0
         }
 
-        struts {}
+        struts {
+            // left 64
+            // right 64
+        }
 
         border {
             on

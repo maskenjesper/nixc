@@ -102,6 +102,12 @@
             pkgs = pkgsFor.x86_64-linux;
             extraSpecialArgs = {inherit inputs outputs;};
           };
+
+          "jakob@saturn" = inputs.home-manager.lib.homeManagerConfiguration {
+            modules = [./profiles/saturn/jakob ./tasks];
+            pkgs = pkgsFor.x86_64-linux;
+            extraSpecialArgs = {inherit inputs outputs;};
+          };
         };
       };
     };
