@@ -96,6 +96,12 @@
             pkgs = pkgsFor.x86_64-linux;
             extraSpecialArgs = {inherit inputs outputs;};
           };
+
+          "jakob@stinkpad" = inputs.home-manager.lib.homeManagerConfiguration {
+            modules = [./profiles/stinkpad/jakob ./tasks];
+            pkgs = pkgsFor.x86_64-linux;
+            extraSpecialArgs = {inherit inputs outputs;};
+          };
         };
       };
     };

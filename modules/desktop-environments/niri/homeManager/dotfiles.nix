@@ -1,16 +1,6 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
-  imports = [
-  ];
-
+{config, ...}: {
   home.file.".config/niri" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/neonixc/modules/desktop-environments/niri/homeManager/dotfiles";
     recursive = true;
   };
-
-  home.packages = with pkgs; [
-  ];
 }
