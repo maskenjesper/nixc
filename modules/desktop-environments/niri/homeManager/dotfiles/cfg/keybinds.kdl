@@ -13,8 +13,8 @@ binds {
     Mod+N                               hotkey-overlay-title="Open Editor: Neovide" { spawn "neovide"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "zen-browser"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Shift+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Alt+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Alt+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // Please choose your own file manager.
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
@@ -106,18 +106,13 @@ binds {
     Mod+Shift+Home                       { move-column-to-first; }
     Mod+Shift+End                        { move-column-to-last; }
 
-    Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+CTRL+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
-
     Mod+WheelScrollRight                { focus-column-right; }
     Mod+WheelScrollLeft                 { focus-column-left; }
-    Mod+CTRL+WheelScrollRight           { move-column-right; }
-    Mod+CTRL+WheelScrollLeft            { move-column-left; }
 
-    Mod+Shift+WheelScrollDown           { focus-column-right; }
-    Mod+Shift+WheelScrollUp             { focus-column-left; }
-    Mod+CTRL+Shift+WheelScrollDown      { move-column-right; }
-    Mod+CTRL+Shift+WheelScrollUp        { move-column-left; }
+    Mod+WheelScrollDown           { focus-column-right; }
+    Mod+WheelScrollUp             { focus-column-left; }
+    Mod+Shift+WheelScrollDown           { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp             { focus-workspace-up; }
 
     // ─── Layout Controls ───
     Mod+C                               { center-column; }

@@ -30,6 +30,7 @@
   # For packages that need no configuration (yet...)
   home.packages = with pkgs; [
     # Trying out
+    keepassxc
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.

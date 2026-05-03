@@ -2,3 +2,10 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "qs -c noctalia-shell"
+
+    spawn-at-startup "spotify-launcher"
+    spawn-at-startup "discord"
+    spawn-at-startup "keepassxc"
+    spawn-at-startup "steam"
+    spawn-at-startup "modrinth-app"
+    spawn-at-startup "obsidian"
