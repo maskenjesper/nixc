@@ -21,6 +21,7 @@
   services.tuned.enable = true;
   services.upower.enable = true;
 
-    environment.systemPackages = with pkgs; [
-    ];
+  environment.systemPackages = with pkgs; [
+
+  ];
 }
