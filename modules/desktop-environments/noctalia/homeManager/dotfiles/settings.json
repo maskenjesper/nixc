@@ -22,7 +22,8 @@
             "org.keepassxc.KeePassXC",
             "steam",
             "modrinth-app",
-            "org.gnome.Meld"
+            "org.gnome.Meld",
+            "org.gnome.Evince"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -365,7 +366,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "attached",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
         "groupClickAction": "cycle",
@@ -506,7 +507,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
