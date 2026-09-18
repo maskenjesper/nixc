@@ -34,6 +34,8 @@
     # Trying out
     keepassxc
     usbimager
+
+    vivaldi
   ];
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
