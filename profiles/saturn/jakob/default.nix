@@ -10,16 +10,16 @@
     ../../../modules/terminal/apps/tmux/homeManager
 
     # Only dots
-    ../../../modules/terminal/emulators/kitty/homeManager/dotfiles.nix
-    ../../../modules/terminal/apps/git/homeManager/dotfiles.nix
-    ../../../modules/terminal/apps/gh/homeManager/dotfiles.nix
-    ../../../modules/terminal/apps/lazygit/homeManager/dotfiles.nix
-    ../../../modules/terminal/shells/fish/homeManager/dotfiles.nix
+    ../../../modules/terminal/emulators/kitty/homeManager
+    ../../../modules/terminal/apps/git/homeManager
+    ../../../modules/terminal/apps/gh/homeManager
+    ../../../modules/terminal/apps/lazygit/homeManager
+    ../../../modules/terminal/shells/fish/homeManager
 
     # ../../../modules/apps/opencode/homeManager/dotfiles.nix
 
-    ../../../modules/desktop-environments/niri/homeManager/dotfiles.nix
-    ../../../modules/desktop-environments/noctalia/homeManager/dotfiles.nix
+    ../../../modules/desktop-environments/niri/homeManager
+    ../../../modules/desktop-environments/noctalia/homeManager
   ];
 
   home.username = "jakob";

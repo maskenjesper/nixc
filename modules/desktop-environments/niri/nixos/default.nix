@@ -5,8 +5,7 @@
   ...
 }: {
   imports = [
-    ../../common/quickshell/nixos
-    ../../common/nixos
+    #../../common/nixos
   ];
 
   options = {

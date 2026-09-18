@@ -33,11 +33,6 @@
       url = "github:lelgenio/dzgui-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      # add ?ref=<tag> to track a tag
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     gittype.url = "github:unhappychoice/gittype";

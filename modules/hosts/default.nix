@@ -24,6 +24,14 @@
           localUsers = ["jakob"];
         };
       };
+      
+      saturn = inputs.nixpkgs.lib.nixosSystem {
+        modules = [../../profiles/saturn];
+        specialArgs = {
+          inherit inputs;
+          localUsers = ["jakob"];
+        };
+      };
 
       voyager = inputs.nixpkgs.lib.nixosSystem {
         modules = [../../profiles/voyager];
