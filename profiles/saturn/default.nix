@@ -8,6 +8,7 @@
     ../../modules/base/nixos
     
     ../../modules/desktop-environments/niri/nixos
+    ../../modules/desktop-environments/noctalia/nixos
   ];
 
   networking.hostName = "saturn"; # Define your hostname.
