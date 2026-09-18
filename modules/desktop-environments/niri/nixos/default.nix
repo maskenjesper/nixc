@@ -31,13 +31,13 @@
     xdg.portal.enable = true;
     xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
-    programs.waybar.enable = true;
+    # programs.waybar.enable = true;
     environment.systemPackages = with pkgs; [
       alacritty
-      fuzzel
-      swaylock
-      mako
-      swayidle
+      # fuzzel
+      # swaylock
+      # mako
+      # swayidle
       xwayland-satellite # xwayland support
     ];
   };
