@@ -13,6 +13,7 @@
   
   programs.noctalia = {
     enable = true;
+    systemd.enable = true;
   };
 
     environment.systemPackages = with pkgs; [
