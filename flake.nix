@@ -45,72 +45,76 @@
     };
   };
 
-  outputs = inputs @ {
-    flake-parts,
-    import-tree,
-    nixpkgs,
-    self,
-    ...
-  }: let
-    inherit (self) outputs;
+  outputs = inputs: inputs.flake-parts.lib.mkFlake
+    {inherit inputs;}
+    (inputs.import-tree ./modules);
 
-    systems = ["x86_64-linux" "aarch64-linux"];
-
-    pkgsFor = inputs.nixpkgs.lib.genAttrs systems (
-      system:
-        import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        }
-    );
-  in
-    flake-parts.lib.mkFlake {inherit inputs;}
-    {
-      imports = [
-        ./modules/flake
-        ./modules/hosts
-      ];
-
-      systems = ["x86_64-linux" "aarch64-linux"];
-
-      flake = {
-        homeConfigurations = {
-          "jakob@tellus" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/tellus/jakob ./tasks];
-            pkgs = pkgsFor.x86_64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-
-          "jakob@rpi" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/rpi/jakob ./tasks];
-            pkgs = pkgsFor.aarch64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-
-          "jakob@jupiter" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/jupiter/jakob ./tasks];
-            pkgs = pkgsFor.x86_64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-
-          "jakob@voyager" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/voyager/jakob ./tasks];
-            pkgs = pkgsFor.x86_64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-
-          "jakob@stinkpad" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/stinkpad/jakob ./tasks];
-            pkgs = pkgsFor.x86_64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-
-          "jakob@saturn" = inputs.home-manager.lib.homeManagerConfiguration {
-            modules = [./profiles/saturn/jakob ./tasks];
-            pkgs = pkgsFor.x86_64-linux;
-            extraSpecialArgs = {inherit inputs outputs;};
-          };
-        };
-      };
-    };
+  # outputs = inputs @ {
+  #   flake-parts,
+  #   import-tree,
+  #   nixpkgs,
+  #   self,
+  #   ...
+  # }: let
+  #   inherit (self) outputs;
+  #
+  #   systems = ["x86_64-linux" "aarch64-linux"];
+  #
+  #   pkgsFor = inputs.nixpkgs.lib.genAttrs systems (
+  #     system:
+  #       import nixpkgs {
+  #         inherit system;
+  #         config.allowUnfree = true;
+  #       }
+  #   );
+  # in
+  #   flake-parts.lib.mkFlake {inherit inputs;}
+  #   {
+  #     imports = [
+  #       ./modules/flake
+  #       ./modules/hosts
+  #     ];
+  #
+  #     systems = ["x86_64-linux" "aarch64-linux"];
+  #
+  #     flake = {
+  #       homeConfigurations = {
+  #         "jakob@tellus" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/tellus/jakob ./tasks];
+  #           pkgs = pkgsFor.x86_64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #
+  #         "jakob@rpi" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/rpi/jakob ./tasks];
+  #           pkgs = pkgsFor.aarch64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #
+  #         "jakob@jupiter" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/jupiter/jakob ./tasks];
+  #           pkgs = pkgsFor.x86_64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #
+  #         "jakob@voyager" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/voyager/jakob ./tasks];
+  #           pkgs = pkgsFor.x86_64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #
+  #         "jakob@stinkpad" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/stinkpad/jakob ./tasks];
+  #           pkgs = pkgsFor.x86_64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #
+  #         "jakob@saturn" = inputs.home-manager.lib.homeManagerConfiguration {
+  #           modules = [./profiles/saturn/jakob ./tasks];
+  #           pkgs = pkgsFor.x86_64-linux;
+  #           extraSpecialArgs = {inherit inputs outputs;};
+  #         };
+  #       };
+  #     };
+  #   };
 }
