@@ -5,7 +5,7 @@
 }: {
   flake.nixosConfigurations.saturn = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.nixosModules.saturn-configuration
+      self.nixosModules.saturnConfiguration
     ];
   };
 }

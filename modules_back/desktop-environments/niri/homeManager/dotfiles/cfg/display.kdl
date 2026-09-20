@@ -1,0 +1,60 @@
+// ────────────── Output Configuration ──────────────
+// You can run `niri msg outputs` to get the correct name for your displays.
+// You will have to remove "/-" and edit it before it takes effect.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+// External Xiaomi monitor (HDMI-A-1)
+output "HDMI-A-1" {
+    mode "2560x1440@143.998"   // 2560x1440 @ 144 Hz (change refresh rate as desired)
+    scale 1
+    position x=0 y=0       // Place to the right of laptop screen
+    hot-corners {
+        bottom-left
+        bottom-right
+    }
+}
+
+// Laptop display (eDP-1)
+output "eDP-1" {
+    mode "1920x1080"     // 1920x1080 @ 59.999 Hz (preferred)
+    scale 1
+    position x=2560 y=0
+    hot-corners {
+        bottom-left
+        bottom-right
+    }
+}
+
+output "DP-1" {
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+    mode "2560x1440"
+    scale 1
+    position x=0 y=0
+
+    hot-corners {
+        bottom-left
+        bottom-right
+    }
+}
+output "DP-2" {
+    mode "2560x1440"
+    scale 1
+    position x=2560 y=-540
+    transform "90"
+
+    hot-corners {
+        bottom-left
+        bottom-right
+    }
+
+    layout {
+        preset-column-widths {
+            proportion 1.0
+        }
+
+        default-column-width {
+            proportion 1.0
+        }
+    }
+}

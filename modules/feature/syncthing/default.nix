@@ -1,0 +1,78 @@
+{
+  inputs,
+  moduleWithSystem,
+  lib,
+  ...
+}: {
+  flake.nixosModules.syncthing = moduleWithSystem ({
+    pkgs,
+    config,
+    ...
+  }: let
+    # The phone does not run nixos so this might change
+    phoneId = "3Y7HXLU-57OAFNZ-MO5PJ2T-PY7MOPA-U6RHHGF-4BUQEGX-7JRNZBZ-Q4CAAAP";
+    cfg = config.syncthing;
+  in {
+    options.syncthing = {
+      devices = lib.mkOption {
+        type = lib.types.attrs;
+        default = {};
+      };
+
+      second-brain.devices = lib.mkOption {
+        type = lib.types.listOf lib.types.str;
+        default = [];
+      };
+
+      passwords.devices = lib.mkOption {
+        type = lib.types.listOf lib.types.str;
+        default = [];
+      };
+    };
+
+    config = {
+      environment.systemPackages = with pkgs; [
+        syncthing
+      ];
+      # TODO remove hardcoded user
+      services.syncthing = {
+        enable = true;
+        dataDir = "home/jakob";
+        openDefaultPorts = true;
+        configDir = "/home/jakob/.config/syncthing";
+        user = "jakob";
+        group = "users";
+        guiAddress = "0.0.0.0:8384";
+        overrideDevices = true;
+        overrideFolders = true;
+        settings = {
+          devices = cfg.devices;
+          folders = {
+            "second-brain" = {
+              path = "/home/jakob/second-brain";
+              devices = cfg.second-brain.devices;
+              versioning = {
+                type = "staggered";
+                params = {
+                  cleanInterval = "3600";
+                  maxAge = "15768000";
+                };
+              };
+            };
+            "passwords" = {
+              path = "/home/jakob/passwords";
+              devices = cfg.passwords.devices;
+              versioning = {
+                type = "staggered";
+                params = {
+                  cleanInterval = "3600";
+                  maxAge = "15768000";
+                };
+              };
+            };
+          };
+        };
+      };
+    };
+  });
+}

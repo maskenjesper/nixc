@@ -1,0 +1,154 @@
+binds {
+
+    // ────────────── Keybindings ──────────────
+   // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
+
+    // ─── noctalia-shell keybinds ───
+    // https://docs.noctalia.dev/getting-started/keybinds/
+
+    Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
+
+    // ─── Applications ───
+    Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
+    Mod+N                               hotkey-overlay-title="Open Editor: Neovide" { spawn "neovide"; }
+    Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+A                               hotkey-overlay-title="Toggle noctalia bar" { spawn-sh "qs -c noctalia-shell ipc call bar toggle"; }
+    Mod+B                               hotkey-overlay-title="Open Browser" { spawn "vivaldi"; }
+    Mod+Alt+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Alt+Q                        hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+
+    // Please choose your own file manager.
+    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+
+    // ─── Media Controls ───
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+
+    // ─── Brightness Controls ───
+    XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
+    // ─── Window/Column Movement and Focus ───
+
+    Mod+H                               { focus-column-left; }
+    Mod+L                               { focus-column-right; }
+    Mod+K                               { focus-window-up; }
+    Mod+J                               { focus-window-down; }
+
+    Mod+CTRL+H                          { move-column-left; }
+    Mod+CTRL+L                          { move-column-right; }
+    Mod+CTRL+K                          { move-window-up; }
+    Mod+CTRL+J                          { move-window-down; }
+
+    Mod+Home                             { focus-column-first; }
+    Mod+End                              { focus-column-last; }
+    Mod+CTRL+Home                       { move-column-to-first; }
+    Mod+CTRL+End                        { move-column-to-last; }
+
+    Mod+Comma                           { consume-window-into-column; }
+    Mod+Period                          { expel-window-from-column; }
+
+    // Mod+Shift+H                          { move-column-to-monitor-left; }
+    // Mod+Shift+L                          { move-column-to-monitor-right; }
+    // Mod+Shift+K                          { move-column-to-workspace-up; }
+    // Mod+Shift+J                          { move-column-to-workspace-down; }
+
+    // ─── Workspace Movement and Focus ───
+
+    Mod+Y                         { focus-monitor-left; }
+    Mod+O                         { focus-monitor-right; }
+
+    Mod+CTRL+Y                    { move-workspace-to-monitor-left; }
+    Mod+CTRL+O                    { move-workspace-to-monitor-right; }
+
+    // Mod+Y                         { focus-monitor-left; }
+    // Mod+O                         { focus-monitor-right; }
+    // Mod+I                         { focus-workspace-up; }
+    // Mod+U                         { focus-workspace-down; }
+
+    // Mod+CTRL+Y                    { move-workspace-to-monitor-left; }
+    // Mod+CTRL+O                    { move-workspace-to-monitor-right; }
+    // Mod+CTRL+I                    { move-workspace-up; }
+    // Mod+CTRL+U                    { move-workspace-down; }
+
+    // ─── Named Workspaces ───
+
+    Mod+1                               { focus-workspace "entertainment"; }
+    Mod+2                               { focus-workspace "research"     ; }
+    Mod+3                               { focus-workspace "development"  ; }
+    Mod+4                               { focus-workspace "communication"; }
+    Mod+5                               { focus-workspace "gaming"       ; }
+    Mod+6                               { focus-workspace "notes"        ; }
+    Mod+7                               { focus-workspace "tools"           ; }
+    Mod+8                               { focus-workspace "music"           ; }
+    Mod+9                               { focus-workspace "system"        ; }
+    Mod+0                               { focus-workspace "misc"       ; }
+
+    // Mod+Shift+1                               { focus-workspace 1; }
+    // Mod+Shift+2                               { focus-workspace 2; }
+    // Mod+Shift+3                               { focus-workspace 3; }
+    // Mod+Shift+4                               { focus-workspace 4; }
+    // Mod+Shift+5                               { focus-workspace 5; }
+    // Mod+Shift+6                               { focus-workspace 6; }
+    // Mod+Shift+7                               { focus-workspace 7; }
+    // Mod+Shift+8                               { focus-workspace 8; }
+    // Mod+Shift+9                               { focus-workspace 9; }
+    // Mod+Shift+0                               { focus-workspace 10; }
+
+    Mod+CTRL+1                         { move-window-to-workspace "entertainment"; }
+    Mod+CTRL+2                         { move-window-to-workspace "research"     ; }
+    Mod+CTRL+3                         { move-window-to-workspace "development"  ; }
+    Mod+CTRL+4                         { move-window-to-workspace "communication"; }
+    Mod+CTRL+5                         { move-window-to-workspace "gaming"       ; }
+    Mod+CTRL+6                         { move-window-to-workspace "notes"        ; }
+    Mod+CTRL+7                         { move-window-to-workspace "tools"           ; }
+    Mod+CTRL+8                         { move-window-to-workspace "music"           ; }
+    Mod+CTRL+9                         { move-window-to-workspace "system"        ; }
+    Mod+CTRL+0                         { move-window-to-workspace "misc"       ; }
+
+    //--------- Extra ----------//
+    Mod+Q                               { close-window; }
+    Mod+TAB                             { focus-workspace-previous; }
+
+    Mod+WheelScrollRight                { focus-column-right; }
+    Mod+WheelScrollLeft                 { focus-column-left; }
+
+    Mod+WheelScrollDown           { focus-column-right; }
+    Mod+WheelScrollUp             { focus-column-left; }
+    Mod+Shift+WheelScrollDown           { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp             { focus-workspace-up; }
+
+    // ─── Layout Controls ───
+    Mod+C                               { center-column; }
+    Mod+M                               { switch-preset-column-width; }
+    Mod+Minus                           { set-column-width "-10%"; }
+    Mod+Equal                           { set-column-width "+10%"; }
+    Mod+Shift+Minus                     { set-window-height "-10%"; }
+    Mod+Shift+Equal                     { set-window-height "+10%"; }
+
+    // ─── Modes ───
+    Mod+T                               { toggle-window-floating; }
+    Mod+F                               { fullscreen-window; }
+    Mod+W                               { toggle-column-tabbed-display; }
+
+    // ─── Screenshots ───
+    CTRL+Shift+1                        { screenshot; }
+    CTRL+Shift+2                        { screenshot-screen; }
+    CTRL+Shift+3                        { screenshot-window; }
+
+    // ─── Emergency Escape Key ───
+    // Use this when a fullscreen app blocks your keybinds.
+    // It disables any active keyboard shortcut inhibitor, restoring control.
+    Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // ─── Exit / Power ───
+    CTRL+ALT+Delete                     { quit; } // Also quits Niri
+    Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+backspace                               repeat=false { toggle-overview; }
+}
