@@ -10,7 +10,10 @@
       self.nixosModules.gnome
       self.nixosModules.kitty
       inputs.nix-index-database.nixosModules.nix-index
+      self.nixosModules.nh
     ];
+
+    nh.enable = true;
 
     networking.hostName = "saturn"; # Define your hostname.
 
