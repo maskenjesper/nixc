@@ -1,8 +1,7 @@
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
-    spawn-sh-at-startup "qs -c noctalia"
-    spawn-sh-at-startup "qs -c noctalia ipc call bar toggle"
+    spawn-sh-at-startup "noctalia"
 
     spawn-at-startup "spotify-launcher"
     spawn-at-startup "discord"
