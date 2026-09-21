@@ -11,6 +11,7 @@
       system-network
       nh
       amd-gpu
+      gaming
 
       inputs.nix-index-database.nixosModules.nix-index
     ];
