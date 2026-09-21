@@ -13,6 +13,7 @@
       amd-gpu
       gaming
       virtualization
+      ssh
 
       inputs.nix-index-database.nixosModules.nix-index
     ];
