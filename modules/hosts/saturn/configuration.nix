@@ -27,6 +27,7 @@
       #inputs.nix-melt.packages."x86_64-linux".default
       # It's also available in nixpkgs:
       pkgs.nix-melt
+      pkgs.opencode
     ];
   };
 }

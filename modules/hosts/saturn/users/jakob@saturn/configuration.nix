@@ -13,6 +13,7 @@
       # ../../../../../modules_back/terminal/apps/gh/homeManager
       # ../../../../../modules_back/terminal/apps/lazygit/homeManager
       self.homeModules.fish
+      self.homeModules.tmux
     ];
 
     home.username = "jakob";
