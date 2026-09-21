@@ -5,11 +5,13 @@
 }: {
   flake.nixosModules.saturn-configuration = {pkgs, ...}: {
     imports = [
+      self.nixosModules.niri
+      self.nixosModules.noctalia
       self.nixosModules.system-core
       self.nixosModules.system-network
-      self.nixosModules.gnome
-      inputs.nix-index-database.nixosModules.nix-index
+      # self.nixosModules.gnome
       self.nixosModules.nh
+      inputs.nix-index-database.nixosModules.nix-index
     ];
 
     nh.enable = true;
@@ -19,6 +21,7 @@
     environment.systemPackages = [
       pkgs.spotify
       pkgs.keepassxc
+      pkgs.vivaldi
 
       # Just trying out installing a package from a flake.
       # The issue is the handling of system. I think there's

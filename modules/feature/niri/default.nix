@@ -11,21 +11,14 @@
     };
   };
 
-  flake.nixosModules.niri = moduleWithSystem ({
+  flake.nixosModules.niri = {
     pkgs,
     lib,
     self',
     ...
-  }: let
-    modules = with self.nixosModules; [
-      noctalia
-    ];
-  in {
-    imports = modules;
-
+  }: {
     programs.niri = {
       enable = true;
-      package = self'.packages.niri;
     };
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -43,17 +36,5 @@
       xwayland-satellite # xwayland support
       alacritty
     ];
-  });
-
-  perSystem = {
-    pkgs,
-    lib,
-    self',
-    ...
-  }: {
-    packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
-      inherit pkgs;
-      "config.kdl".path = ./dotfiles;
-    };
   };
 }

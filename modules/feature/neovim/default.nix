@@ -116,7 +116,7 @@
       packageDefinitions.replace = {
         nixCats = {pkgs, ...}: {
           settings = {
-            aliases = ["vim"];
+            aliases = ["nvim"];
           };
 
           categories = {

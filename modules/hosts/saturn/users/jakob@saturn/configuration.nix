@@ -5,6 +5,8 @@
 }: {
   flake.homeModules.saturn-jakob-configuration = {pkgs, ...}: {
     imports = [
+      self.homeModules.niri
+      self.homeModules.noctalia
       self.homeModules.fish
       self.homeModules.tmux
       self.homeModules.direnv
@@ -13,8 +15,7 @@
       self.homeModules.gh
       self.homeModules.lazygit
       self.homeModules.neovim
-      self.homeModules.niri
-      self.homeModules.noctalia
+      self.homeModules.just
     ];
 
     home.username = "jakob";

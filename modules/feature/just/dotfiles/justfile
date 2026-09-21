@@ -1,0 +1,14 @@
+############################################################################
+#
+#  Nix commands related to the local machine
+#
+############################################################################
+
+sync:
+  ~/.config/just/sync.sh
+
+homeSync:
+  ~/.config/just/sync-home.sh
+
+systemSync:
+  ~/.config/just/sync-system.sh
