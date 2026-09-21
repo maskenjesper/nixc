@@ -22,6 +22,7 @@
       pkgs.spotify
       pkgs.keepassxc
       pkgs.vivaldi
+      pkgs.spotify
 
       # Just trying out installing a package from a flake.
       # The issue is the handling of system. I think there's

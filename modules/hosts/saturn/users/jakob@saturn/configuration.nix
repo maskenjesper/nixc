@@ -25,8 +25,6 @@
     home.packages = with pkgs; [
       keepassxc
       usbimager
-
-      hello
     ];
 
     home.stateVersion = "24.05"; # Please read the comment before changing.
