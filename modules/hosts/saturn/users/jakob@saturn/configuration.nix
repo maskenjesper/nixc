@@ -16,7 +16,6 @@
       lazygit
       neovim
       just
-      ghostty
     ];
 
     home.username = "jakob";

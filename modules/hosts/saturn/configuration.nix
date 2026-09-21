@@ -15,6 +15,7 @@
       virtualization
       ssh
       adb
+      system-nix_ld
 
       inputs.nix-index-database.nixosModules.nix-index
     ];
