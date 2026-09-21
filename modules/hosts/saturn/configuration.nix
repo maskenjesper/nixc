@@ -4,13 +4,14 @@
   ...
 }: {
   flake.nixosModules.saturn-configuration = {pkgs, ...}: {
-    imports = [
-      self.nixosModules.niri
-      self.nixosModules.noctalia
-      self.nixosModules.system-core
-      self.nixosModules.system-network
-      # self.nixosModules.gnome
-      self.nixosModules.nh
+    imports = with self.nixosModules; [
+      niri
+      noctalia
+      system-core
+      system-network
+      nh
+      amd-gpu
+
       inputs.nix-index-database.nixosModules.nix-index
     ];
 
