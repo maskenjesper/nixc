@@ -12,7 +12,7 @@
       mesa
       wayland-protocols
       xwayland
-      xorg.libxcb
+      libxcb
 
       (heroic.override {
         extraPkgs = pkgs: [
