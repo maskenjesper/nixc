@@ -12,6 +12,7 @@
       nh
       amd-gpu
       gaming
+      virtualization
 
       inputs.nix-index-database.nixosModules.nix-index
     ];
