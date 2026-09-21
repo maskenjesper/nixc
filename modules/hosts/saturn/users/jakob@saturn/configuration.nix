@@ -16,6 +16,7 @@
       self.homeModules.lazygit
       self.homeModules.neovim
       self.homeModules.just
+      self.homeModules.ghostty
     ];
 
     home.username = "jakob";
