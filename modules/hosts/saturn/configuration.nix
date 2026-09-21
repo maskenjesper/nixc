@@ -14,6 +14,7 @@
       gaming
       virtualization
       ssh
+      adb
 
       inputs.nix-index-database.nixosModules.nix-index
     ];
