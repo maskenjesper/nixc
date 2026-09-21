@@ -17,6 +17,7 @@
       neovim
       just
       ghostty
+      gittype
     ];
 
     home.username = "jakob";
