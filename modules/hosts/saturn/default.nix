@@ -21,6 +21,7 @@
           ssh
           adb
           system-nix_ld
+          appimage
 
           inputs.nix-index-database.nixosModules.nix-index
         ];
