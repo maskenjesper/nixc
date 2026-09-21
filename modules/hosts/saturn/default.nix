@@ -7,5 +7,8 @@
     modules = [
       self.nixosModules.saturn-configuration
     ];
+    specialArgs = {
+      localUsers = ["jakob"];
+    };
   };
 }

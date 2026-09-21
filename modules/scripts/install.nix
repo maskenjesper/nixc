@@ -1,7 +1,14 @@
 # WORK IN PROGRESS
 {
-  perSystem = {pkgs, ...}: {
-    packages.nixcInstaller = pkgs.writeShellScriptBin "nixcInstaller" ''
+  perSystem = {
+    pkgs,
+    self',
+    system,
+    inputs',
+    ...
+  }: {
+    packages = {
+      nixcInstaller = pkgs.writeShellScriptBin "nixcInstaller" ''
 
       # Automated script to install my nix configuration.
       if [ $# -gt 0 ]
@@ -52,5 +59,21 @@
 
       sudo mv ./nixc /home/''${USER_NAME}/nixc
     '';
+
+      install = pkgs.writeShellApplication {
+        name = "install";
+        runtimeInputs = with pkgs; [git inputs'.home-manager.packages.default];
+        text = ''${../../assets/scripts/install.sh} "$@"'';
+      };
+    };
+
+    apps = {
+      default = self'.apps.install;
+
+      install = {
+        type = "app";
+        program = "${self'.packages.install}/bin/install";
+      };
+    };
   };
 }

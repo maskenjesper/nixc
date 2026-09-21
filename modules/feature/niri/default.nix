@@ -4,6 +4,13 @@
   moduleWithSystem,
   ...
 }: {
+  flake.homeModules.niri = {config, ...}: {
+    home.file.".config/niri" = {
+      source = ./dotfiles;
+      recursive = true;
+    };
+  };
+
   flake.nixosModules.niri = moduleWithSystem ({
     pkgs,
     lib,
@@ -46,7 +53,7 @@
   }: {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
-      "config.kdl".path = ./.;
+      "config.kdl".path = ./dotfiles;
     };
   };
 }

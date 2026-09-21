@@ -7,5 +7,8 @@
     modules = [
       self.nixosModules.iso-configuration
     ];
+    specialArgs = {
+      localUsers = ["jakob"];
+    };
   };
 }

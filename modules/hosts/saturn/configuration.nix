@@ -8,7 +8,6 @@
       self.nixosModules.system-core
       self.nixosModules.system-network
       self.nixosModules.gnome
-      self.nixosModules.kitty
       inputs.nix-index-database.nixosModules.nix-index
       self.nixosModules.nh
     ];

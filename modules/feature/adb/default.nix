@@ -1,0 +1,10 @@
+{
+  flake.nixosModules.adb = {lib, localUsers, ...}: {
+    users.users = lib.genAttrs localUsers (user: {
+      extraGroups = ["adbusers"];
+    });
+
+    boot.kernelModules = ["v4l2loopback"];
+    services.hardware.bolt.enable = true;
+  };
+}

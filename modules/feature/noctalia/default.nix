@@ -3,6 +3,13 @@
   inputs,
   ...
 }: {
+  flake.homeModules.noctalia = {config, ...}: {
+    home.file.".config/noctalia" = {
+      source = ./dotfiles;
+      recursive = true;
+    };
+  };
+
   flake.nixosModules.noctalia = {
     pkgs,
     lib,

@@ -34,6 +34,16 @@
     nix-melt.url = "github:nix-community/nix-melt";
 
     # other
+    hyprland.url = "github:hyprwm/Hyprland";
+    stylix.url = "github:danth/stylix/release-24.11";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    xremap.url = "github:xremap/nix-flake";
+
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     gittype.url = "github:unhappychoice/gittype";
