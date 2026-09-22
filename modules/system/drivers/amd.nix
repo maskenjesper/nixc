@@ -22,9 +22,15 @@
       };
     };
 
+    boot.initrd.kernelModules = ["amdgpu"];
     boot.kernelParams = [
       "amdgpu.ppfeaturemask=0xffffffff"
     ];
+
+    services.xserver = {
+      videoDrivers = ["amdgpu"];
+      enable = true;
+    };
 
     # For rOCM
     systemd.tmpfiles.rules = [

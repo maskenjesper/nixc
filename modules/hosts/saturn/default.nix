@@ -15,13 +15,15 @@
           system-theme
           system-core
           system-network
+          system-nix_ld
+          system-audio
+          system-amdDrivers
+          system-upower
+          adb
           nh
-          amd-gpu
           gaming
           virtualization
           ssh
-          adb
-          system-nix_ld
           appimage
 
           inputs.nix-index-database.nixosModules.nix-index
