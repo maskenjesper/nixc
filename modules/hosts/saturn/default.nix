@@ -38,6 +38,27 @@
           pkgs.discord
           pkgs.meld
           pkgs.modrinth-app
+          pkgs.audacity
+          pkgs.evolution
+          pkgs.signal-cli
+          pkgs.signal-desktop
+          pkgs.audacious
+          pkgs.snapper
+          pkgs.snapper-gui
+          pkgs.obsidian
+          pkgs.opencode
+          pkgs.cheat
+          pkgs.broot
+          pkgs.rnote
+          pkgs.zellij
+          pkgs.homebank
+          pkgs.nnn
+          pkgs.rclone
+          pkgs.rclone-ui
+          pkgs.evince
+          pkgs.deluge
+          pkgs.gnome-multi-writer
+
 
           # Just trying out installing a package from a flake.
           # The issue is the handling of system. I think there's
@@ -45,7 +66,6 @@
           #inputs.nix-melt.packages."x86_64-linux".default
           # It's also available in nixpkgs:
           pkgs.nix-melt
-          pkgs.opencode
         ];
       })
     ];
