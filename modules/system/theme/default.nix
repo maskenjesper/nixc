@@ -11,9 +11,16 @@
   }: {
     imports = with self.nixosModules; [
       system-theme-bibataCursors
-      system-theme-catppuccinGtk
+      system-theme-gtk
     ];
 
     xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  };
+
+  perSystem = {
+    pkgs,
+    ...
+  }: {
+
   };
 }
