@@ -29,7 +29,6 @@
 
     # Enable inter-application communication
     xdg.portal.enable = true;
-    xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
     # programs.waybar.enable = true;
     environment.systemPackages = with pkgs; [

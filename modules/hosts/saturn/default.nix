@@ -12,6 +12,7 @@
         imports = with self.nixosModules; [
           niri
           noctalia
+          system-theme
           system-core
           system-network
           nh

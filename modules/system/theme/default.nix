@@ -8,12 +8,12 @@
     pkgs,
     lib,
     ...
-  }: let
-    modules = with self.nixosModules; [
-      bibataCursors
-      catppuccinGtk
+  }: {
+    imports = with self.nixosModules; [
+      system-theme-bibataCursors
+      system-theme-catppuccinGtk
     ];
-  in {
-    imports = modules;
+
+    xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 }

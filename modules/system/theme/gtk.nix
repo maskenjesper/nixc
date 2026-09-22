@@ -31,7 +31,7 @@
             settings = {
               "org/gnome/desktop/interface" = {
                 gtk-theme = "catppuccin-mocha-mauve-compact+rimless";
-                icon-theme = "Papirus";
+                icon-theme = "Papirus-Dark";
                 color-scheme = "prefer-dark";
               };
             };
