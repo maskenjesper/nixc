@@ -35,6 +35,7 @@
 
         environment.systemPackages = [
           pkgs.resources
+          pkgs.nautilus
           pkgs.spotify
           pkgs.keepassxc
           pkgs.vivaldi
