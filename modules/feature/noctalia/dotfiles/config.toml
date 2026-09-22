@@ -1,0 +1,177 @@
+# Noctalia v5 configuration (migrated from the v4 Quickshell settings.json).
+# Selected non-default values are set explicitly; everything omitted keeps its default.
+
+[shell]
+avatar_path = "/home/jakob/.face"
+polkit_agent = true
+font_family = "Adwaita Sans"
+button_borders = false
+card_borders = false
+input_borders = false
+popup_borders = false
+
+[shell.panel]
+launcher_placement = "floating"
+launcher_position = "center"
+session_placement = "attached"
+session_position = "auto"
+
+[shell.launcher]
+pinned = [
+    "anki",
+    "org.keepassxc.KeePassXC",
+    "steam",
+    "modrinth-app",
+    "org.gnome.Meld",
+    "org.gnome.Evince",
+]
+app_grid = true
+
+[shell.launcher.providers.session]
+global = true
+
+[shell.launcher.providers.windows]
+global = true
+
+[bar]
+order = ["default"]
+
+    [bar.default]
+    position = "top"
+    auto_hide = false
+    background_opacity = 0.71
+    radius = 12
+    margin_edge = 4
+    margin_ends = 4
+    widget_spacing = 6
+    scale = 1.0
+    font_scale = 1.0
+    shadow = true
+    reserve_space = true
+    capsule = false
+    start = ["launcher", "clock", "cpu", "temp", "ram", "active_window"]
+    center = ["workspaces"]
+    end = ["media", "tray", "keyboard_layout", "notifications", "battery", "volume", "brightness", "control-center"]
+
+[widget.clock]
+format = "{:%H:%M %a, %b %d}"
+tooltip_format = "{:%H:%M %a, %b %d}"
+
+[widget.workspaces]
+label_source = "name"
+max_label_chars = 2
+labels_only_when_occupied = true
+hide_when_empty = true
+pill_scale = 0.6
+focused_color = "primary"
+occupied_color = "secondary"
+empty_color = "secondary"
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+
+[widget.temp]
+type = "sysmon"
+stat = "cpu_temp"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+
+[widget.active_window]
+max_length = 145
+title_scroll = "on_hover"
+
+[widget.media]
+max_length = 145
+artist_first = true
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.tray]
+pinned = ["steam"]
+drawer = true
+hide_passive = false
+
+[widget.keyboard_layout]
+display = "short"
+show_glyph = false
+show_label = true
+hide_when_single_layout = false
+
+[widget.notifications]
+hide_when_no_unread = false
+
+[widget.battery]
+display_mode = "graphic"
+
+[widget.volume.actions]
+middle = "exec pwvucontrol || pavucontrol"
+
+[system.monitor]
+cpu_usage_activity_threshold = 80
+cpu_usage_critical_threshold = 90
+cpu_temp_activity_threshold = 80
+cpu_temp_critical_threshold = 90
+ram_pct_activity_threshold = 80
+ram_pct_critical_threshold = 90
+disk_used_pct_activity_threshold = 80
+disk_used_pct_critical_threshold = 90
+swap_pct_activity_threshold = 80
+swap_pct_critical_threshold = 90
+gpu_usage_activity_threshold = 80
+gpu_usage_critical_threshold = 90
+
+[battery]
+warning_threshold = 20
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "Kanagawa Dragon"
+
+[wallpaper]
+directory = "/home/jakob/Pictures/Wallpapers"
+fill_mode = "crop"
+transition = ["fade", "disc", "stripes", "wipe", "honeycomb"]
+transition_duration = 1500
+
+[notification]
+position = "top_right"
+background_opacity = 1.0
+keep_dismissed_in_history = false
+
+[osd]
+position = "top_right"
+background_opacity = 1.0
+
+[location]
+auto_locate = true
+
+[weather]
+enabled = true
+
+[calendar]
+enabled = true
+
+[control_center]
+hidden_tabs = []
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "wallpaper"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"

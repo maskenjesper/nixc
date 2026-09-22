@@ -37,6 +37,7 @@
           pkgs.spotify
           pkgs.discord
           pkgs.meld
+          pkgs.modrinth-app
 
           # Just trying out installing a package from a flake.
           # The issue is the handling of system. I think there's
