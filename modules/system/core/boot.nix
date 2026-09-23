@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.system-core-boot = {
+  flake.nixosModules.boot = {
     pkgs,
     lib,
     ...

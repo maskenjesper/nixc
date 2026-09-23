@@ -4,7 +4,7 @@
   moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.system-theme-gtk = moduleWithSystem (
+  flake.nixosModules.gtk = moduleWithSystem (
     {
       self',
       pkgs,

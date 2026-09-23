@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.system-theme-bibataCursors = {
+  flake.nixosModules.bibataCursors = {
     pkgs,
     lib,
     ...

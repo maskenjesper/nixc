@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.system-network = {
+  flake.nixosModules.network = {
     pkgs,
     lib,
     ...

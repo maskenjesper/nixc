@@ -12,13 +12,13 @@
         imports = with self.nixosModules; [
           niri
           noctalia
-          system-theme
-          system-core
-          system-network
-          system-nix_ld
-          system-audio
-          system-amdDrivers
-          system-upower
+          theme
+          core
+          network
+          nix-ld
+          audio
+          amd-gpu
+          upower
           adb
           nh
           gaming

@@ -5,7 +5,7 @@
       config.allowUnfree = true;
     };
   };
-  flake.nixosModules.system-core-nix_settings = {...}: {
+  flake.nixosModules.nix_settings = {...}: {
     nix = {
       registry = {
       };

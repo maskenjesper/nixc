@@ -3,20 +3,18 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.system-core = {
+  flake.nixosModules.core = {
     pkgs,
     lib,
     ...
-  }: let
-    modules = with self.nixosModules; [
-      system-core-boot
-      system-core-hardware
-      system-core-locale
-      system-core-nix_settings
-      system-core-user
+  }: {
+    imports = with self.nixosModules; [
+      boot
+      hardware
+      locale
+      nix_settings
+      user
     ];
-  in {
-    imports = modules;
     services = {
       openssh.enable = true;
       avahi.enable = true;

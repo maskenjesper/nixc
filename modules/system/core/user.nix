@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.system-core-user = {
+  flake.nixosModules.user = {
     pkgs,
     lib,
     ...
