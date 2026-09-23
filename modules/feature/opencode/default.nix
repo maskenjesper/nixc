@@ -4,5 +4,9 @@
       source = ./dotfiles;
       recursive = true;
     };
+
+    programs.opencode = {
+      enable = true;
+    };
   };
 }
