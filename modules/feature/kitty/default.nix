@@ -10,6 +10,9 @@
       source = ./dotfiles;
       recursive = true;
     };
+    programs.kitty = {
+      enable = true;
+    };
   };
   # flake.homeModules.kitty = {pkgs, ...}: {
   #   programs.kitty = {
