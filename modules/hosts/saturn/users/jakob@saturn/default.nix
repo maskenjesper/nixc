@@ -19,6 +19,7 @@
           lazygit
           neovim
           just
+          opencode
         ];
 
         home.username = "jakob";

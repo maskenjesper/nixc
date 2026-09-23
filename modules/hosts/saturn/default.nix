@@ -51,7 +51,6 @@
           pkgs.snapper
           pkgs.snapper-gui
           pkgs.obsidian
-          pkgs.opencode
           pkgs.cheat
           pkgs.broot
           pkgs.rnote
