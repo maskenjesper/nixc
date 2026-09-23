@@ -25,6 +25,7 @@
           virtualization
           ssh
           appimage
+          nautilus
 
           inputs.nix-index-database.nixosModules.nix-index
         ];
@@ -35,7 +36,6 @@
 
         environment.systemPackages = [
           pkgs.resources
-          pkgs.nautilus
           pkgs.spotify
           pkgs.keepassxc
           pkgs.vivaldi
