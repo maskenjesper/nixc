@@ -39,7 +39,6 @@
           pkgs.spotify
           pkgs.keepassxc
           pkgs.vivaldi
-          pkgs.spotify
           pkgs.discord
           pkgs.meld
           pkgs.modrinth-app
