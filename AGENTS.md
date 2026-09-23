@@ -4,7 +4,7 @@ NixOS + home-manager dotfiles flake, deployed at `~/nixc` on machine `saturn` (t
 
 ## Layout & how modules get wired
 - `flake.nix` passes `./modules` to import-tree: every `.nix` file under `modules/` is auto-imported as a flake-parts module. Adding a file requires NO registration; paths containing `/_` are skipped.
-- Each file declares its own flake attrs; convention is that the attr name mirrors the path with dashes, e.g. `modules/system/core/boot.nix` sets `flake.nixosModules.system-core-boot`. Feature modules usually emit both `flake.nixosModules.<name>` and `flake.homeModules.<name>`.
+- Each file declares its own flake attrs. Feature modules usually emit both `flake.nixosModules.<name>` and `flake.homeModules.<name>`.
 - `modules/flake/` = framework (root.nix imports the home-manager flake module; parts.nix sets systems + `formatter = alejandra`).
 - `modules/hosts/<host>/default.nix` defines `flake.nixosConfigurations.<host>`; `modules/hosts/<host>/users/<user>@<host>/default.nix` defines `flake.homeConfigurations."<user>@<host>"`. Hosts pull features via `imports = with self.nixosModules; [...]`.
 - `modules/feature/<name>/` = reusable features; dotfiles are shipped with `home.file.<x>.source = ./dotfiles`.
