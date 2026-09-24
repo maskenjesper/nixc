@@ -1,10 +1,6 @@
 {
-  inputs,
-  moduleWithSystem,
-  lib,
-  ...
-}: {
-  flake.nixosModules.syncthing = moduleWithSystem ({
+  flake.nixosModules.syncthing = {
+    lib,
     pkgs,
     config,
     ...
@@ -74,5 +70,5 @@
         };
       };
     };
-  });
+  };
 }
