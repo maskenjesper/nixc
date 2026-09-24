@@ -51,6 +51,7 @@
           pkgs.snapper-gui
           pkgs.obsidian
           pkgs.cheat
+          pkgs.stoat-desktop
           pkgs.broot
           pkgs.rnote
           pkgs.zellij
