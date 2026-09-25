@@ -1,7 +1,7 @@
 {
   flake.homeModules.fish = {config, ...}: {
     home.file.".config/fish" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${toString ./.}/dotfiles";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/fish/dotfiles";
     };
 
     programs = {
