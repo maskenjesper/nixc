@@ -14,9 +14,9 @@
   };
 
   flake.homeModules.quickshell = {config, ...}: {
-    home.file.".config/quickshell" = {
-      source = ./dotfiles;
-      recursive = true;
-    };
+    home.file.".config/quickshell".source =
+      if !config.dotfiles.mutable
+      then ./dotfiles
+      else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/quickshell/dotfiles";
   };
 }
