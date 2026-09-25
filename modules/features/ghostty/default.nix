@@ -1,10 +1,5 @@
 {
   flake.homeModules.ghostty = {pkgs, ...}: {
-    home.file.".config/ghostty" = {
-      source = ./dotfiles;
-      recursive = true;
-    };
-
     programs.ghostty = {
       enable = true;
       package =
