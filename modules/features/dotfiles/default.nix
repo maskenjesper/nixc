@@ -16,11 +16,6 @@
           description = "Location of the dotfiles working copy";
         };
       };
-
-      mkPath = path:
-        if !config.dotfiles.mutable
-        then ./dotfiles
-        else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}${path}";
     };
   };
 }
