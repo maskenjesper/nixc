@@ -8,6 +8,7 @@
     modules = [
       ({pkgs, ...}: {
         imports = with self.homeModules; [
+          dotfiles
           niri
           noctalia
           fish
