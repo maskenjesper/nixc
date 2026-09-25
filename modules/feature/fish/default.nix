@@ -2,7 +2,6 @@
   flake.homeModules.fish = {config, ...}: {
     home.file.".config/fish" = {
       source = config.lib.file.mkOutOfStoreSymlink "${toString ./.}/dotfiles";
-      recursive = true;
     };
 
     programs = {
