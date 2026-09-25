@@ -5,8 +5,6 @@
     config,
     ...
   }: let
-    # The phone does not run nixos so this might change
-    phoneId = "3Y7HXLU-57OAFNZ-MO5PJ2T-PY7MOPA-U6RHHGF-4BUQEGX-7JRNZBZ-Q4CAAAP";
     cfg = config.syncthing;
   in {
     options.syncthing = {

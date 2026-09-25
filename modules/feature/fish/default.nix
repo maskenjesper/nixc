@@ -1,7 +1,7 @@
 {
   flake.homeModules.fish = {config, ...}: {
     home.file.".config/fish" = {
-      source = ./dotfiles;
+      source = "${toString ./.}/dotfiles";
       recursive = true;
     };
 
