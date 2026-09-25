@@ -23,7 +23,7 @@
           opencode
         ];
 
-        dotfiles.mutable = false;
+        dotfiles.mutable = true;
 
         home.username = "jakob";
         home.homeDirectory = "/home/jakob";
