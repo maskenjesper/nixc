@@ -115,20 +115,85 @@
 
       packageDefinitions.replace = {
         nixCats = {pkgs, ...}: {
-          settings = {
-            aliases = ["nvim"];
-            wrapRc = false;
-            unwrappedCfgPath =
+          settings =
+            {
+              aliases = ["nvim"];
+            }
+            // (
               if !config.dotfiles.mutable
-              then ./dotfiles
-              else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/neovim/dotfiles";
-          };
+              then {}
+              else {
+                wrapRc = false;
+                unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/features/neovim/dotfiles";
+              }
+            );
 
           categories = {
             general = true;
             elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
           };
         };
+
+        # nixCats = {pkgs, ...}:
+        #   if !config.dotfiles.mutable
+        #   then {
+        #     settings = {
+        #       aliases = ["nvim"];
+        #     };
+        #
+        #     categories = {
+        #       general = true;
+        #       elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
+        #     };
+        #   }
+        #   else {
+        #     settings = {
+        #       wrapRc = false;
+        #       unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/features/neovim/dotfiles";
+        #       aliases = ["nvim"];
+        #     };
+        #
+        #     categories = {
+        #       general = true;
+        #       elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
+        #     };
+        #   };
+
+        # nixCats = if !config.dotfiles.mutable
+        # then ({pkgs, ...}: {
+        #     settings = {
+        #       aliases = ["nvim"];
+        #     };
+        #
+        #     categories = {
+        #       general = true;
+        #       elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
+        #     };
+        #   };)
+        # else
+        #   ({pkgs, ...}: {
+        #     settings = {
+        #       wrapRc = false;
+        #       unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/terminal/apps/nixCats/homeManager/dotfiles";
+        #       aliases = ["nvim"];
+        #     };
+        #
+        #     categories = {
+        #       general = true;
+        #       elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
+        #     };
+        #   };);
+
+        # nixCats = {pkgs, ...}: {
+        #   settings = {
+        #     aliases = ["nvim"];
+        #   };
+        #
+        #   categories = {
+        #     general = true;
+        #     elixirlspath = "${pkgs.elixir-ls}/lib/language-server.sh";
+        #   };
+        # };
         # testCats = {pkgs, ...}: {
         #   settings = {
         #     wrapRc = false;
