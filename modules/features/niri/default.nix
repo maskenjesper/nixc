@@ -1,14 +1,9 @@
 {
-  self,
-  inputs,
-  moduleWithSystem,
-  ...
-}: {
   flake.homeModules.niri = {config, ...}: {
-    home.file.".config/niri" = {
-      source = ./dotfiles;
-      recursive = true;
-    };
+    home.file.".config/niri".source =
+      if !config.dotfiles.mutable
+      then ./dotfiles
+      else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/niri/dotfiles";
   };
 
   flake.nixosModules.niri = {
