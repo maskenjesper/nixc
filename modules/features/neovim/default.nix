@@ -117,6 +117,11 @@
         nixCats = {pkgs, ...}: {
           settings = {
             aliases = ["nvim"];
+            wrapRc = false;
+            unwrappedCfgPath =
+              if !config.dotfiles.mutable
+              then ./dotfiles
+              else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/gh/dotfiles";
           };
 
           categories = {
