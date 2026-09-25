@@ -3,16 +3,19 @@
   moduleWithSystem,
   ...
 }: {
-  flake.homeModules.kitty = {config, ...}: {
+  flake.homeModules.kitty = {
+    config,
+    pkgs,
+    ...
+  }: {
     home.file.".config/kitty" = {
-      # for some reaseon this doesn't work: config.lib.file.mkOutOfStoreSymlink
-      # source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/terminal/emulators/kitty/dotfiles";
-      source = ./dotfiles;
-      recursive = true;
+      source =
+        if !config.dotfiles.mutable
+        then ./dotfiles
+        else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/gh/dotfiles";
     };
-    programs.kitty = {
-      enable = true;
-    };
+
+    home.packages = [pkgs.kitty];
   };
   # flake.homeModules.kitty = {pkgs, ...}: {
   #   programs.kitty = {
