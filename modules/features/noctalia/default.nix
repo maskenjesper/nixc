@@ -4,10 +4,10 @@
   ...
 }: {
   flake.homeModules.noctalia = {config, ...}: {
-    home.file.".config/noctalia" = {
-      source = ./dotfiles;
-      recursive = true;
-    };
+    home.file.".config/noctalia".source =
+      if !config.dotfiles.mutable
+      then ./dotfiles
+      else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/noctalia/dotfiles";
   };
 
   flake.nixosModules.noctalia = {
