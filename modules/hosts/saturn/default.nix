@@ -10,10 +10,13 @@
     modules = [
       ({pkgs, ...}: {
         imports = with self.nixosModules; [
+          core
+
+          greetd
+
           niri
           noctalia
           theme
-          core
           network
           nix-ld
           audio

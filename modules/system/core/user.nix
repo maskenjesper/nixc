@@ -7,11 +7,9 @@
     pkgs,
     lib,
     ...
-  }: let
-    modules = with self.nixosModules; [
+  }: {
+    imports = with self.nixosModules; [
     ];
-  in {
-    imports = modules;
     programs.fish.enable = true;
     users.users.jakob = {
       isNormalUser = true;
