@@ -3,10 +3,17 @@
     services.xserver = {
       enable = true;
 
+      xrandrHeads = [
+        {
+          output = "DP-1";
+          primary = true;
+        }
+      ];  
+
       displayManager.lightdm = {
         enable = true;
 
-        greeters.gtk = {
+        greeters.slick = {
           enable = true;
         };
       };
