@@ -25,16 +25,16 @@
       };
 
       # What is plymouth? It's a graphical boot splash screen manager that hides the kernel messages during boot.
-      plymouth = {
-        enable = true;
-        theme = "catppuccin-mocha";
-        themePackages = with pkgs; [
-          # By default we would install all themes
-          (catppuccin-plymouth.override {
-            variant = "mocha";
-          })
-        ];
-      };
+      # plymouth = {
+      #   enable = true;
+      #   theme = "catppuccin-mocha";
+      #   themePackages = with pkgs; [
+      #     # By default we would install all themes
+      #     (catppuccin-plymouth.override {
+      #       variant = "mocha";
+      #     })
+      #   ];
+      # };
 
       ### KERNEL ###
       kernelPackages = pkgs.linuxPackages_latest;
