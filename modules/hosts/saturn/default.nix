@@ -12,7 +12,6 @@
         imports = with self.nixosModules; [
           core
 
-          greetd
 
           niri
           noctalia
