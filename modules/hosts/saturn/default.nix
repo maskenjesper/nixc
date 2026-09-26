@@ -47,6 +47,8 @@
         networking.hostName = "saturn"; # Define your hostname.
 
         environment.systemPackages = [
+          pkgs.rustdesk
+
           pkgs.pkgit
 
           pkgs.stoat-desktop
