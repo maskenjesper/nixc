@@ -3,9 +3,9 @@
 
     spawn-at-startup "noctalia"
 
-    spawn-at-startup "spotify-launcher"
-    spawn-at-startup "discord"
-    spawn-at-startup "keepassxc"
-    spawn-at-startup "steam"
-    spawn-at-startup "modrinth-app"
-    spawn-at-startup "obsidian"
+    // spawn-at-startup "spotify-launcher"
+    // spawn-at-startup "discord"
+    // spawn-at-startup "keepassxc"
+    // spawn-at-startup "steam"
+    // spawn-at-startup "modrinth-app"
+    // spawn-at-startup "obsidian"
