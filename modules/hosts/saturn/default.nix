@@ -12,6 +12,7 @@
         imports = with self.nixosModules; [
           core
 
+          lightdm
 
           niri
           noctalia
