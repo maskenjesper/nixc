@@ -9,8 +9,8 @@
           zlib
           libusb1
 
-          stdenv.cc.cc.lib
-          libz
+          # stdenv.cc.cc.lib
+          # libz
         ];
       };
     };

@@ -52,6 +52,7 @@
           cmake-lint
           nginx-language-server
           htmx-lsp2
+          jinja-lsp
         ];
 
         startupPlugins.general = with pkgs.vimPlugins; [

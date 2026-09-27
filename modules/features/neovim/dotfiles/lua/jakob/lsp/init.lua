@@ -46,6 +46,7 @@ local servers = {
 	openscad_lsp = {},
 	clangd = {},
 	cmake = {},
+	jinja_lsp = {},
 }
 
 -- Set the default root marker for all LSP clients.
@@ -67,4 +68,3 @@ for server_name, cfg in pairs(servers) do
 	})
 	vim.lsp.enable(server_name)
 end
-
