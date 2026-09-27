@@ -27,7 +27,8 @@
       lsof
       gvfs
       libnotify
-      python315
+      #dont know if I want this on the system-level
+      #python315
       curlWithGnuTls
       wget
     ];
