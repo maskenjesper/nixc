@@ -5,10 +5,6 @@
       then ./dotfiles
       else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/fish/dotfiles";
 
-    home.sessionVariables = {
-      NIX_SHELL = "${pkgs.fish}/bin/fish";
-    };
-
     programs = {
       tmux.enable = true;
       zoxide.enable = true;
