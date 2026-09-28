@@ -20,6 +20,7 @@ if [[ $? -eq 0 ]]; then
         echo Sync successful
         gen=$(nixos-rebuild list-generations | awk '$NF == "True" { print $2, $3 }')
         git commit -m "$gen"
+        git push
     else
         echo Rebuild failed. Aborting...
     fi
