@@ -9,11 +9,11 @@
     ...
   }: let
   in {
-    fonts.packages = with pkgs.nerd-fonts; [
-      fira-mono
+    fonts.packages = [
+      pkgs.nerd-fonts.fira-mono
     ];
-    environment.systemPackages = with pkgs; [
-      bibata-cursors
+    environment.systemPackages = [
+      pkgs.bibata-cursors
     ];
 
     environment.variables = {

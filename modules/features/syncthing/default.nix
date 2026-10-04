@@ -25,8 +25,8 @@
     };
 
     config = {
-      environment.systemPackages = with pkgs; [
-        syncthing
+      environment.systemPackages = [
+        pkgs.syncthing
       ];
       # TODO remove hardcoded user
       services.syncthing = {

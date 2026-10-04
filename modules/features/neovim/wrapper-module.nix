@@ -7,48 +7,48 @@
     packages.neovim = inputs.wrapper-modules.wrappers.neovim.wrap {
       inherit pkgs;
 
-      runtimePkgs = with pkgs; [
-        universal-ctags
-        ripgrep
-        fd
-        zoxide
-        fzf
+      runtimePkgs = [
+        pkgs.universal-ctags
+        pkgs.ripgrep
+        pkgs.fd
+        pkgs.zoxide
+        pkgs.fzf
 
-        fish-lsp
-        gopls
-        gotools
-        go-tools
-        bash-language-server
-        shfmt
+        pkgs.fish-lsp
+        pkgs.gopls
+        pkgs.gotools
+        pkgs.go-tools
+        pkgs.bash-language-server
+        pkgs.shfmt
 
-        nix-doc
-        nixd
-        alejandra
+        pkgs.nix-doc
+        pkgs.nixd
+        pkgs.alejandra
 
-        lua-language-server
-        stylua
+        pkgs.lua-language-server
+        pkgs.stylua
 
-        elixir-ls
-        dart
+        pkgs.elixir-ls
+        pkgs.dart
 
-        yamlfmt
-        yaml-language-server
-        hyprls
-        csharp-ls
+        pkgs.yamlfmt
+        pkgs.yaml-language-server
+        pkgs.hyprls
+        pkgs.csharp-ls
 
-        kdePackages.qtdeclarative
-        openscad-lsp
-        arduino-language-server
+        pkgs.kdePackages.qtdeclarative
+        pkgs.openscad-lsp
+        pkgs.arduino-language-server
 
-        clang
-        clang-tools
-        cmake-language-server
-        cmake-format
-        cmake-lint
+        pkgs.clang
+        pkgs.clang-tools
+        pkgs.cmake-language-server
+        pkgs.cmake-format
+        pkgs.cmake-lint
 
-        nginx-language-server
-        htmx-lsp2
-        jinja-lsp
+        pkgs.nginx-language-server
+        pkgs.htmx-lsp2
+        pkgs.jinja-lsp
       ];
 
       settings.config_directory = ./.;

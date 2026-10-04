@@ -3,11 +3,11 @@
     programs = {
       nix-ld = {
         enable = true;
-        libraries = with pkgs; [
-          util-linux
-          stdenv.cc.cc
-          zlib
-          libusb1
+        libraries = [
+          pkgs.util-linux
+          pkgs.stdenv.cc.cc
+          pkgs.zlib
+          pkgs.libusb1
 
           # stdenv.cc.cc.lib
           # libz

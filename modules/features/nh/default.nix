@@ -15,8 +15,8 @@
     config = lib.mkIf config.nh.enable {
       environment.sessionVariables.NH_FLAKE = config.nh.flakePath;
 
-      environment.systemPackages = with pkgs; [
-        nh
+      environment.systemPackages = [
+        pkgs.nh
       ];
     };
   };

@@ -11,7 +11,10 @@
 
       install = pkgs.writeShellApplication {
         name = "install";
-        runtimeInputs = with pkgs; [git self'.inputs.home-manager.packages.${system}.home-manager];
+        runtimeInputs = [
+          pkgs.git
+          self'.inputs.home-manager.packages.${system}.home-manager
+        ];
         text = ''${../../assets/scripts/install.sh} "$@"'';
       };
     };

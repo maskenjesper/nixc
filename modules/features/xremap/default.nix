@@ -1,8 +1,9 @@
-{
-  inputs,
-  ...
-}: {
-  flake.nixosModules.xremap = {pkgs, localUsers, ...}: {
+{inputs, ...}: {
+  flake.nixosModules.xremap = {
+    pkgs,
+    localUsers,
+    ...
+  }: {
     imports = [
       inputs.xremap.nixosModules.default
     ];
@@ -25,10 +26,10 @@
       '';
     };
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = [
       # xremap needs these.
-      wtype
-      xremap
+      pkgs.wtype
+      pkgs.xremap
     ];
 
     # make xremap (and other software) able to bind keys

@@ -1,10 +1,10 @@
 {
   flake.nixosModules.dolphin = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      kdePackages.dolphin
-      kdePackages.qtsvg
-      kdePackages.kio-fuse
-      kdePackages.kio-extras
+    environment.systemPackages = [
+      pkgs.kdePackages.dolphin
+      pkgs.kdePackages.qtsvg
+      pkgs.kdePackages.kio-fuse
+      pkgs.kdePackages.kio-extras
     ];
   };
 }

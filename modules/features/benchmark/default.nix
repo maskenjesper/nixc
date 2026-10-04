@@ -1,9 +1,9 @@
 {
   flake.nixosModules.benchmark = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      geekbench_6
-      phoronix-test-suite
-      stress-ng
+    environment.systemPackages = [
+      pkgs.geekbench_6
+      pkgs.phoronix-test-suite
+      pkgs.stress-ng
     ];
   };
 }

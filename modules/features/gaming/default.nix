@@ -3,18 +3,18 @@
     # Steam Hardware Curry and other nobara packages
     hardware.steam-hardware.enable = true;
 
-    environment.systemPackages = with pkgs; [
-      mangohud
-      r2modman
-      protonup-qt
-      gamemode
-      vulkan-tools
-      mesa
-      wayland-protocols
-      xwayland
-      libxcb
+    environment.systemPackages = [
+      pkgs.mangohud
+      pkgs.r2modman
+      pkgs.protonup-qt
+      pkgs.gamemode
+      pkgs.vulkan-tools
+      pkgs.mesa
+      pkgs.wayland-protocols
+      pkgs.xwayland
+      pkgs.libxcb
 
-      (heroic.override {
+      (pkgs.heroic.override {
         extraPkgs = pkgs: [
           pkgs.gamescope
         ];

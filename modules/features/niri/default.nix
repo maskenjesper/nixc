@@ -26,9 +26,9 @@
     xdg.portal.enable = true;
 
     # programs.waybar.enable = true;
-    environment.systemPackages = with pkgs; [
-      xwayland-satellite # xwayland support
-      alacritty
+    environment.systemPackages = [
+      pkgs.xwayland-satellite # xwayland support
+      pkgs.alacritty
     ];
   };
 }

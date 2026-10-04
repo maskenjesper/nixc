@@ -9,8 +9,8 @@
       then ./dotfiles
       else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/just/dotfiles";
 
-    home.packages = with pkgs; [
-      just
+    home.packages = [
+      pkgs.just
     ];
   };
 }

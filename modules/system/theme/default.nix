@@ -9,9 +9,9 @@
     lib,
     ...
   }: {
-    imports = with self.nixosModules; [
-      bibataCursors
-      gtk
+    imports = [
+      self.nixosModules.bibataCursors
+      self.nixosModules.gtk
     ];
 
     xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];

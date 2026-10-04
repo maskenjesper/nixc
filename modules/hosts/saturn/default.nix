@@ -9,29 +9,25 @@
     };
     modules = [
       ({pkgs, ...}: {
-        imports = with self.nixosModules; [
-          core
-
-          lightdm
-
-          niri
-          noctalia
-          theme
-          network
-          nix-ld
-          audio
-          amd-gpu
-          upower
-          adb
-          nh
-          gaming
-          virtualization
-          ssh
-          appimage
-          nautilus
-
-          syncthing
-
+        imports = [
+          self.nixosModules.core
+          self.nixosModules.lightdm
+          self.nixosModules.niri
+          self.nixosModules.noctalia
+          self.nixosModules.theme
+          self.nixosModules.network
+          self.nixosModules.nix-ld
+          self.nixosModules.audio
+          self.nixosModules.amd-gpu
+          self.nixosModules.upower
+          self.nixosModules.adb
+          self.nixosModules.nh
+          self.nixosModules.gaming
+          self.nixosModules.virtualization
+          self.nixosModules.ssh
+          self.nixosModules.appimage
+          self.nixosModules.nautilus
+          self.nixosModules.syncthing
           inputs.nix-index-database.nixosModules.nix-index
         ];
 
@@ -52,11 +48,8 @@
         environment.systemPackages = [
           pkgs.tuios
           pkgs.rustdesk
-
           pkgs.pkgit
-
           pkgs.stoat-desktop
-
           pkgs.resources
           pkgs.spotify
           pkgs.keepassxc

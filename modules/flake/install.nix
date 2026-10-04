@@ -10,59 +10,62 @@
     packages = {
       nixcInstaller = pkgs.writeShellScriptBin "nixcInstaller" ''
 
-      # Automated script to install my nix configuration.
-      if [ $# -gt 0 ]
-        then
-          HOST_NAME=$1
-        else
-          echo "Invalid arguments"
-          exit 1
-      fi
-      if [ $# -gt 1 ]
-        then
-          USER_NAME=$2
-        else
-          echo "Invalid arguments"
-          exit 1
-      fi
-
-      sudo echo "Installing nix config for host ''${HOST_NAME} with user ''${USER_NAME}..."
-
-      echo "Cloning repo..."
-      ${pkgs.git}/bin/git clone https://github.com/maskenjesper/nixc.git
-
-      pushd "./nixc" || exit
-
-      # TODO If host and/or username doesn't exist already. Create a new profile from template.
-
-
-
-      # nix requires all files in the directory to be either commited or staged
-      ${pkgs.git}/bin/git add --all
-      echo ====================== Running nixos-rebuild ======================
-      sudo nixos-rebuild switch --impure --flake ".#''${HOST_NAME}" --show-trace -L -v
-
-      if [[ $? -eq 0 ]]; then
-          echo ====================== Running home-manager ======================
-          home-manager switch --experimental-features 'nix-command flakes' --impure --flake ".#''${USER_NAME}@''${HOST_NAME}" -b backup --show-trace -L -v
-
-          if [[ $? -eq 0 ]]; then
-              echo Sync successful
+        # Automated script to install my nix configuration.
+        if [ $# -gt 0 ]
+          then
+            HOST_NAME=$1
           else
-              echo Home manager failed. Aborting...
-          fi
-      else
-          echo Rebuild failed. Aborting...
-      fi
+            echo "Invalid arguments"
+            exit 1
+        fi
+        if [ $# -gt 1 ]
+          then
+            USER_NAME=$2
+          else
+            echo "Invalid arguments"
+            exit 1
+        fi
 
-      popd || exit
+        sudo echo "Installing nix config for host ''${HOST_NAME} with user ''${USER_NAME}..."
 
-      sudo mv ./nixc /home/''${USER_NAME}/nixc
-    '';
+        echo "Cloning repo..."
+        ${pkgs.git}/bin/git clone https://github.com/maskenjesper/nixc.git
+
+        pushd "./nixc" || exit
+
+        # TODO If host and/or username doesn't exist already. Create a new profile from template.
+
+
+
+        # nix requires all files in the directory to be either commited or staged
+        ${pkgs.git}/bin/git add --all
+        echo ====================== Running nixos-rebuild ======================
+        sudo nixos-rebuild switch --impure --flake ".#''${HOST_NAME}" --show-trace -L -v
+
+        if [[ $? -eq 0 ]]; then
+            echo ====================== Running home-manager ======================
+            home-manager switch --experimental-features 'nix-command flakes' --impure --flake ".#''${USER_NAME}@''${HOST_NAME}" -b backup --show-trace -L -v
+
+            if [[ $? -eq 0 ]]; then
+                echo Sync successful
+            else
+                echo Home manager failed. Aborting...
+            fi
+        else
+            echo Rebuild failed. Aborting...
+        fi
+
+        popd || exit
+
+        sudo mv ./nixc /home/''${USER_NAME}/nixc
+      '';
 
       install = pkgs.writeShellApplication {
         name = "install";
-        runtimeInputs = with pkgs; [git inputs'.home-manager.packages.default];
+        runtimeInputs = [
+          pkgs.git
+          inputs'.home-manager.packages.default
+        ];
         text = ''${../../assets/scripts/install.sh} "$@"'';
       };
     };

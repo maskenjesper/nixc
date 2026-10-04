@@ -8,29 +8,29 @@
     lib,
     ...
   }: {
-    imports = with self.nixosModules; [
-      boot
-      hardware
-      locale
-      nix_settings
-      user
+    imports = [
+      self.nixosModules.boot
+      self.nixosModules.hardware
+      self.nixosModules.locale
+      self.nixosModules.nix_settings
+      self.nixosModules.user
     ];
     services = {
       openssh.enable = true;
       avahi.enable = true;
     };
-    environment.systemPackages = with pkgs; [
-      vim
-      unzip
-      p7zip-rar
-      usbutils
-      lsof
-      gvfs
-      libnotify
+    environment.systemPackages = [
+      pkgs.vim
+      pkgs.unzip
+      pkgs.p7zip-rar
+      pkgs.usbutils
+      pkgs.lsof
+      pkgs.gvfs
+      pkgs.libnotify
       #dont know if I want this on the system-level
       #python315
-      curlWithGnuTls
-      wget
+      pkgs.curlWithGnuTls
+      pkgs.wget
     ];
     system.stateVersion = "25.05";
   };

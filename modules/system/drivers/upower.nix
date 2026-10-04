@@ -1,7 +1,7 @@
 {...}: {
   flake.nixosModules.upower = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      upower
+    environment.systemPackages = [
+      pkgs.upower
     ];
     services = {
       upower.enable = true;

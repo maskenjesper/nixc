@@ -56,7 +56,11 @@
     };
   };
 
-  flake.homeModules.hyprland = {pkgs, config, ...}: {
+  flake.homeModules.hyprland = {
+    pkgs,
+    config,
+    ...
+  }: {
     imports = [
       self.homeModules.waybar
       self.homeModules.quickshell
@@ -75,54 +79,54 @@
       enable = false;
     };
 
-    home.packages = with pkgs; [
-      networkmanagerapplet
-      gucharmap
-      alarm-clock-applet
-      resources
-      usbimager
-      galculator
+    home.packages = [
+      pkgs.networkmanagerapplet
+      pkgs.gucharmap
+      pkgs.alarm-clock-applet
+      pkgs.resources
+      pkgs.usbimager
+      pkgs.galculator
 
-      hyprshot
-      qt5.qtquickcontrols2
-      qt5.qtgraphicaleffects
-      waypaper
-      swww
-      swaybg
+      pkgs.hyprshot
+      pkgs.qt5.qtquickcontrols2
+      pkgs.qt5.qtgraphicaleffects
+      pkgs.waypaper
+      pkgs.swww
+      pkgs.swaybg
       # Notifications
-      swaynotificationcenter
-      libnotify # notification dep
+      pkgs.swaynotificationcenter
+      pkgs.libnotify # notification dep
 
       # Locking
-      hyprlock
+      pkgs.hyprlock
 
-      hyprsunset
-      hyprpolkitagent
-      hyprpicker
-      hypridle
+      pkgs.hyprsunset
+      pkgs.hyprpolkitagent
+      pkgs.hyprpicker
+      pkgs.hypridle
 
       # Panel and widgets
-      waybar
+      pkgs.waybar
 
       # App launcher
-      rofi
+      pkgs.rofi
 
       # Clipboard management
-      wl-clipboard
-      cliphist
+      pkgs.wl-clipboard
+      pkgs.cliphist
 
       #####################
       # Disk usage analyzer
-      baobab
+      pkgs.baobab
 
       # Disks utitlity
-      gnome-disk-utility
-      udisks
-      udisks2
-      udiskie
+      pkgs.gnome-disk-utility
+      pkgs.udisks
+      pkgs.udisks2
+      pkgs.udiskie
 
       # Camera utility
-      guvcview
+      pkgs.guvcview
     ];
   };
 }

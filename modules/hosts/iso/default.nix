@@ -25,9 +25,9 @@
           "pipe-operators"
         ];
 
-        environment.systemPackages = with pkgs; [
-          nvim
-          git
+        environment.systemPackages = [
+          pkgs.nvim
+          pkgs.git
         ];
       })
     ];

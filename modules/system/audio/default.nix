@@ -8,10 +8,10 @@
     lib,
     ...
   }: {
-    environment.systemPackages = with pkgs; [
-      playerctl
-      pavucontrol
-      pulseaudioFull
+    environment.systemPackages = [
+      pkgs.playerctl
+      pkgs.pavucontrol
+      pkgs.pulseaudioFull
     ];
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;

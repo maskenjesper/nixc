@@ -1,19 +1,19 @@
 {...}: {
   flake.nixosModules.amd-gpu = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      mesa
-      rocmPackages.rocm-smi
-      rocmPackages.rocminfo
-      vulkan-tools
+    environment.systemPackages = [
+      pkgs.mesa
+      pkgs.rocmPackages.rocm-smi
+      pkgs.rocmPackages.rocminfo
+      pkgs.vulkan-tools
     ];
     hardware = {
       graphics = {
         enable = true;
         enable32Bit = true;
-        extraPackages = with pkgs; [
-          libva-vdpau-driver
-          libvdpau-va-gl
-          rocmPackages.clr.icd
+        extraPackages = [
+          pkgs.libva-vdpau-driver
+          pkgs.libvdpau-va-gl
+          pkgs.rocmPackages.clr.icd
         ];
       };
       amdgpu = {

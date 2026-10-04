@@ -21,12 +21,12 @@
       enable = true;
       terminal = "tmux-256color";
       historyLimit = 100000;
-      plugins = with pkgs; [
+      plugins = [
         {
           plugin = tmux-super-fingers;
           extraConfig = "set -g @super-fingers-key f";
         }
-        tmuxPlugins.better-mouse-mode
+        pkgs.tmuxPlugins.better-mouse-mode
         # {
         #   plugin = tmuxPlugins.gruvbox;
         #   extraConfig = ''
@@ -37,7 +37,7 @@
         #   #   set -g @tmux-gruvbox 'dark'
         #   #   '';
         # }
-        tmuxPlugins.vim-tmux-navigator
+        pkgs.tmuxPlugins.vim-tmux-navigator
       ];
       extraConfig = ''
         set -sg escape-time 0

@@ -1,7 +1,7 @@
 {
   flake.nixosModules.nautilus = {pkgs, ...}: {
-    environment.systemPackages = with pkgs; [
-      nautilus
+    environment.systemPackages = [
+      pkgs.nautilus
     ];
 
     services.gvfs.enable = true;
@@ -11,10 +11,10 @@
         nautilus = prev.nautilus.overrideAttrs (nprev: {
           buildInputs =
             nprev.buildInputs
-            ++ (with pkgs.gst_all_1; [
-              gst-plugins-good
-              gst-plugins-bad
-            ]);
+            ++ [
+              pkgs.gst_all_1.gst-plugins-good
+              pkgs.gst_all_1.gst-plugins-bad
+            ];
         });
       })
     ];

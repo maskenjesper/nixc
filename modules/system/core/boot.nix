@@ -28,9 +28,9 @@
       # plymouth = {
       #   enable = true;
       #   theme = "catppuccin-mocha";
-      #   themePackages = with pkgs; [
+      #   themePackages = [
       #     # By default we would install all themes
-      #     (catppuccin-plymouth.override {
+      #     (pkgs.catppuccin-plymouth.override {
       #       variant = "mocha";
       #     })
       #   ];
@@ -39,7 +39,7 @@
       ### KERNEL ###
       kernelPackages = pkgs.linuxPackages_latest;
       # If using extra kernel modules, they should be selected from the module set for the kernel version configured above.
-      extraModulePackages = with config.boot.kernelPackages; [];
+      extraModulePackages = [];
     };
   };
 }

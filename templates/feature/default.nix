@@ -8,11 +8,8 @@
     lib,
     self',
     ...
-  }: let
-    modules = with self.nixosModules; [
-    ];
-  in {
-    imports = modules;
+  }: {
+    imports = [];
   };
 
   perSystem = {

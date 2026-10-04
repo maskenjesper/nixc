@@ -1,8 +1,8 @@
 {
   flake.homeModules.codeblocks = {pkgs, ...}: {
-    home.packages = with pkgs; [
-      codeblocksFull
-      gcc
+    home.packages = [
+      pkgs.codeblocksFull
+      pkgs.gcc
     ];
   };
 }

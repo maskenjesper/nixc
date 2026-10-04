@@ -8,7 +8,7 @@
     lib,
     ...
   }: {
-    imports = with self.nixosModules; [
+    imports = [
     ];
     programs.fish.enable = true;
     users.users.jakob = {
