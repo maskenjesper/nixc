@@ -2,13 +2,14 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   flake.nixosConfigurations.saturn = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = {
-      localUsers = ["jakob"];
+      localUsers = [ "jakob" ];
     };
     modules = [
-      ({pkgs, ...}: {
+      ({ pkgs, ... }: {
         imports = [
           self.nixosModules.core
           self.nixosModules.lightdm
@@ -35,12 +36,24 @@
 
         syncthing = {
           devices = {
-            "phone" = {id = "3Y7HXLU-57OAFNZ-MO5PJ2T-PY7MOPA-U6RHHGF-4BUQEGX-7JRNZBZ-Q4CAAAP";};
-            "laptop" = {id = "NGB3ZV7-5TUJBHD-S4G55WQ-GB2IJKU-T27F57R-KYUUW6O-ABBPROL-WXS3WAW";};
-            "rpi" = {id = "";};
+            "phone" = {
+              id = "3Y7HXLU-57OAFNZ-MO5PJ2T-PY7MOPA-U6RHHGF-4BUQEGX-7JRNZBZ-Q4CAAAP";
+            };
+            "laptop" = {
+              id = "NGB3ZV7-5TUJBHD-S4G55WQ-GB2IJKU-T27F57R-KYUUW6O-ABBPROL-WXS3WAW";
+            };
+            "rpi" = {
+              id = "";
+            };
           };
-          passwords.devices = ["phone" "rpi"];
-          second-brain.devices = ["phone" "rpi"];
+          passwords.devices = [
+            "phone"
+            "rpi"
+          ];
+          second-brain.devices = [
+            "phone"
+            "rpi"
+          ];
         };
 
         networking.hostName = "saturn"; # Define your hostname.

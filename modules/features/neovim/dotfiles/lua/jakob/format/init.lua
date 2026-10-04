@@ -23,7 +23,8 @@ require("lze").load({
 					-- Use a sub-list to run only the first available formatter
 					-- javascript = { { "prettierd", "prettier" } },
 					-- nix = { "alejandra" },
-					nix = { "nixfmt" },
+					-- nix = { "nixfmt" },
+					nix = { "pedantix" },
 					lua = { "stylua" },
 					bash = { "shfmt" },
 					go = { "gofmt" },
