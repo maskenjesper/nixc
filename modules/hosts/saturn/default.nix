@@ -59,6 +59,7 @@
         networking.hostName = "saturn"; # Define your hostname.
 
         environment.systemPackages = [
+          pkgs.gitcomet
           pkgs.tuios
           pkgs.rustdesk
           pkgs.pkgit
