@@ -7,6 +7,7 @@
         user.name = "maskenjesper";
         user.email = "jakobolsson973@gmail.com";
         pull.rebase = false;
+        diff.tool = "${pkgs.gitcomet}/bin/gitcomet";
       };
     };
   };
