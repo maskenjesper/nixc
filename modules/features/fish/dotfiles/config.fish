@@ -33,6 +33,10 @@ function sux
     end
 end
 
+function gdt
+    git difftool
+end
+
 function dallow
     direnv allow
 end
