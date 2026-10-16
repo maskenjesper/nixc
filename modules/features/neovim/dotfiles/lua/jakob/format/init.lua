@@ -22,9 +22,9 @@ require("lze").load({
 					-- python = { "isort", "black" },
 					-- Use a sub-list to run only the first available formatter
 					-- javascript = { { "prettierd", "prettier" } },
-					-- nix = { "alejandra" },
+					nix = { "alejandra" },
 					-- nix = { "nixfmt" },
-					nix = { "pedantix" },
+					-- nix = { "pedantix" },
 					lua = { "stylua" },
 					bash = { "shfmt" },
 					go = { "gofmt" },
