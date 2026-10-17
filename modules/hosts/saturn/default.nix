@@ -29,6 +29,8 @@
           self.nixosModules.nautilus
           self.nixosModules.syncthing
           inputs.nix-index-database.nixosModules.nix-index
+
+          self.nixosModules.neovim
         ];
 
         nh.enable = true;

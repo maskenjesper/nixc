@@ -16,11 +16,10 @@
       {...}: {
         inherit pkgs;
 
-        # settings.config_directory = ./dotfiles2;
         settings.config_directory =
           if config.dotfiles.mutable
-          then lib.generators.mkLuaInline "vim.fn.expand('$HOME/nixc/modules/features/neovim/dotfiles2')"
-          else ./dotfiles2;
+          then lib.generators.mkLuaInline "vim.fn.expand('$HOME/nixc/modules/features/neovim/dotfiles')"
+          else ./dotfiles;
 
         specs = {
           general = [

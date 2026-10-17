@@ -19,7 +19,6 @@
           self.homeModules.git
           self.homeModules.gh
           self.homeModules.lazygit
-          self.homeModules.neovim
           self.homeModules.just
           self.homeModules.opencode
         ];
