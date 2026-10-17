@@ -8,6 +8,17 @@ return {
 			vim.cmd.packadd(name)
 			vim.cmd.packadd("nvim-treesitter-textobjects")
 		end,
+		opts = {
+			ensure_installed = {
+				"lua",
+				"vim",
+				"vimdoc",
+				"html",
+				"css",
+				"c_sharp",
+				"razor",
+			},
+		},
 		after = function(plugin)
 			-- Highlighting is built into Neovim; enable it for every filetype.
 			-- Parsers are pre-installed via nvim-treesitter.withAllGrammars.

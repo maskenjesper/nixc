@@ -46,9 +46,8 @@
             pkgs.yamlfmt
             pkgs.yaml-language-server
             pkgs.hyprls
-            pkgs.csharp-ls
-            pkgs.dotnet-sdk_10
-            pkgs.glibc
+            # pkgs.csharp-ls
+            pkgs.roslyn-ls
             pkgs.kdePackages.qtdeclarative
             pkgs.openscad-lsp
             pkgs.arduino-language-server
