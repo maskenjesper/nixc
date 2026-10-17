@@ -6,7 +6,7 @@
   };
 
   config = {
-    dotfiles.mutable = true;
+    dotfiles.mutable = true; # This toggles live-editing setting on the flake-parts level as opposed to the below home manager option that does the same but in a home-manager context. This setting can instead be used outside of home manager modules like a perSystem definition (see neovim).
 
     flake.homeModules.dotfiles = {
       config,

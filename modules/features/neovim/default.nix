@@ -12,7 +12,7 @@
       ];
       packageNames = ["nixCats"];
 
-      luaPath = "${./dotfiles}";
+      luaPath = "${./dotfiles_old}";
 
       categoryDefinitions.replace = {pkgs, ...} @ packageDef: {
         lspsAndRuntimeDeps.general = [
@@ -124,7 +124,7 @@
               then {}
               else {
                 wrapRc = false;
-                unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/features/neovim/dotfiles";
+                unwrappedCfgPath = "${config.home.homeDirectory}/nixc/modules/features/neovim/dotfiles_old";
               }
             );
 
