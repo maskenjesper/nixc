@@ -1,2 +1,13 @@
 -- Load modules
 require("jakob.core")
+require("jakob.colors")
+require("jakob.lsp")
+require("jakob.navigation")
+require("jakob.completion")
+require("jakob.general")
+require("jakob.git")
+require("jakob.format")
+require("jakob.dev-tools")
+require("jakob.lint")
+require("jakob.debug")
+require("jakob.git")

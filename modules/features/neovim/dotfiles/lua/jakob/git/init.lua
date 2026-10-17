@@ -1,4 +1,4 @@
-return {
+require("lze").load({
 	{
 		"vim-fugitive",
 	},
@@ -17,4 +17,4 @@ return {
 			vim.keymap.set("n", "<leader>gB", ":Gitsigns blame<CR>", { desc = "Git - View blame" })
 		end,
 	},
-}
+})

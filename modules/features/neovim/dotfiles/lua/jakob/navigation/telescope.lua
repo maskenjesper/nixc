@@ -1,4 +1,4 @@
-return {
+require("lze").load({
 	"telescope.nvim",
 	branch = "0.1.x",
 	-- dependencies = {
@@ -43,4 +43,4 @@ return {
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find open buffer" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { desc = "Resume last find" })
 	end,
-}
+})

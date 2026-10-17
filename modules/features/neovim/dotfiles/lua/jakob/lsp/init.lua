@@ -7,7 +7,7 @@ local servers = {
 			},
 			signatureHelp = { enabled = true },
 			diagnostics = {
-				globals = { "nixCats", "vim" },
+				globals = { "vim" },
 				disable = { "missing-fields" },
 			},
 		},
@@ -16,11 +16,7 @@ local servers = {
 	},
 	nixd = {
 		nixd = {
-			nixpkgs = {
-				-- nixd requires some configuration in flake based configs.
-				-- luckily, the nixCats plugin is here to pass whatever we need!
-				-- expr = [[import (builtins.getFlake "]] .. nixCats.extra("nixdExtras.nixpkgs") .. [[") { }   ]],
-			},
+			nixpkgs = {},
 			formatting = {
 				command = { "alejandra" },
 			},
@@ -31,23 +27,8 @@ local servers = {
 			},
 		},
 	},
-	elixirls = {
-		cmd = { "elixir-ls" },
-		filetypes = { "elixir" },
-	},
-	gopls = {},
-	dartls = {},
-	bashls = {},
-	fish_lsp = {},
-	yamlls = {},
-	hyprls = {},
-	-- csharp_ls = {},
-	roslyn = {},
-	qmlls = {},
-	openscad_lsp = {},
 	clangd = {},
 	cmake = {},
-	jinja_lsp = {},
 }
 
 -- Set the default root marker for all LSP clients.
@@ -59,9 +40,9 @@ vim.lsp.config("*", {
 for server_name, cfg in pairs(servers) do
 	vim.lsp.config(server_name, {
 
-		capabilities = require("jakob.lsp.caps-on_attach").get_capabilities(server_name),
+		-- capabilities = require("jakob.lsp.caps-on_attach").get_capabilities(server_name),
 		-- this line is interchangeable with the above LspAttach autocommand
-		on_attach = require("jakob.lsp.caps-on_attach").on_attach,
+		-- on_attach = require("jakob.lsp.caps-on_attach").on_attach,
 		settings = cfg,
 		filetypes = (cfg or {}).filetypes,
 		cmd = (cfg or {}).cmd,

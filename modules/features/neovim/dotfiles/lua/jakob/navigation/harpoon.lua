@@ -1,4 +1,4 @@
-return {
+require("lze").load({
 	"harpoon",
 	after = function()
 		local mark = require("harpoon.mark")
@@ -38,4 +38,4 @@ return {
 			ui.nav_file(0)
 		end)
 	end,
-}
+})

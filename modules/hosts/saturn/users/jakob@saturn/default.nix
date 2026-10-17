@@ -2,12 +2,11 @@
   self,
   inputs,
   ...
-}:
-{
+}: {
   flake.homeConfigurations."jakob@saturn" = inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
     modules = [
-      ({ pkgs, ... }: {
+      ({pkgs, ...}: {
         imports = [
           self.homeModules.dotfiles
           self.homeModules.niri
@@ -19,7 +18,6 @@
           self.homeModules.git
           self.homeModules.gh
           self.homeModules.lazygit
-          self.homeModules.neovim
           self.homeModules.just
           self.homeModules.opencode
         ];

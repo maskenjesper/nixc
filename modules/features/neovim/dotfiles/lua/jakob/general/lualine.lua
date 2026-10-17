@@ -9,9 +9,7 @@ return {
 			options = {
 				theme = "auto",
 			},
-            tabline = {
-
-            },
+			tabline = {},
 			sections = {
 				lualine_c = {
 					{ "filename", path = 1 },
