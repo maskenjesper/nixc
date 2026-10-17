@@ -8,7 +8,7 @@ require("lze").load({
 	},
 	-- colorscheme = "",
 	after = function(plugin)
-		local conform = require("modules.features.neovim.dotfiles.lua.jakob.features.lze-specs.conform")
+		local conform = require("conform")
 
 		conform.setup({
 			formatters_by_ft = {

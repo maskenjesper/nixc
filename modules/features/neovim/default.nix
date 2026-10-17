@@ -54,6 +54,13 @@
               pkgs.vimPlugins.gitsigns-nvim
             ];
           };
+          lint = {
+              lazy = true;
+              data = [
+              pkgs.vimPlugins.nvim-lint
+          ];
+
+          };
           completion = {
             lazy = true;
             data = [
