@@ -55,11 +55,10 @@
             ];
           };
           lint = {
-              lazy = true;
-              data = [
+            lazy = true;
+            data = [
               pkgs.vimPlugins.nvim-lint
-          ];
-
+            ];
           };
           completion = {
             lazy = true;
