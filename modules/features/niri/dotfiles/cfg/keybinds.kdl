@@ -13,7 +13,8 @@ binds {
     Mod+Alt+Q                           hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // ─── Applications ───
-    Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    // Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Space                           repeat=false { toggle-overview; }
     Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
     Mod+A                               hotkey-overlay-title="Toggle noctalia bar" { spawn-sh "noctalia msg bar-toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser" { spawn "vivaldi"; }
@@ -149,5 +150,4 @@ binds {
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
     Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    Mod+backspace                               repeat=false { toggle-overview; }
 }

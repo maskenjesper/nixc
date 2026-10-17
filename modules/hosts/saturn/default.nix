@@ -2,14 +2,13 @@
   self,
   inputs,
   ...
-}:
-{
+}: {
   flake.nixosConfigurations.saturn = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = {
-      localUsers = [ "jakob" ];
+      localUsers = ["jakob"];
     };
     modules = [
-      ({ pkgs, ... }: {
+      ({pkgs, ...}: {
         imports = [
           self.nixosModules.core
           self.nixosModules.lightdm
@@ -30,6 +29,8 @@
           self.nixosModules.nautilus
           self.nixosModules.syncthing
           inputs.nix-index-database.nixosModules.nix-index
+
+          self.nixosModules.neovim
         ];
 
         nh.enable = true;
