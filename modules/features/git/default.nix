@@ -10,9 +10,21 @@
         user.name = "maskenjesper";
         user.email = "jakobolsson973@gmail.com";
         pull.rebase = false;
-        diff.tool = delta;
-        merge.tool = delta;
         difftool.prompt = false;
+
+        core = {
+          pager = delta;
+        };
+        interactive = {
+          diffFilter = "${delta} --color-only";
+        };
+        delta = {
+          navigate = true;
+          dark = true;
+        };
+        merge = {
+          conflictstyle = "zdiff3";
+        };
       };
     };
   };
