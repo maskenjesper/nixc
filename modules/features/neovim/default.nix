@@ -8,6 +8,7 @@
   flake.nixosModules.neovim = {pkgs, ...}: {
     environment.systemPackages = [
       self.packages.${pkgs.system}.neovim
+      pkgs.neovide
     ];
   };
 
