@@ -95,7 +95,7 @@
           pkgs.cmake-lint
 
           # c#
-          pkgs.roslyn
+          pkgs.roslyn-ls
         ];
       }
     );
