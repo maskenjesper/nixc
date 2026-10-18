@@ -1,6 +1,6 @@
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
-return {
+require("lze").load({
 	{
 		"nvim-treesitter",
 		event = "DeferredUIEnter",
@@ -95,4 +95,4 @@ return {
 			-- end)
 		end,
 	},
-}
+})

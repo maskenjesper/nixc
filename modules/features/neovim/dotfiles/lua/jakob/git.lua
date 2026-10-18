@@ -1,7 +1,5 @@
 require("lze").load({
-	{
-		"vim-fugitive",
-	},
+	{ "vim-fugitive" },
 	{
 		"gitsigns.nvim",
 		after = function()

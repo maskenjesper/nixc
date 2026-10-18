@@ -1,4 +1,4 @@
-return {
+require("lze").load({
 	"which-key.nvim",
 	event = "DeferredUIEnter",
 	after = function(plugin)
@@ -30,4 +30,4 @@ return {
 			{ "<leader>t_", hidden = true },
 		})
 	end,
-}
+})

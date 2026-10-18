@@ -1,4 +1,4 @@
-return {
+require("lze").load({
 	"lualine.nvim",
 	-- dependencies = { "nvim-tree/nvim-web-devicons" },
 	after = function()
@@ -22,4 +22,4 @@ return {
 			},
 		})
 	end,
-}
+})
