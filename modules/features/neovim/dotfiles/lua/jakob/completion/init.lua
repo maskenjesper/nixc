@@ -5,7 +5,7 @@
 -- NOTE: packadd doesnt load after directories.
 -- hence, the above function that you can get from luaUtils that exists to make that easy.
 
-return {
+require("lze").load({
 	{
 		"cmp-buffer",
 		on_plugin = { "nvim-cmp" },
@@ -210,4 +210,4 @@ return {
 			})
 		end,
 	},
-}
+})
