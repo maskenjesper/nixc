@@ -64,6 +64,7 @@
               pkgs.vimPlugins.luasnip
               pkgs.vimPlugins.friendly-snippets
               pkgs.vimPlugins.lspkind-nvim
+              pkgs.vimPlugins.roslyn-nvim
             ];
           };
         };
