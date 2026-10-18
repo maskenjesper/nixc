@@ -1,6 +1,7 @@
 local servers = {
 	lua_ls = require("jakob.lsp.lua_ls"),
 	nixd = require("jakob.lsp.nixd"),
+    roslyn_ls = require("jakob.lsp.roslyn_ls"),
 	clangd = {},
 	cmake = {},
 }

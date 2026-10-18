@@ -92,6 +92,9 @@
           pkgs.cmake-language-server
           pkgs.cmake-format
           pkgs.cmake-lint
+
+          # c#
+          pkgs.roslyn
         ];
       }
     );
