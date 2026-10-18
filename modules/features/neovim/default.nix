@@ -48,24 +48,9 @@
               pkgs.vimPlugins.which-key-nvim
               pkgs.vimPlugins.nvim-treesitter-textobjects
               pkgs.vimPlugins.nvim-treesitter.withAllGrammars
-            ];
-          };
-          git = {
-            lazy = true;
-            data = [
               pkgs.vimPlugins.vim-fugitive
               pkgs.vimPlugins.gitsigns-nvim
-            ];
-          };
-          lint = {
-            lazy = true;
-            data = [
               pkgs.vimPlugins.nvim-lint
-            ];
-          };
-          completion = {
-            lazy = true;
-            data = [
               pkgs.vimPlugins.nvim-cmp
               pkgs.vimPlugins.cmp_luasnip
               pkgs.vimPlugins.cmp-buffer
