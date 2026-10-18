@@ -11,3 +11,11 @@ MiniCompletion.setup({
 		end,
 	},
 })
+
+local MiniSnippets = require("mini.snippets")
+MiniSnippets.setup({
+  snippets = {
+      MiniSnippets.gen_loader.from_lang(), -- loads friendy-snippets automatically
+  },
+})
+MiniSnippets.start_lsp_server({match = false})

@@ -1,10 +1,6 @@
 return {
 	"which-key.nvim",
-	-- cmd = { "" },
 	event = "DeferredUIEnter",
-	-- ft = "",
-	-- keys = "",
-	-- colorscheme = "",
 	after = function(plugin)
 		require("which-key").setup({})
 		require("which-key").add({
