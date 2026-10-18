@@ -4,6 +4,8 @@ vim.g.have_nerd_font = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.colorcolumn = "100"
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -32,9 +34,18 @@ vim.opt.autoread = true
 
 -- vim.opt.colorcolumn = "80"
 
-vim.opt.winborder = 'rounded'
+vim.opt.winborder = "rounded"
 
 -- vim.o.list = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.o.confirm = true
+
+-- Folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 3
+vim.opt.foldnestmax = 10

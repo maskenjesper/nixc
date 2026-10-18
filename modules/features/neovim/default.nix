@@ -18,7 +18,9 @@
 
         settings.config_directory =
           if config.dotfiles.mutable
-          then lib.generators.mkLuaInline "vim.fn.expand('$HOME/nixc/modules/features/neovim/dotfiles')"
+          then
+            lib.generators.mkLuaInline
+            "vim.fn.expand('$HOME/nixc/modules/features/neovim/dotfiles')"
           else ./dotfiles;
 
         specs = {
@@ -32,6 +34,7 @@
             pkgs.vimPlugins.mini-icons
             pkgs.vimPlugins.kanagawa-nvim
             pkgs.vimPlugins.vim-tmux-navigator
+            pkgs.vimPlugins.mini-nvim
           ];
           lazy = {
             lazy = true;
