@@ -36,10 +36,12 @@
             pkgs.vimPlugins.kanagawa-nvim
             pkgs.vimPlugins.vim-tmux-navigator
             pkgs.vimPlugins.mini-nvim
+	    pkgs.vimPlugins.fzf-lua
           ];
           lazy = {
             lazy = true;
             data = [
+	      pkgs.vimPlugins.quicker-nvim
               pkgs.vimPlugins.telescope-fzf-native-nvim
               pkgs.vimPlugins.telescope-ui-select-nvim
               pkgs.vimPlugins.telescope-nvim

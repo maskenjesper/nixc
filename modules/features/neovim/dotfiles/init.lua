@@ -126,4 +126,5 @@ vim.lsp.config('lua_ls', {
 })
 vim.lsp.enable('lua_ls')
 
-
+-- colorscheme
+vim.cmd.colorscheme('kanagawa-dragon')
