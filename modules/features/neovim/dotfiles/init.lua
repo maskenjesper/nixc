@@ -12,6 +12,10 @@ vim.g.mapleader = ' '
 -- To see documentation for an option, you can use `:h 'optionname'`, for example `:h 'number'`
 -- (Note the single quotes)
 
+-- Natural splits
+vim.o.splitbelow = true
+vim.o.splitright = true
+
 vim.o.number = true -- Show line numbers in a column.
 
 -- Show line numbers relative to where the cursor is.
@@ -21,11 +25,11 @@ vim.o.relativenumber = true
 -- Sync clipboard between OS and Neovim. Schedule the setting after `UIEnter` because it can
 -- increase startup-time. Remove this option if you want your OS clipboard to remain independent.
 -- See `:h 'clipboard'`
-vim.api.nvim_create_autocmd('UIEnter', {
-  callback = function()
-    vim.o.clipboard = 'unnamedplus'
-  end,
-})
+-- vim.api.nvim_create_autocmd('UIEnter', {
+--   callback = function()
+--     vim.o.clipboard = 'unnamedplus'
+--   end,
+-- })
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
@@ -106,3 +110,20 @@ require('fzf-lua').setup { fzf_colors = true }
 require('mini.completion').setup {}
 require('quicker').setup {}
 require('gitsigns').setup {}
+require('oil').setup {}
+require('telescope').setup {}
+
+-- LSP
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+        disable = { "missing-fields" },
+      },
+    },
+  },
+})
+vim.lsp.enable('lua_ls')
+
+
