@@ -14,6 +14,8 @@
 #    echo interactive
 #end
 
+fzf --fish | source
+
 bind \cj down-or-search
 bind \ck up-or-search
 
@@ -22,16 +24,6 @@ bind \co lfcd
 bind \ce tmux-sessionizer
 bind \cw 'tmux-sessionizer $(pwd)'
 bind \cr 'tmux-sessionizer $HOME'
-
-function sux
-    # use argument as path
-    set x (systemctl status xremap | grep -c running)
-    if test $x -eq 1
-        sudo systemctl stop xremap
-    else
-        sudo systemctl start xremap
-    end
-end
 
 function gdt
     git difftool
@@ -49,6 +41,10 @@ function mw
 end
 function mr
     tmux-sessionizer $HOME
+end
+
+function v
+    nvim $argv
 end
 
 function vv
