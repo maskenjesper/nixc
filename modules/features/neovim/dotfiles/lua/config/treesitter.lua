@@ -1,1 +1,1 @@
-print("helloooo")
+require('nvim-treesitter').setup({})

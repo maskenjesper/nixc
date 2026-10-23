@@ -18,6 +18,11 @@
 | qa | q | start recording macro 'a'. What it actually does is it records every keystroke into register a |
 | q |  | stop recording a macro (must be in normal mode) |
 | @a | @ | run macro 'a'. Actually it just executes the contents of register a as keystrokes. This means one can also execute something one has yanked |
+| fx |  | moves to the next occurence of x in the line. Very sad that it can't go to the next line :( |
+| Fx |  | other direction |
+| ; |  | repeat last  command |
+| , |  | repeat the last f command in the other direction |
+
 
 
 

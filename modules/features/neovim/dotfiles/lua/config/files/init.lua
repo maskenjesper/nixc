@@ -19,8 +19,8 @@ MiniFiles.setup
   mappings = {
     close       = 'q',
     go_in       = '',
-    go_in_plus  = 'l',
-    go_out      = 'h',
+    go_in_plus  = '<right>',
+    go_out      = '<left>',
     go_out_plus = 'H',
     mark_goto   = "'",
     mark_set    = 'm',
@@ -51,11 +51,11 @@ MiniFiles.setup
     -- Width of focused window
     width_focus = 50,
     -- Width of non-focused window
-    width_nofocus = 15,
+    width_nofocus = 30,
     -- Width of preview window
     width_preview = 100,
   },
 }
-vim.keymap.set({ 'n' }, '-', function ()
+vim.keymap.set({ 'n' }, '<left>', function ()
   MiniFiles.open(vim.api.nvim_buf_get_name(0))
 end)

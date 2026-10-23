@@ -15,7 +15,7 @@ for server_name, cfg in pairs(servers) do
         keymaps.on_attach(client, bufnr)
 
         if server_on_attach then
-            server_on_attach(client, bufnr)
+             server_on_attach(client, bufnr)
         end
     end
     vim.lsp.config(server_name, cfg)

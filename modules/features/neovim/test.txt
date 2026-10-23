@@ -1,0 +1,10 @@
+TODO: fix this bug hej! hej! hej! hej! hej!
+This is normal code hej! hej! hej! hej! hej!
+TODO: add tests hej! hej! hej! hej! hej!
+more code here hej! hej! hej! hej! hej!
+TODO: refactor later hej! hej! hej! hej! hej!
+final line hej! hej! hej! hej! hej!
+ hej! hej! hej! hej! hej!
+local test = func processData();; hej! hej! hej! hej! hej!
+local test = func handleError();; hej! hej! hej! hej! hej!
+local test = func validateInput();; hej! hej! hej! hej! hej!
