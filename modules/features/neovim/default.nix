@@ -28,9 +28,10 @@
           general = [
             pkgs.vimPlugins.lze
             pkgs.vimPlugins.nvim-lspconfig
-            pkgs.vimPlugins.telescope-nvim
+            pkgs.vimPlugins.nvim-treesitter-textobjects
+            pkgs.vimPlugins.nvim-treesitter-context
+            pkgs.vimPlugins.nvim-treesitter.withAllGrammars
             pkgs.vimPlugins.plenary-nvim
-            pkgs.vimPlugins.oil-nvim
             pkgs.vimPlugins.nvim-web-devicons
             pkgs.vimPlugins.mini-icons
             pkgs.vimPlugins.kanagawa-nvim
@@ -50,8 +51,6 @@
               pkgs.vimPlugins.lualine-nvim
               pkgs.vimPlugins.conform-nvim
               pkgs.vimPlugins.which-key-nvim
-              pkgs.vimPlugins.nvim-treesitter-textobjects
-              pkgs.vimPlugins.nvim-treesitter.withAllGrammars
               pkgs.vimPlugins.vim-fugitive
               pkgs.vimPlugins.gitsigns-nvim
               pkgs.vimPlugins.nvim-lint
@@ -79,6 +78,7 @@
           pkgs.fd
           pkgs.zoxide
           pkgs.fzf
+          pkgs.tree-sitter
 
           # nix
           pkgs.nixd
