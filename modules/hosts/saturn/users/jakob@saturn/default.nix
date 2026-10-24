@@ -14,7 +14,7 @@
           self.homeModules.fish
           self.homeModules.tmux
           self.homeModules.direnv
-          self.homeModules.kitty
+          self.homeModules.ghostty
           self.homeModules.git
           self.homeModules.gh
           self.homeModules.lazygit

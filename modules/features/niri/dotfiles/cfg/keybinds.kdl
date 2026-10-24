@@ -13,12 +13,13 @@ binds {
     Mod+Alt+Q                           hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // ─── Applications ───
-    // Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+D                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+Space                           repeat=false { toggle-overview; }
-    Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
+    // Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
+    Mod+Return                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+A                               hotkey-overlay-title="Toggle noctalia bar" { spawn-sh "noctalia msg bar-toggle"; }
     Mod+B                               hotkey-overlay-title="Open Browser" { spawn "vivaldi"; }
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    Mod+E                               hotkey-overlay-title="File Manager: Thunar" { spawn "thunar"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }

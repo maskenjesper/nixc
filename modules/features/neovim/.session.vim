@@ -10,12 +10,21 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
+badd +11 dotfiles/lua/config/keymaps.lua
+badd +23 dotfiles/plugin/session.lua
+badd +50 default.nix
+badd +3 dotfiles_backup/lua/jakob/format.lua
+badd +6 dotfiles/lua/config/format/init.lua
+badd +1 dotfiles/lua/config/finder/init.lua
+badd +2 vim_notes.md
+badd +1 test.txt
 badd +1 new
+badd +0 dotfiles/lua/config/treesitter.lua
 argglobal
 %argdel
-edit new
+edit test.txt
 argglobal
-balt new
+balt vim_notes.md
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
