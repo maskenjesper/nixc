@@ -1,39 +1,39 @@
-{
-  flake.homeModules.ghostty = {pkgs, ...}: {
-    programs.ghostty = {
-      enable = true;
-      package =
-        if pkgs.stdenv.isDarwin
-        then pkgs.ghostty-bin
-        else pkgs.ghostty;
-
-      enableFishIntegration = true;
-
-      settings = {
-        # Custom shaders for a smooth cursor experience. Sourced from:
-        # https://github.com/2501mau/term-bots/tree/main/shaders/cursor_smear_fade/glsl
-        custom-shader = [
-          "./shaders/cursor_smear_fade.glsl"
-        ];
-        font-size = 15;
-        font-family = "Fira Code Nerd Font";
-        background-opacity = "0.8";
-        gtk-single-instance = true;
-      };
-    };
-  };
-}
 # {
-#   flake.homeModules.ghostty = {
-#     config,
-#     pkgs,
-#     ...
-#   }: {
-#     home.file.".config/ghostty".source =
-#       if !config.dotfiles.mutable
-#       then ./dotfiles
-#       else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/ghostty/dotfiles";
+#   flake.homeModules.ghostty = {pkgs, ...}: {
+#     programs.ghostty = {
+#       enable = true;
+#       package =
+#         if pkgs.stdenv.isDarwin
+#         then pkgs.ghostty-bin
+#         else pkgs.ghostty;
 #
-#     home.packages = [pkgs.ghostty];
+#       enableFishIntegration = true;
+#
+#       settings = {
+#         # Custom shaders for a smooth cursor experience. Sourced from:
+#         # https://github.com/2501mau/term-bots/tree/main/shaders/cursor_smear_fade/glsl
+#         custom-shader = [
+#           "./shaders/cursor_smear_fade.glsl"
+#         ];
+#         font-size = 15;
+#         font-family = "Fira Code Nerd Font";
+#         background-opacity = 0.8;
+#         gtk-single-instance = true;
+#       };
+#     };
 #   };
 # }
+{
+  flake.homeModules.ghostty = {
+    config,
+    pkgs,
+    ...
+  }: {
+    home.file.".config/ghostty".source =
+      if !config.dotfiles.mutable
+      then ./dotfiles
+      else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/ghostty/dotfiles";
+
+    home.packages = [pkgs.ghostty];
+  };
+}
