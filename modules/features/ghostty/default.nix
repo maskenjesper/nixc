@@ -23,3 +23,17 @@
     };
   };
 }
+# {
+#   flake.homeModules.ghostty = {
+#     config,
+#     pkgs,
+#     ...
+#   }: {
+#     home.file.".config/ghostty".source =
+#       if !config.dotfiles.mutable
+#       then ./dotfiles
+#       else config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixc/modules/features/ghostty/dotfiles";
+#
+#     home.packages = [pkgs.ghostty];
+#   };
+# }
