@@ -1,0 +1,7 @@
+background-opacity = 0.5
+foreground = ffffff
+custom-shader = ./shaders/cursor_smear_fade.glsl
+font-family = Fira Code Nerd Font
+font-size = 10
+gtk-single-instance = true
+
