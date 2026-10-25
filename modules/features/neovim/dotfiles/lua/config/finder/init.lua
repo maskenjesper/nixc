@@ -1,3 +1,5 @@
+require("config.finder.flash")
+
 local FzfLua = require("fzf-lua")
 FzfLua.setup({ fzf_colors = true })
 

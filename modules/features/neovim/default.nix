@@ -100,6 +100,12 @@
 
           # c#
           pkgs.roslyn-ls
+
+          # Web
+          pkgs.vscode-css-languageserver
+          pkgs.vscode-html-languageserver
+          pkgs.htmx-lsp2
+          pkgs.jinja-lsp
         ];
       }
     );
