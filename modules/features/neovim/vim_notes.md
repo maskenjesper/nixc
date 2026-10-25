@@ -22,6 +22,9 @@
 | Fx |  | other direction |
 | ; |  | repeat last  command |
 | , |  | repeat the last f command in the other direction |
+| <C-g> | | show current file and location in it |
+
+
 
 
 

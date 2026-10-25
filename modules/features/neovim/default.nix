@@ -38,6 +38,7 @@
             pkgs.vimPlugins.vim-tmux-navigator
             pkgs.vimPlugins.mini-nvim
             pkgs.vimPlugins.fzf-lua
+            pkgs.vimPlugins.flash-nvim
           ];
           lazy = {
             lazy = true;

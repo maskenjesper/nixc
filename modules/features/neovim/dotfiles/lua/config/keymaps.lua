@@ -42,6 +42,9 @@ vim.keymap.set("n", "<C-y>", '"+y')
 vim.keymap.set("v", "<C-y>", '"+y')
 vim.keymap.set("n", "<C-p>", '"+p')
 vim.keymap.set("v", "<C-p>", '"+p')
+-- copy whole buffer
+vim.keymap.set("n", "<leader>a", "ggVGy")
+vim.keymap.set("n", "<leader><C-a>", 'ggVG"+y')
 
 -- Search
 vim.keymap.set("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlights" })
