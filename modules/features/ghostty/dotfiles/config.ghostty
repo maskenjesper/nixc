@@ -1,7 +1,8 @@
-background-opacity = 0.5
-foreground = ffffff
-custom-shader = ./shaders/cursor_smear_fade.glsl
-font-family = Fira Code Nerd Font
-font-size = 10
+background-opacity = 1.0
+custom-shader = ./shaders/cursor_smear_fade.glsl # white smear
+font-family = ""
+font-family = "Fira Mono Nerd Font"
+font-size = 15
 gtk-single-instance = true
+theme = light:Kanagawa Lotus,dark:Kanagawa Dragon
 

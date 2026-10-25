@@ -1,4 +1,3 @@
-
 -- OPTIONS
 --
 -- See `:h vim.o`
@@ -6,6 +5,7 @@
 -- For more options, you can see `:h option-list`
 -- To see documentation for an option, you can use `:h 'optionname'`, for example `:h 'number'`
 -- (Note the single quotes)
+--
 
 -- Natural splits
 vim.o.splitbelow = true
@@ -32,7 +32,6 @@ vim.o.confirm = true
 ---OLD---
 vim.g.netrw_liststyle = 3
 vim.g.have_nerd_font = true
-
 
 -- vim.opt.colorcolumn = "100"
 
@@ -64,8 +63,6 @@ vim.opt.updatetime = 50
 vim.opt.autoread = true
 
 vim.opt.winborder = "rounded"
-
-
 
 -- Folding
 vim.opt.foldmethod = "indent"

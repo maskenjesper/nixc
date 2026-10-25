@@ -60,6 +60,7 @@
         networking.hostName = "saturn"; # Define your hostname.
 
         environment.systemPackages = [
+          pkgs.gedit
           pkgs.thunar
           pkgs.drawio
           pkgs.gitcomet
