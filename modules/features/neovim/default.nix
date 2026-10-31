@@ -99,7 +99,8 @@
           pkgs.cmake-lint
 
           # c#
-          pkgs.roslyn-ls
+          pkgs.roslyn-ls # cant get this to work
+          pkgs.csharp-ls
 
           # Web
           pkgs.vscode-css-languageserver

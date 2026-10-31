@@ -1,5 +1,5 @@
 function tmux-sessionizer --description "sessionizer"
-    
+
     # use argument as path
     if test (count $argv) -eq 1
         set session_path $argv[1]
@@ -11,7 +11,7 @@ function tmux-sessionizer --description "sessionizer"
     if test -z "$session_path"
         return 0
     end
-    
+
     set session_name (basename "$session_path" | tr . _)
 
     # make sure the server is started
