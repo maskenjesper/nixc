@@ -13,8 +13,8 @@ require("lze").load({
 })
 
 return {
-    cmd = {
-        "roslyn-language-server",
-        "--stdio",
-    },
+    -- cmd = {
+    --     "roslyn-language-server",
+    --     "--stdio",
+    -- },
 }

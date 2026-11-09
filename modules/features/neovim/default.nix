@@ -71,8 +71,16 @@
             ];
           };
         };
+        runtimePkgs = let
+          roslyn-language-server = pkgs.buildDotnetGlobalTool {
+            pname = "roslyn-language-server";
+            version = "5.13.0-1.26514.10";
 
-        runtimePkgs = [
+            nugetHash = "sha256-9tlblmrXyU2NbZ/4chfnOIXZhS6SbJesE7ZeFGZKUx0=";
+
+            dotnet-sdk = pkgs.dotnet-sdk_10;
+          };
+        in [
           # general
           pkgs.universal-ctags
           pkgs.ripgrep
@@ -99,9 +107,10 @@
           pkgs.cmake-lint
 
           # c#
-          pkgs.roslyn # cant get this to work
+          # pkgs.roslyn # cant get this to work
+          # roslyn-language-server
           pkgs.csharp-ls
-          # pkgs.csharpier
+          pkgs.csharpier
 
           # Web
           pkgs.vscode-css-languageserver

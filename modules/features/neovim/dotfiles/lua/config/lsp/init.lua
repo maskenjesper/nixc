@@ -1,8 +1,8 @@
 local servers = {
     lua_ls = require("config.lsp.lua_ls"),
     nixd = require("config.lsp.nixd"),
-    roslyn = require("config.lsp.roslyn"),
-    -- csharp_ls = {},
+    -- roslyn = require("config.lsp.roslyn"),
+    csharp_ls = {},
     clangd = {},
     cmake = {},
 }
