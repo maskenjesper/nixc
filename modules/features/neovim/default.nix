@@ -99,9 +99,9 @@
           pkgs.cmake-lint
 
           # c#
-          # pkgs.roslyn-ls # cant get this to work
+          pkgs.roslyn-ls # cant get this to work
           pkgs.csharp-ls
-          pkgs.csharpier
+          # pkgs.csharpier
 
           # Web
           pkgs.vscode-css-languageserver
