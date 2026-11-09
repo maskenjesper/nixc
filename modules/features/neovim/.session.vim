@@ -10,19 +10,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
-badd +1 dotfiles/plugin/session.lua
-badd +11 .session.vim
-badd +1 new
-badd +1 test.txt
-badd +1 vim_notes.md
-badd +12 ~/nixc/modules/hosts/saturn/default.nix
-badd +7 ~/nixc/modules/hosts/saturn/users/jakob@saturn/default.nix
-badd +2 default.nix
 argglobal
 %argdel
-edit default.nix
 argglobal
-balt ~/nixc/modules/hosts/saturn/users/jakob@saturn/default.nix
+enew
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -31,16 +22,6 @@ setlocal foldlevel=99
 setlocal foldminlines=1
 setlocal foldnestmax=10
 setlocal foldenable
-16
-sil! normal! zo
-18
-sil! normal! zo
-let s:l = 41 - ((40 * winheight(0) + 28) / 56)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 41
-normal! 013|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -13,6 +13,7 @@ require("lze").load({
                 lua = { "stylua" },
                 cpp = { "clang-format" },
                 cmake = { "cmake-format" },
+                cs = { "astyle" },
             },
             formatters = {
                 stylua = {

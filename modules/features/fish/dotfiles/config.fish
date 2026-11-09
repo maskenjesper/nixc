@@ -48,7 +48,7 @@ function v
 end
 
 function vv
-    nvim .
+    neovide $argv
 end
 
 function dn
