@@ -101,7 +101,7 @@
           # c#
           # pkgs.roslyn-ls # cant get this to work
           pkgs.csharp-ls
-          pkgs.astyle
+          pkgs.csharpier
 
           # Web
           pkgs.vscode-css-languageserver
