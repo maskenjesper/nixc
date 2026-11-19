@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.bibataCursors = {
+  flake.nixosModules.cursor = {
     pkgs,
     lib,
     ...

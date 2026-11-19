@@ -10,7 +10,7 @@
     ...
   }: {
     imports = [
-      self.nixosModules.bibataCursors
+      self.nixosModules.cursor
       self.nixosModules.gtk
     ];
 
