@@ -12,11 +12,12 @@
     environment.systemPackages = [
       pkgs.bibata-cursors
       pkgs.banana-cursor
+      pkgs.hello
     ];
 
     environment.variables = {
       XCURSOR_THEME = "Banana";
-      XCURSOR_SIZE = "50";
+      XCURSOR_SIZE = "20";
     };
 
     programs.dconf.profiles.user.databases = [
