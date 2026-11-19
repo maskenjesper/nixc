@@ -10,19 +10,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
-badd +16 modules/system/theme/cursor.nix
-badd +4 modules/features/niri/dotfiles/cfg/rules.kdl
-badd +2 modules/features/niri/dotfiles/cfg/animation.kdl
-badd +13 modules/system/theme/default.nix
-badd +1 modules/system/core/default.nix
-badd +1 modules/system/core/user.nix
-badd +1 modules/system/theme/gtk.nix
-badd +6 modules/system/theme/font.nix
+badd +6 modules/features/hamachi/default.nix
+badd +32 modules/hosts/saturn/default.nix
+badd +3 modules/features/flatpak/default.nix
+badd +28 modules/system/audio/default.nix
 argglobal
 %argdel
-edit modules/system/theme/cursor.nix
+edit modules/system/audio/default.nix
 argglobal
-balt modules/system/theme/font.nix
+balt modules/hosts/saturn/default.nix
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -31,16 +27,12 @@ setlocal foldlevel=99
 setlocal foldminlines=1
 setlocal foldnestmax=10
 setlocal foldenable
-12
-sil! normal! zo
-24
-sil! normal! zo
-let s:l = 17 - ((16 * winheight(0) + 28) / 56)
+let s:l = 28 - ((27 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 17
-normal! 024|
+keepjumps 28
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -54,7 +46,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
