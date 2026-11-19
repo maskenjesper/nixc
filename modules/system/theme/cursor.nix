@@ -9,9 +9,6 @@
     ...
   }: let
   in {
-    fonts.packages = [
-      pkgs.nerd-fonts.fira-mono
-    ];
     environment.systemPackages = [
       pkgs.bibata-cursors
       pkgs.banana-cursor
@@ -19,7 +16,7 @@
 
     environment.variables = {
       XCURSOR_THEME = "Banana";
-      XCURSOR_SIZE = "20";
+      XCURSOR_SIZE = "50";
     };
 
     programs.dconf.profiles.user.databases = [
@@ -28,7 +25,6 @@
         settings = {
           "org/gnome/desktop/interface" = {
             cursor-theme = "Banana";
-            font-name = "FiraMono Nerd Font 11";
           };
         };
       }
