@@ -12,10 +12,9 @@
     environment.systemPackages = [
       pkgs.bibata-cursors
       pkgs.banana-cursor
-      pkgs.hello
     ];
 
-    environment.variables = {
+    environment.sessionVariables = {
       XCURSOR_THEME = "Banana";
       XCURSOR_SIZE = "20";
     };
