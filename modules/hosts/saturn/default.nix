@@ -22,6 +22,7 @@
           self.nixosModules.upower
           self.nixosModules.adb
           self.nixosModules.nh
+          self.nixosModules.hamachi
           self.nixosModules.gaming
           self.nixosModules.virtualization
           self.nixosModules.ssh
