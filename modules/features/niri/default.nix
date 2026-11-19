@@ -29,6 +29,7 @@
     environment.systemPackages = [
       pkgs.xwayland-satellite # xwayland support
       pkgs.alacritty
+      pkgs.banana-cursor
     ];
   };
 }

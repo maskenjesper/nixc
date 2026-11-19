@@ -10,13 +10,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
-badd +1 result/share/icons/Banana/cursor.theme
-badd +1 /nix/store/60fh5ay36y7awbky0ifwsqb6cg6y8hib-banana-cursor-1.0.0/share/icons/Banana/index.theme
+badd +16 modules/system/theme/cursor.nix
+badd +4 modules/features/niri/dotfiles/cfg/rules.kdl
+badd +2 modules/features/niri/dotfiles/cfg/animation.kdl
+badd +13 modules/system/theme/default.nix
+badd +1 modules/system/core/default.nix
+badd +1 modules/system/core/user.nix
+badd +1 modules/system/theme/gtk.nix
+badd +6 modules/system/theme/font.nix
 argglobal
 %argdel
-edit result/share/icons/Banana/cursor.theme
+edit modules/system/theme/cursor.nix
 argglobal
-balt /nix/store/60fh5ay36y7awbky0ifwsqb6cg6y8hib-banana-cursor-1.0.0/share/icons/Banana/index.theme
+balt modules/system/theme/font.nix
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -25,12 +31,16 @@ setlocal foldlevel=99
 setlocal foldminlines=1
 setlocal foldnestmax=10
 setlocal foldenable
-let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+12
+sil! normal! zo
+24
+sil! normal! zo
+let s:l = 17 - ((16 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 17
+normal! 024|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

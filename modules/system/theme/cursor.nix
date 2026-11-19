@@ -15,6 +15,7 @@
     ];
 
     environment.sessionVariables = {
+      # Doesn't do anything on wayland. Configure in compositor instead.
       XCURSOR_THEME = "Banana";
       XCURSOR_SIZE = "20";
     };
