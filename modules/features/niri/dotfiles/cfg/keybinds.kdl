@@ -13,8 +13,8 @@ binds {
     Mod+Alt+Q                           hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // ─── Applications ───
-    Mod+D                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Space                           repeat=false { toggle-overview; }
+    Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Backspace                           repeat=false { toggle-overview; }
     // Mod+Return                          hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
     Mod+Return                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+A                               hotkey-overlay-title="Toggle noctalia bar" { spawn-sh "noctalia msg bar-toggle"; }

@@ -10,10 +10,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
+badd +1 result/share/icons/Banana/cursor.theme
+badd +1 /nix/store/60fh5ay36y7awbky0ifwsqb6cg6y8hib-banana-cursor-1.0.0/share/icons/Banana/index.theme
 argglobal
 %argdel
+edit result/share/icons/Banana/cursor.theme
 argglobal
-enew
+balt /nix/store/60fh5ay36y7awbky0ifwsqb6cg6y8hib-banana-cursor-1.0.0/share/icons/Banana/index.theme
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -22,6 +25,12 @@ setlocal foldlevel=99
 setlocal foldminlines=1
 setlocal foldnestmax=10
 setlocal foldenable
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

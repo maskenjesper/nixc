@@ -14,10 +14,11 @@
     ];
     environment.systemPackages = [
       pkgs.bibata-cursors
+      pkgs.banana-cursor
     ];
 
     environment.variables = {
-      XCURSOR_THEME = "Bibata-Modern-Ice";
+      XCURSOR_THEME = "Banana";
       XCURSOR_SIZE = "20";
     };
 
@@ -26,7 +27,7 @@
         lockAll = false;
         settings = {
           "org/gnome/desktop/interface" = {
-            cursor-theme = "Bibata-Modern-Ice";
+            cursor-theme = "Banana";
             font-name = "FiraMono Nerd Font 11";
           };
         };
