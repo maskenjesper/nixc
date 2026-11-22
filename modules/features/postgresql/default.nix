@@ -1,6 +1,7 @@
 {
   flake.nixosModules.postgresql = {pkgs, ...}: {
     environment.systemPackages = [
+      pkgs.beekeeper-studio
       pkgs.dbeaver-bin
     ];
 
