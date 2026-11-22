@@ -29,6 +29,7 @@
           self.nixosModules.appimage
           self.nixosModules.nautilus
           self.nixosModules.syncthing
+          self.nixosModules.postgresql
           inputs.nix-index-database.nixosModules.nix-index
 
           self.nixosModules.neovim
