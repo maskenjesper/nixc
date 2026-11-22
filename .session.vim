@@ -10,26 +10,21 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 let s:shortmess_save = &shortmess
 set shortmess+=aoO
+badd +1 modules/features/openrgb/default.nix
+badd +4 modules/features/postgresql/default.nix
 badd +1 modules/features/niri/default.nix
 badd +13 modules/features/niri/dotfiles/cfg/input.kdl
 badd +1 modules/features/niri/dotfiles/cfg/keybinds.kdl
 badd +1 modules/features/niri/dotfiles/cfg/workspaces.kdl
 badd +6 modules/features/hamachi/default.nix
-badd +63 modules/hosts/saturn/default.nix
+badd +67 modules/hosts/saturn/default.nix
 badd +3 modules/features/flatpak/default.nix
 badd +27 modules/system/audio/default.nix
 argglobal
 %argdel
-edit modules/hosts/saturn/default.nix
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
+edit modules/features/postgresql/default.nix
 argglobal
-balt modules/system/audio/default.nix
+balt modules/hosts/saturn/default.nix
 setlocal foldmethod=indent
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -38,16 +33,14 @@ setlocal foldlevel=99
 setlocal foldminlines=1
 setlocal foldnestmax=10
 setlocal foldenable
-7
+3
 sil! normal! zo
-12
-sil! normal! zo
-let s:l = 63 - ((34 * winheight(0) + 28) / 56)
+let s:l = 4 - ((3 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 63
-normal! 035|
+keepjumps 4
+normal! 027|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -55,8 +48,6 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)

@@ -8,15 +8,14 @@
     lib,
     ...
   }: {
-    environment.systemPackages = [
-      pkgs.playerctl
-      pkgs.pavucontrol
-      pkgs.pulseaudioFull
+    environment.systemPackages = with pkgs; [
+      playerctl
+      pavucontrol
     ];
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
 
-    nixpkgs.config.pulseaudio = true;
+    services.pulseaudio.enable = false;
+
+    security.rtkit.enable = true;
 
     services.pipewire = {
       enable = true;
@@ -24,6 +23,11 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       # jack.enable = true;
+    };
+
+    hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
     };
   };
 }
